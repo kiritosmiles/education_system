@@ -22,7 +22,7 @@ loguru==0.7.3
 # 数据可视化
 matplotlib==3.10.8
 
-# HTTP客户端
+# HTTP客户端（Dify API调用）
 httpx==0.28.1
 
 # AI/大模型
@@ -40,5 +40,5 @@ aiofiles>=24.1.0
 # 配置
 python-dotenv>=1.0.0
 
-# 定时任务
+# 定时任务（工作日报总结/行业周报定时生成）
 apscheduler>=3.10.0
