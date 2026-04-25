@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}仪表盘{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h3><i class="bi bi-speedometer2"></i> 仪表盘</h3>
+</div>
+<div class="row" id="statsCards">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body"><h5>用户总数</h5><h2 id="statUsers">-</h2></div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success">
+            <div class="card-body"><h5>顾客总数</h5><h2 id="statCustomers">-</h2></div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning">
+            <div class="card-body"><h5>工作日报</h5><h2 id="statWork">-</h2></div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info">
+            <div class="card-body"><h5>行业周报</h5><h2 id="statIndustry">-</h2></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card"><div class="card-header">最近顾客</div><div class="card-body" id="recentCustomers">加载中...</div></div>
+    </div>
+    <div class="col-md-6">
+        <div class="card"><div class="card-header">最近工作日报</div><div class="card-body" id="recentWork">加载中...</div></div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+async function loadDashboard() {
+    try {
+        const [users, customers, work, industry] = await Promise.all([
+            apiGet('/api/users?page=1&size=1'),
+            apiGet('/api/customers?page=1&size=1'),
+            apiGet('/api/work-repos?page=1&size=1'),
+            apiGet('/api/industry-repos?page=1&size=1')
+        ]);
+        document.getElementById('statUsers').textContent = users.data?.total ?? '-';
+        document.getElementById('statCustomers').textContent = customers.data?.total ?? '-';
+        document.getElementById('statWork').textContent = work.data?.total ?? '-';
+        document.getElementById('statIndustry').textContent = industry.data?.total ?? '-';
+    } catch(e) { console.error(e); }
+
+    try {
+        const res = await apiGet('/api/customers?page=1&size=5');
+        const items = res.data?.items || [];
+        document.getElementById('recentCustomers').innerHTML = items.length ?
+            '<table class="table table-sm"><tr><th>姓名</th><th>状态</th><th>创建时间</th></tr>' +
+            items.map(c => `<tr><td>${c.c_name}</td><td>${customerStatusBadge(c.c_status)}</td><td>${formatDate(c.create_time)}</td></tr>`).join('') + '</table>' :
+            '<p class="text-muted">暂无数据</p>';
+    } catch(e) { document.getElementById('recentCustomers').innerHTML = '<p class="text-muted">无权限</p>'; }
+
+    try {
+        const res = await apiGet('/api/work-repos?page=1&size=5');
+        const items = res.data?.items || [];
+        document.getElementById('recentWork').innerHTML = items.length ?
+            '<table class="table table-sm"><tr><th>标题</th><th>日期</th></tr>' +
+            items.map(w => `<tr><td>${w.w_title}</td><td>${formatDate(w.w_date)}</td></tr>`).join('') + '</table>' :
+            '<p class="text-muted">暂无数据</p>';
+    } catch(e) { document.getElementById('recentWork').innerHTML = '<p class="text-muted">无权限</p>'; }
+}
+loadDashboard();
+</script>
+{% endblock %}

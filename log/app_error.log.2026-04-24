@@ -1,0 +1,28 @@
+2026-04-24 20:04:24 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:86 - 调用Dify API失败: Client error '404 NOT FOUND' for url 'http://192.168.184.128/v1/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-24 20:05:54 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:86 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:06:01 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:86 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:09:53 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:81 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:14:18 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:81 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:16:41 - app.utils.dify_client - ERROR - dify_client.py:29 - Dify API错误: status=400, body={"code":"not_workflow_app","message":"Please check if your app mode matches the right API route.","status":400}
+
+2026-04-24 20:16:41 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:81 - 调用Dify API失败: Dify API错误(400): {"code":"not_workflow_app","message":"Please check if your app mode matches the right API route.","status":400}
+
+2026-04-24 21:16:34 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:19:32 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:22:27 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:28:43 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:28:43 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:30:35 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:30:35 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+

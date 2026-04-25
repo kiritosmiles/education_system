@@ -1,0 +1,940 @@
+2026-04-24 09:36:18 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 09:36:18 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 09:36:18 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 09:36:21 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 09:36:21 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 09:36:21 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 09:36:25 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 50.00ms
+2026-04-24 09:39:17 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 3.42ms
+2026-04-24 09:39:41 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 2.52ms
+2026-04-24 09:40:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 09:40:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 80.03ms
+2026-04-24 09:40:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 400 - 耗时: 3.00ms
+2026-04-24 09:41:29 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.00ms
+2026-04-24 09:46:18 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 09:46:18 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 09:46:18 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 09:46:51 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 09:46:51 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 09:46:51 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 09:48:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 19.63ms
+2026-04-24 09:49:09 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.99ms
+2026-04-24 09:49:44 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 09:49:44 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 09:49:44 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 09:49:46 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 09:49:46 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 09:49:46 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 09:53:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 09:53:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 16.00ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 5.82ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 24.01ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 27.00ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 17.00ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 09:53:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 09:53:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 09:53:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 09:53:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers/1 - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 09:53:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - PUT /api/customers/1 - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 09:53:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 09:54:46 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.39ms
+2026-04-24 09:55:25 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.99ms
+2026-04-24 09:57:48 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 2.00ms
+2026-04-24 09:58:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 09:58:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 400 - 耗时: 4.00ms
+2026-04-24 10:01:40 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 10:01:40 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 10:01:40 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 10:01:59 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 9.00ms
+2026-04-24 10:02:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 400 - 耗时: 13.00ms
+2026-04-24 10:02:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 10:02:50 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.99ms
+2026-04-24 10:03:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 3.00ms
+2026-04-24 10:05:28 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 6.41ms
+2026-04-24 10:06:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 10:07:23 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.00ms
+2026-04-24 10:08:25 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 400 - 耗时: 5.01ms
+2026-04-24 10:09:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 400 - 耗时: 3.00ms
+2026-04-24 10:10:11 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 400 - 耗时: 4.00ms
+2026-04-24 10:10:32 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 400 - 耗时: 4.00ms
+2026-04-24 10:11:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 400 - 耗时: 4.00ms
+2026-04-24 10:11:21 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 2.00ms
+2026-04-24 10:11:51 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 400 - 耗时: 6.00ms
+2026-04-24 10:14:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/customers - 状态码: 401 - 耗时: 2.00ms
+2026-04-24 10:17:47 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 10:18:08 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 401 - 耗时: 2.00ms
+2026-04-24 10:20:02 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.11ms
+2026-04-24 10:20:26 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 5.00ms
+2026-04-24 10:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 10:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 87.00ms
+2026-04-24 10:26:05 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 10:34:07 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 3.58ms
+2026-04-24 10:38:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 11:09:45 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 11:09:45 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 11:09:45 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 11:10:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 11:13:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:14:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 11:15:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:16:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 11:19:21 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 11:19:21 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 11:19:21 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 11:19:22 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 11:19:22 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 11:19:22 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 11:19:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 11:19:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:19:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:19:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:19:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:19:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:22:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:22:22 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 11:22:22 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 11:22:22 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 11:22:23 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 11:22:23 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 11:22:23 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 11:22:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 12.00ms
+2026-04-24 11:22:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:23:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 11:23:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:25:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:25:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 11:28:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:28:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:28:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 11:28:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:28:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:28:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:28:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:28:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:28:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.01ms
+2026-04-24 11:28:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 17.55ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 23.01ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 30.00ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 20.00ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 21.99ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.62ms
+2026-04-24 11:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:28:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:28:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:30:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:31:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:31:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:31:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 11:39:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:40:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 16.56ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 20.55ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 23.55ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 11.02ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.66ms
+2026-04-24 11:40:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 11:40:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:40:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 11:40:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:40:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 17.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 21.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 21.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 22.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:41:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 11:42:21 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 11:42:21 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 11:42:21 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 12.00ms
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 64.00ms
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 74.00ms
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 55.00ms
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 48.00ms
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 17.00ms
+2026-04-24 11:42:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 18.00ms
+2026-04-24 11:42:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 11:43:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 11:43:53 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 6.38ms
+2026-04-24 11:47:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:48:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 11:50:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 4.57ms
+2026-04-24 11:53:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:54:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:54:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 11:55:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:56:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 11:58:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 12:04:31 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 12:04:31 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 12:04:31 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 12:04:33 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 12:04:33 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 12:04:33 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 12:04:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 12:04:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 12:04:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 18.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 30.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 29.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 31.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 12:04:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 12:04:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 12:06:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 12:22:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 12:24:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:24:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 12:42:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 12:42:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:44:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 15.05ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 17.05ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 18.05ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 12:44:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 12:44:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 12:52:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:52:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 15.20ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 11.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 12:52:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.01ms
+2026-04-24 12:52:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:53:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 12:53:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 13:01:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 13:03:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 13:03:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/ai-chat/log - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 13:03:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 13:04:33 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 13:04:33 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 13:04:33 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 14:00:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 9.64ms
+2026-04-24 14:00:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 14:02:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 14:04:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 61.01ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 60.00ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 61.00ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 16.00ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 14:04:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 14:04:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 14:04:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 14:04:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 14:13:03 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 14:13:03 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 14:13:03 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 14:13:04 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 14:13:04 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 14:13:04 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 14:13:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 14:13:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 14:27:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 14:27:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 14:27:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 14:27:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 14:27:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 14:27:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 14:27:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 14:32:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 14:32:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 28.01ms
+2026-04-24 14:32:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 14:32:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 14:32:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 14:32:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 14:32:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 14:32:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 14:32:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 14:32:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 14:32:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 14:32:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 14:47:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 14:47:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 14:47:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 14:47:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 69.00ms
+2026-04-24 14:48:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 401 - 耗时: 1.01ms
+2026-04-24 14:48:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 14:48:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 4.00ms
+2026-04-24 14:48:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 14:49:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 14:50:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 4.47ms
+2026-04-24 15:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 15:36:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 15:36:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 15:36:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 15:37:30 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 15:37:30 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 15:37:30 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 15:37:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 15:37:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 74.00ms
+2026-04-24 15:37:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 401 - 耗时: 8.00ms
+2026-04-24 15:37:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 26.00ms
+2026-04-24 15:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.99ms
+2026-04-24 15:45:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.01ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 5.62ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 8.00ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 18.00ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 17.99ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 15:45:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:45:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 15:45:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 10.09ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 11.09ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 17.09ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.99ms
+2026-04-24 15:45:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:45:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 15:45:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 15:45:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 15:45:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 15.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 16.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:45:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 15:46:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 15:46:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 15:47:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 15:47:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 11.95ms
+2026-04-24 15:48:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 15:48:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 18.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 19.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 20.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:48:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 15:48:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 15:48:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.20ms
+2026-04-24 15:48:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 15:48:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 15:49:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 15:51:10 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 15:51:19 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 401 - 耗时: 2.00ms
+2026-04-24 15:53:52 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 15:54:02 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 15:57:11 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 15:57:32 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 16:00:19 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.99ms
+2026-04-24 16:00:30 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 422 - 耗时: 5.00ms
+2026-04-24 16:03:10 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 16:03:20 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 16:10:14 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 16:10:35 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 16:11:44 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 16:11:58 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 16:12:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 16:12:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 16:12:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 16:12:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 5.93ms
+2026-04-24 16:12:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 16:13:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/email/send - 状态码: 500 - 耗时: 619.27ms
+2026-04-24 16:13:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 16:13:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/email/send - 状态码: 500 - 耗时: 460.81ms
+2026-04-24 16:15:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/email/send - 状态码: 500 - 耗时: 2732.28ms
+2026-04-24 16:15:10 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 16:15:10 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 16:15:10 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 16:15:12 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 16:15:12 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 16:15:12 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 16:15:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 16:15:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 16:15:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/email/send - 状态码: 200 - 耗时: 580.53ms
+2026-04-24 16:30:44 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 16:31:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 6.01ms
+2026-04-24 16:31:32 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 422 - 耗时: 7.00ms
+2026-04-24 16:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 16:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 92.00ms
+2026-04-24 16:34:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 16:34:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 12.01ms
+2026-04-24 16:34:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 422 - 耗时: 3.00ms
+2026-04-24 16:34:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 401 - 耗时: 1.00ms
+2026-04-24 16:34:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 16:35:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 422 - 耗时: 9.23ms
+2026-04-24 16:45:05 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 16:47:00 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 16:47:43 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 16:47:51 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 12.00ms
+2026-04-24 16:48:14 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 16:48:25 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 422 - 耗时: 5.01ms
+2026-04-24 17:06:51 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.19ms
+2026-04-24 17:07:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 17:08:46 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 17:09:03 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 17:09:53 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 17:10:03 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 17:10:48 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 17:11:09 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 17:13:29 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 17:13:41 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 17:14:39 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 17:14:59 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 17:18:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 15.00ms
+2026-04-24 17:22:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/text2sql/query - 状态码: 400 - 耗时: 553.60ms
+2026-04-24 17:23:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/text2sql/query - 状态码: 400 - 耗时: 406.45ms
+2026-04-24 17:27:18 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 17:27:34 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1095.72ms
+2026-04-24 17:28:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 18:56:06 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 10.04ms
+2026-04-24 18:56:19 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 642.42ms
+2026-04-24 19:01:08 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:01:08 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:01:08 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:01:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 19:01:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 19:02:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:02:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 19:02:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 24.00ms
+2026-04-24 19:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:02:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:02:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 19:03:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/industry-repos - 状态码: 200 - 耗时: 11.00ms
+2026-04-24 19:03:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 19:03:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:03:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:03:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 19:03:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos/1 - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 19:03:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:03:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:05:15 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:05:15 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:05:15 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:07:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 19:08:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/email/send - 状态码: 422 - 耗时: 18.00ms
+2026-04-24 19:08:14 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:08:14 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:08:14 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:08:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 19:08:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/email/send - 状态码: 200 - 耗时: 937.72ms
+2026-04-24 19:11:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 19:11:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:11:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 19:13:15 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:13:15 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:13:15 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:15:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 19:19:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:19:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 81.66ms
+2026-04-24 19:19:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 7.99ms
+2026-04-24 19:19:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 19:19:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 19:19:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 32.00ms
+2026-04-24 19:28:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:28:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:30:16 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:30:16 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:30:16 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 77.59ms
+2026-04-24 19:30:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:30:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:30:49 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:30:49 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:30:49 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:30:53 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:30:53 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:30:53 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:30:55 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:30:55 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:30:55 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:31:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 19:31:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 19:31:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 71.99ms
+2026-04-24 19:31:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/all/list - 状态码: 401 - 耗时: 4.00ms
+2026-04-24 19:32:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/all/list - 状态码: 401 - 耗时: 139.99ms
+2026-04-24 19:32:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 21.60ms
+2026-04-24 19:32:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/all/list - 状态码: 200 - 耗时: 11.00ms
+2026-04-24 19:33:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:33:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 14.99ms
+2026-04-24 19:33:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:33:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 19:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 19:35:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 0.63ms
+2026-04-24 19:35:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.61ms
+2026-04-24 19:35:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.64ms
+2026-04-24 19:35:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 1.27ms
+2026-04-24 19:35:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 4.41ms
+2026-04-24 19:35:52 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:35:52 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:35:52 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 19:36:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:36:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 99.99ms
+2026-04-24 19:36:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:36:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:36:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/all/list - 状态码: 422 - 耗时: 28.44ms
+2026-04-24 19:36:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/all/list - 状态码: 200 - 耗时: 11.00ms
+2026-04-24 19:36:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/all/list - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 19:54:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 19:54:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 17.00ms
+2026-04-24 19:54:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 19:54:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 19:54:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 19:54:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 19:54:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 19:54:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 19:54:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 19:54:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 19:54:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 19:55:53 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 19:55:53 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 19:55:53 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:03 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:03 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:03 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:05 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:05 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:05 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:13 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:13 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:13 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:14 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:14 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:14 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:43 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:43 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:43 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:44 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:44 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:44 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:52 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:52 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:52 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:02:54 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:02:54 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:02:54 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:03:32 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:03:32 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:03:32 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:03:35 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:03:35 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:03:35 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:03:35 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:03:35 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:03:35 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:03:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 20:03:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 37.99ms
+2026-04-24 20:03:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/5 - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:04:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 400 - 耗时: 7.00ms
+2026-04-24 20:04:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 400 - 耗时: 6.00ms
+2026-04-24 20:04:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 400 - 耗时: 6.00ms
+2026-04-24 20:04:24 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/v1/workflows/run "HTTP/1.1 404 NOT FOUND"
+2026-04-24 20:04:24 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:86 - 调用Dify API失败: Client error '404 NOT FOUND' for url 'http://192.168.184.128/v1/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-24 20:04:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 500 - 耗时: 52.61ms
+2026-04-24 20:05:03 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:05:03 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:05:03 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:05:05 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:05:05 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:05:05 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:05:05 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:05:05 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:05:05 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:05:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 20:05:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 37.70ms
+2026-04-24 20:05:54 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/workflows/run "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 20:05:54 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:86 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:05:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 500 - 耗时: 89.07ms
+2026-04-24 20:06:01 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/workflows/run "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 20:06:01 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:86 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:06:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 500 - 耗时: 51.81ms
+2026-04-24 20:09:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 20:09:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 9.01ms
+2026-04-24 20:09:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 400 - 耗时: 5.00ms
+2026-04-24 20:09:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 20:09:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 20:09:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 20:09:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 400 - 耗时: 5.00ms
+2026-04-24 20:09:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:09:35 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:09:35 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:09:35 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:09:35 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:09:35 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:09:35 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:09:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 18.99ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 31.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 37.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 41.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 14.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 20:09:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 20:09:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 20:09:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 20:09:53 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/workflows/run "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 20:09:53 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:81 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:09:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 500 - 耗时: 51.00ms
+2026-04-24 20:13:54 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:13:54 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:13:54 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:13:56 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:13:56 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:13:56 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:13:56 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:13:56 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:13:56 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:14:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 20:14:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 33.00ms
+2026-04-24 20:14:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 20:14:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 20:14:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 20:14:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 18.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 47.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 30.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 16.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 20:14:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 20:14:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 20:14:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 20:14:18 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/workflows/run "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 20:14:18 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:81 - 调用Dify API失败: Client error '400 BAD REQUEST' for url 'http://192.168.184.128/v1/workflows/run'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-04-24 20:14:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 500 - 耗时: 50.59ms
+2026-04-24 20:16:30 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:16:30 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:16:30 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:16:30 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:16:30 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:16:30 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:16:41 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/workflows/run "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 20:16:41 - app.utils.dify_client - ERROR - dify_client.py:29 - Dify API错误: status=400, body={"code":"not_workflow_app","message":"Please check if your app mode matches the right API route.","status":400}
+
+2026-04-24 20:16:41 - app.controllers.work_repo_sum_controller - ERROR - work_repo_sum_controller.py:81 - 调用Dify API失败: Dify API错误(400): {"code":"not_workflow_app","message":"Please check if your app mode matches the right API route.","status":400}
+
+2026-04-24 20:16:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 500 - 耗时: 65.85ms
+2026-04-24 20:18:56 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:18:56 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:18:56 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:18:56 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:18:56 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:18:56 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:20:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 20:20:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 26.00ms
+2026-04-24 20:20:35 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 3.00ms
+2026-04-24 20:20:35 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 20:20:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 5375.55ms
+2026-04-24 20:20:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:20:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/5 - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:20:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/6 - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 20:20:59 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.00ms
+2026-04-24 20:20:59 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 20:20:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 562.88ms
+2026-04-24 20:20:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 20:21:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/7 - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 20:23:26 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 20:28:55 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:28:55 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:28:55 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:28:55 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:28:55 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:28:55 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:29:27 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:29:27 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:29:27 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:29:27 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:29:27 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:29:27 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:29:47 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:29:47 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:29:47 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:29:49 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:29:49 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:29:49 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:29:49 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:29:49 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:29:49 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:29:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 20:29:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 37.00ms
+2026-04-24 20:29:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 20:29:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 20:29:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 5.87ms
+2026-04-24 20:29:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 20:29:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 20:29:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 36.00ms
+2026-04-24 20:29:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 41.00ms
+2026-04-24 20:29:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 49.00ms
+2026-04-24 20:29:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 18.99ms
+2026-04-24 20:29:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 20:29:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.96ms
+2026-04-24 20:30:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 20:30:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 20:30:09 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 4.00ms
+2026-04-24 20:30:09 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 20:30:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 5424.92ms
+2026-04-24 20:30:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 20:30:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/8 - 状态码: 200 - 耗时: 6.03ms
+2026-04-24 20:34:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/8 - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 20:44:39 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:44:39 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:44:39 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:44:41 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 20:44:41 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 20:44:41 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 20:44:41 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 20:44:41 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 20:44:41 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 20:46:06 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 2.00ms
+2026-04-24 20:46:06 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 20:46:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 447.10ms
+2026-04-24 20:46:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 10.60ms
+2026-04-24 20:46:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/9 - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 20:47:00 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 422 - 耗时: 1.00ms
+2026-04-24 20:47:00 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 20:47:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 200.55ms
+2026-04-24 20:47:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 20:47:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/10 - 状态码: 200 - 耗时: 4.00ms
+2026-04-24 21:14:40 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:14:40 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:14:40 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:14:40 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:14:40 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:14:40 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:15:11 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:15:11 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:15:11 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:15:12 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:15:12 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:15:12 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:16:14 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:16:14 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:16:14 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:16:14 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:16:14 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:16:14 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:16:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 21:16:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:16:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 21:16:34 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 21:16:34 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:16:34 - app.controllers.auth_controller - WARNING - auth_controller.py:33 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 63.45ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 39.59ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 44.60ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 51.60ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 20.00ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 21:16:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 21:18:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 21:18:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 21:18:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:18:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 21:18:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:18:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 21:18:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 21:19:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 21:19:32 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 21:19:32 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:19:32 - app.controllers.auth_controller - WARNING - auth_controller.py:33 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 36.00ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 12.61ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 13.61ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 14.61ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-24 21:19:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 21:22:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
+2026-04-24 21:22:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:22:11 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:22:11 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:22:11 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:22:13 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:22:13 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:22:13 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:22:13 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:22:13 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:22:13 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:22:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 21:22:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 21:22:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-24 21:22:27 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 21:22:27 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:22:27 - app.controllers.auth_controller - WARNING - auth_controller.py:33 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 69.80ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 40.39ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 51.20ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 63.21ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 22.00ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 21:22:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-24 21:22:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 21:27:11 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:27:11 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:27:11 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:27:11 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:27:11 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:27:11 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:28:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 9.52ms
+2026-04-24 21:28:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 21:28:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 35.00ms
+2026-04-24 21:28:30 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:28:30 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:28:30 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:28:31 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:28:31 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:28:31 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:28:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 10.59ms
+2026-04-24 21:28:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 21:28:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:28:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.58ms
+2026-04-24 21:28:43 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-24 21:28:43 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 21:28:43 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:28:43 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:28:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 65.12ms
+2026-04-24 21:28:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 21:28:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 22.00ms
+2026-04-24 21:28:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 24.63ms
+2026-04-24 21:28:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 24.20ms
+2026-04-24 21:28:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 21.20ms
+2026-04-24 21:28:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:28:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 21:28:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:30:15 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:30:15 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:30:15 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:30:16 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:30:16 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:30:16 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:30:16 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:30:16 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:30:16 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:30:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 21:30:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:30:34 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-24 21:30:35 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
+2026-04-24 21:30:35 - app.utils.dify_client - ERROR - dify_client.py:40 - Dify API错误: status=400, body={"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:30:35 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: Dify API错误(400): {"code":"invalid_param","message":"token in input form must be less than 48 characters","status":400}
+
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 62.72ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 36.00ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 41.65ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 42.65ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 14.00ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 21:30:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-24 21:33:15 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:33:15 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:33:15 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:33:16 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:33:16 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:33:16 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:33:17 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:33:17 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:33:17 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:33:40 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:33:40 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:33:40 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:33:42 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:33:42 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:33:42 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:33:42 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:33:42 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:33:42 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-24 21:33:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:33:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
+2026-04-24 21:33:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
+2026-04-24 21:33:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-24 21:33:51 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-24 21:33:53 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-24 21:33:53 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-24 21:33:53 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 21:33:53 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzEyNDAzMX0.PWO
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2259.59ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 12.00ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 12.01ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 17.00ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 13.00ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 9.00ms
+2026-04-24 21:33:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
+2026-04-24 21:33:56 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 21:33:56 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzEyNDAzM30.6GO
+2026-04-24 21:33:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2990.30ms
+2026-04-24 21:34:00 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 21:34:00 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzEyNDAzM30.6GO
+2026-04-24 21:34:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 7171.97ms
+2026-04-24 21:35:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 3.00ms
+2026-04-24 21:35:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 14.00ms
+2026-04-24 21:35:06 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-24 21:35:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 2920.70ms
+2026-04-24 21:35:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
+2026-04-24 21:35:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/11 - 状态码: 200 - 耗时: 5.60ms
+2026-04-24 21:50:56 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:50:56 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:50:56 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:50:57 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-24 21:50:57 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-24 21:50:57 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-24 21:50:57 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-24 21:50:57 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-24 21:50:57 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started

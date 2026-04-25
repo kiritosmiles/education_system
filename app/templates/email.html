@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}邮件推送{% endblock %}
+{% block content %}
+<div class="page-header">
+    <h3><i class="bi bi-envelope"></i> 邮件推送</h3>
+</div>
+<div class="card">
+    <div class="card-body">
+        <form id="emailForm">
+            <div class="mb-3"><label class="form-label">收件人邮箱</label><input type="email" class="form-control" id="f_to_email" required></div>
+            <div class="mb-3"><label class="form-label">邮件主题</label><input type="text" class="form-control" id="f_subject" required></div>
+            <div class="mb-3"><label class="form-label">邮件内容</label><textarea class="form-control" id="f_content" rows="6" required></textarea></div>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">附件类型</label>
+                    <select class="form-select" id="f_attachment_type">
+                        <option value="">无附件</option>
+                        <option value="work_repo">工作日报</option>
+                        <option value="industry_repo">行业周报</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label class="form-label">附件ID</label>
+                    <input type="number" class="form-control" id="f_attachment_id" placeholder="输入报告ID">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">上传附件</label>
+                <input type="file" class="form-control" id="f_files" multiple>
+                <div class="form-text">支持多个文件，可选择图片、文档等</div>
+            </div>
+            <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> 发送邮件</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+document.getElementById('emailForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('to_email', document.getElementById('f_to_email').value);
+    formData.append('subject', document.getElementById('f_subject').value);
+    formData.append('content', document.getElementById('f_content').value);
+    const attachmentType = document.getElementById('f_attachment_type').value;
+    const attachmentId = document.getElementById('f_attachment_id').value;
+    if (attachmentType) formData.append('attachment_type', attachmentType);
+    if (attachmentId) formData.append('attachment_id', attachmentId);
+    const files = document.getElementById('f_files').files;
+    for (let i = 0; i < files.length; i++) {
+        formData.append('files', files[i]);
+    }
+    try {
+        const res = await fetch('/api/email/send', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + getToken() },
+            body: formData
+        });
+        const data = await res.json();
+        if (data.code === 200) { showToast('邮件发送成功'); document.getElementById('emailForm').reset(); }
+        else { showToast(data.msg || '发送失败', 'danger'); }
+    } catch(err) { showToast('发送失败: ' + (err.message||''), 'danger'); }
+});
+</script>
+{% endblock %}

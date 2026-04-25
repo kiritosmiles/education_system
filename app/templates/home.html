@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广东省教育服务有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent: #c8102e;
+            --gold: #b8860b;
+            --light-bg: #f8f9fa;
+            --section-padding: 80px 0;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; color: #333; }
+
+        /* Navbar */
+        .navbar-custom {
+            background: linear-gradient(135deg, var(--primary) 0%, #0d2137 100%);
+            padding: 12px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,.15);
+        }
+        .navbar-custom .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff !important;
+            letter-spacing: 1px;
+        }
+        .navbar-custom .nav-link { color: rgba(255,255,255,.85) !important; font-weight: 500; padding: 8px 18px !important; transition: .3s; }
+        .navbar-custom .nav-link:hover { color: #fff !important; }
+        .navbar-custom .btn-login { background: var(--accent); border: none; color: #fff; border-radius: 20px; padding: 6px 24px; font-weight: 600; }
+        .navbar-custom .btn-login:hover { background: #a50d26; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #0a1929 60%, var(--accent) 100%);
+            color: #fff;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(200,16,46,.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(184,134,11,.1) 0%, transparent 40%);
+            animation: heroFloat 20s ease-in-out infinite;
+        }
+        @keyframes heroFloat { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-2%,2%); } }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,.3); }
+        .hero .lead { font-size: 1.25rem; opacity: .9; max-width: 700px; }
+
+        /* Sections */
+        section { padding: var(--section-padding); }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.05rem; }
+
+        /* Cards */
+        .info-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 35px 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            height: 100%;
+            transition: transform .3s, box-shadow .3s;
+            border-top: 3px solid transparent;
+        }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,.1); }
+        .info-card .card-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .info-card h5 { font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+        .info-card p { color: #555; line-height: 1.8; font-size: .95rem; }
+
+        /* Mission & Values */
+        .mv-section { background: var(--light-bg); }
+        .mv-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+        }
+        .mv-card h4 { color: var(--accent); font-weight: 700; margin-bottom: 20px; }
+        .mv-card .mv-item { padding: 12px 0; border-bottom: 1px dashed #e0e0e0; }
+        .mv-card .mv-item:last-child { border-bottom: none; }
+        .mv-card .mv-item p { margin-bottom: 0; color: #555; line-height: 1.8; }
+
+        /* Business */
+        .biz-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            height: 100%;
+            transition: transform .3s;
+        }
+        .biz-card:hover { transform: translateY(-4px); }
+        .biz-card .biz-header {
+            background: linear-gradient(135deg, var(--primary), #2c5f8a);
+            color: #fff;
+            padding: 25px 30px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .biz-card .biz-body { padding: 25px 30px; }
+        .biz-card .biz-body p { color: #555; line-height: 1.8; font-size: .95rem; text-indent: 2em; }
+
+        /* Departments */
+        .dept-section { background: var(--light-bg); }
+        .dept-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            height: 100%;
+            border-left: 4px solid var(--accent);
+            transition: transform .3s;
+        }
+        .dept-card:hover { transform: translateY(-3px); }
+        .dept-card h5 { color: var(--primary); font-weight: 700; margin-bottom: 12px; }
+        .dept-card p { color: #555; line-height: 1.8; font-size: .93rem; text-indent: 2em; }
+
+        /* Sub-project tabs */
+        .sub-project-section { padding: 40px 0 0; }
+        .sub-nav .nav-link {
+            color: #555;
+            font-weight: 600;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            padding: 8px 24px;
+            margin: 0 5px 10px;
+            transition: .3s;
+        }
+        .sub-nav .nav-link.active, .sub-nav .nav-link:hover {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .sub-content { padding: 30px 0; }
+        .sub-content p { color: #555; line-height: 2; text-indent: 2em; }
+
+        /* Contact */
+        .contact-section { background: linear-gradient(135deg, var(--primary), #0d2137); color: #fff; }
+        .contact-item { display: flex; align-items: flex-start; margin-bottom: 18px; }
+        .contact-item i { font-size: 1.3rem; margin-right: 15px; color: var(--gold); margin-top: 3px; }
+        .contact-item span { line-height: 1.6; }
+
+        /* Footer */
+        footer {
+            background: #0a1929;
+            color: rgba(255,255,255,.6);
+            padding: 25px 0;
+            text-align: center;
+            font-size: .9rem;
+        }
+
+        /* Scroll-to-top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            font-size: 1.2rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,.2);
+            z-index: 999;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#hero"><i class="bi bi-mortarboard-fill me-2"></i>粤教服务</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" style="border-color:rgba(255,255,255,.3)">
+            <span class="navbar-toggler-icon" style="filter:invert(1)"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navContent">
+            <ul class="navbar-nav ms-auto me-3">
+                <li class="nav-item"><a class="nav-link" href="#about">企业简介</a></li>
+                <li class="nav-item"><a class="nav-link" href="#mission">使命与价值观</a></li>
+                <li class="nav-item"><a class="nav-link" href="#business">主营业务</a></li>
+                <li class="nav-item"><a class="nav-link" href="#departments">部门架构</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">联系我们</a></li>
+            </ul>
+            <a class="btn btn-login" href="/login"><i class="bi bi-box-arrow-in-right me-1"></i>员工登录</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+    <div class="container position-relative" style="z-index:1">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1 class="mb-3">广东省教育服务有限公司</h1>
+                <p class="lead mb-1">粤教服务 · 创办于1981年</p>
+                <p class="lead" style="opacity:.8">致力让生活更美好 · 向上向善，实干笃行</p>
+                <div class="mt-4">
+                    <a href="#about" class="btn btn-outline-light btn-lg me-2" style="border-radius:25px;padding:10px 30px">了解更多</a>
+                    <a href="#business" class="btn btn-lg" style="background:var(--accent);border:none;border-radius:25px;padding:10px 30px;color:#fff">主营业务</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">企业简介</h2>
+        <p class="section-subtitle">坚守初心，砥砺前行四十余载</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="info-card" style="border-top-color: var(--accent);">
+                    <p style="font-size:1.05rem;line-height:2;text-indent:2em">
+                        广东省教育服务有限公司（简称"粤教服务"），创办于1981年，成立至今，始终坚守初心，砥砺前行，通过整合各方优质教育资源搭建专业、可靠的文化教育综合服务平台，一直致力于服务广东教育事业，全力打造省属国有优质教育服务品牌。
+                    </p>
+                    <p style="font-size:1.05rem;line-height:2;text-indent:2em">
+                        2024年3月，粤教服务划转至广东教育国际交流服务中心有限公司（简称"粤教国际"）。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="mv-section" id="mission">
+    <div class="container">
+        <h2 class="section-title">使命与价值观</h2>
+        <p class="section-subtitle">致力让生活更美好 · 向上向善，实干笃行</p>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="mv-card">
+                    <h4><i class="bi bi-bullseye me-2"></i>我们的使命：致力让生活更美好</h4>
+                    <div class="mv-item">
+                        <p>习近平总书记深刻指出："人民对美好生活的向往就是我们的奋斗目标"。我国正处于实现中华民族伟大复兴的关键时期，经济已由高速增长阶段转向高质量发展阶段，社会主要矛盾发生变化，人民对美好生活的向往，是中国未来发展的持久动力。</p>
+                    </div>
+                    <div class="mv-item">
+                        <p>"致力"寓意信心坚定、勇于担当、知行合一；"让"蕴含持之以恒、革故鼎新、不懈奋斗。两者搭配意在强调主动作为，以积极乐观的姿态向美而行、向好而生。</p>
+                    </div>
+                    <div class="mv-item">
+                        <p>集团多业态共融为美好生活赋能。</p>
+                    </div>
+                    <div class="mv-item">
+                        <p>激发集团全体员工活力，践行初心使命，奋力改革争先，加速企业转型升级，勇往直前创造美好生活。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mv-card">
+                    <h4><i class="bi bi-gem me-2"></i>我们的价值观：向上向善，实干笃行</h4>
+                    <div class="mv-item">
+                        <p>"向上向善"为精神指引，"实干笃行"是行动指南。追求美好生活的过程，就是企业员工不断向上向善、实干笃行的过程。</p>
+                    </div>
+                    <div class="mv-item">
+                        <p>外化于行，"向上"是社会责任。我们的职责是传播主流、进步的优秀文化；"向上"亦是员工的精神状态，与时俱进，奋发昂扬。</p>
+                    </div>
+                    <div class="mv-item">
+                        <p>内化于心，"向善"是内在人格。个人成长必先修其德，以健全愉悦的精神，塑造正直、善良的美好品德，以德立身，以德立业。</p>
+                    </div>
+                    <div class="mv-item">
+                        <p>实干笃行，知行合一。学而能用是真学，知而能行是真知。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Business -->
+<section id="business">
+    <div class="container">
+        <h2 class="section-title">主营业务</h2>
+        <p class="section-subtitle">国际教育 · 智慧教育 · 素质教育 · 实体教育</p>
+
+        <!-- 四大业务概览 -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="info-card text-center" style="border-top-color:#c8102e">
+                    <div class="card-icon"><i class="bi bi-globe-americas" style="color:#c8102e"></i></div>
+                    <h5>国际教育</h5>
+                    <p>双元制教育、学历提升、国际留学、国际研学，培养兼具本土情怀与国际视野的复合型人才</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="info-card text-center" style="border-top-color:#1a3a5c">
+                    <div class="card-icon"><i class="bi bi-cpu" style="color:#1a3a5c"></i></div>
+                    <h5>智慧教育</h5>
+                    <p>智慧校园、AI助教、类脑计算实验室、人工智能与大数据实验室，推动教育智能化转型</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="info-card text-center" style="border-top-color:#b8860b">
+                    <div class="card-icon"><i class="bi bi-palette" style="color:#b8860b"></i></div>
+                    <h5>素质教育</h5>
+                    <p>课后服务、编程启蒙、STEAM创客、非遗手作，构建"教育+科技+文化"生态体系</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="info-card text-center" style="border-top-color:#28a745">
+                    <div class="card-icon"><i class="bi bi-building" style="color:#28a745"></i></div>
+                    <h5>实体教育</h5>
+                    <p>智能装备、新能源基础设施、光储充停一体化，赋能校园与城市智慧化建设</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 国际教育详情 -->
+        <div class="biz-card mb-4">
+            <div class="biz-header"><i class="bi bi-globe-americas me-2"></i>国际教育</div>
+            <div class="biz-body">
+                <p>在国家大力推动教育对外开放的时代浪潮下，国际教育迎来了全新的发展机遇。党的二十届三中全会高瞻远瞩，明确提出推进高水平教育开放，积极鼓励国外高水平理工类大学来华合作办学。在此政策指引下，国际教育领域积极整合全球优质教育资源，致力于培养出一批又一批兼具深厚本土情怀与广阔国际视野的复合型人才，使其能够在多元文化环境中实现高效协作，从容解决复杂问题。</p>
+                <p>广东省教育服务有限公司（粤教服务）自1981年创办以来，始终坚守服务广东教育的初心，历经岁月沉淀，积累了丰富经验。2024年3月划转至粤教国际后，依托自身独特优势，大力整合各方资源，成功搭建起专业且可靠的综合服务平台，为广东国际教育的深入开展提供了有力支撑。目前，粤教服务正全力以赴，为打造省属国有优质品牌而努力奋进，持续推动区域国际教育迈向高质量发展的新阶段。</p>
+            </div>
+        </div>
+
+        <!-- 子项目 Tab -->
+        <div class="sub-project-section">
+            <ul class="nav sub-nav justify-content-center flex-wrap" role="tablist">
+                <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#tab-dual">双元制项目</a></li>
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-degree">学历提升项目</a></li>
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-study">国际留学项目</a></li>
+                <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#tab-camp">国际研学项目</a></li>
+            </ul>
+            <div class="tab-content sub-content">
+                <div class="tab-pane fade show active" id="tab-dual">
+                    <div class="info-card">
+                        <h5><i class="bi bi-gear me-2" style="color:var(--accent)"></i>双元制项目</h5>
+                        <p>德国职业人才培养计划是源于德国的一种职业培训模式。受训者必须经过两个场所的培训。其中，一边是在职业学校，主要向学生传授与职业有关的专业知识；另一边是企业或公共事业单位等校外实训场所，主要让学生在企业里接受职业技能方面的专业培训。这种模式在德国的企业中应用很广，近几年也被中国的一些企业借鉴采用。</p>
+                        <p>根据培训职业的不同，培训年限为两年至三年半。提供企业培训的有手工业、工商业、服务业、自由职业和公共服务业。培训的前提是由培训岗位的申请者办理相关申请手续。一般情况下，培训生每周有三至四日在企业学习其培训职业的实践和手工技能，此外培训生每周还要在职业学校学习8到12课时的课程。课程分为针对相关职业的专业课程以及德语、政治或体育等通识课程。培训的费用由企业和国家共同承担，企业每月向培训生发放酬金，国家则承担职业学校的开支。</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-degree">
+                    <div class="info-card">
+                        <h5><i class="bi bi-award me-2" style="color:var(--accent)"></i>学历提升项目</h5>
+                        <p>新加坡国际本硕升学项目通常指的是由新加坡的教育机构（包括公立大学附属学院、私立大学、国际学校等）开设的，专门为国际学生设计的、旨在帮助学生顺利衔接进入新加坡或海外大学本科或硕士阶段的课程。该项目是获得中国教育部留学服务中心的指导和支持。通常，国内专科升到本科需要2-3年，本科升到研究生也需要2-3年。同等条件下，就读国外名校，专升本只需1.5年，本科升硕士仅需一年。</p>
+                        <p>选择该留学项目能为中国学生提供一条便捷、有效、安全的留学通道，帮助中国学生不仅能够获得国际化名校录取和学位证书，还能够拓宽国际视野并提升跨文化交流能力，实现弯道超车。回国后，学位证书受到中国教育部认证，享受留学生归国福利。</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-study">
+                    <div class="info-card">
+                        <h5><i class="bi bi-airplane me-2" style="color:var(--accent)"></i>国际留学项目</h5>
+                        <p>粤教服务作为国际化教育支持平台，通过系统性全球院校网络建设，与美、英、加、澳、新等英语国家，法、德、意、瑞士、荷兰等欧洲教育强国，以及日、韩、新、马、泰等亚洲教育枢纽的数百所院校建立深度合作。业务核心聚焦留学全流程服务，提供涵盖院校精准匹配、申请材料规范化指导、签证策略优化的全周期管理，依托成熟的资源整合与服务标准，连续保持98%以上的签证通过率，显著降低学生留学风险。</p>
+                        <p>当前服务网络已实现对全球主流留学目的国的全面覆盖，形成以英语国家为主体、欧亚教育强国为两翼的战略布局。通过持续优化院校资源库与服务体系，为学员构建高效合规的海外教育通道，切实支撑国际化人才培养目标。</p>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-camp">
+                    <div class="info-card">
+                        <h5><i class="bi bi-backpack me-2" style="color:var(--accent)"></i>国际研学项目</h5>
+                        <p>国际研学项目面向中小学生、高职高专及大学生等，分层设计培养方案，打造国际特色课程。中小学生侧重文化浸润与名校初体验，安排博物馆参访、民俗体验及名校校园导览，播撒国际视野种子；高职高专聚焦技能对接，走进海外职业院校实训基地与相关企业，强化实操能力；大学生深耕能源、基建等专业领域，嵌入名校课程与行业龙头参访，匹配国内企业需求。</p>
+                        <p>项目时长依学段适配，中小学设3-5天假期营，高职与大学为1-2周专项研学。结业证书与实践报告纳入国内人才储备评估体系，通过分层培养，既为国内输送具备跨文化素养的各层级人才，也搭建海外资源对接桥梁，助力国内在"走出去"中夯实人才与合作双根基。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Departments -->
+<section class="dept-section" id="departments">
+    <div class="container">
+        <h2 class="section-title">部门架构</h2>
+        <p class="section-subtitle">五大事业部协同发展，构建全方位教育服务体系</p>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="dept-card">
+                    <h5><i class="bi bi-gear me-2" style="color:var(--accent)"></i>双元制事业部</h5>
+                    <p>粤教双元制事业部，隶属于粤教服务旗下的国际交流服务部门，专注于德国双元制教育模式的深入探索与推广实践。秉持着高效、专业的原则，致力于构建一座连接中德人才交流与合作的桥梁，推动两国在教育、技术及文化等多领域的深入对话与合作。</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dept-card">
+                    <h5><i class="bi bi-robot me-2" style="color:var(--accent)"></i>智能装备事业部</h5>
+                    <p>粤教服务整合了清华大学珠三角研究院、中国联通、中山大学及广州大学等多所知名高校与机构资源，成立了智能装备事业部，致力于提供一系列专业而全面的服务。核心业务涵盖大学生实习平台、智慧校园与教育信息化建设的推动、AI助教系统的部署、AI智慧党建平台的搭建、类脑计算实验室的创建与运营、人工智能与大数据实验室的产教融合与专业共建项目、智慧实验室的整体设计与建设、新能源基础设施的建设（包括光储充停一体化解决方案及储能型UPS系统）以及专业培训与赛事的举办等。</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dept-card">
+                    <h5><i class="bi bi-book me-2" style="color:var(--accent)"></i>课后服务事业部</h5>
+                    <p>粤教课后服务事业部是粤教服务旗下专注"双减"政策落地与素质教育延伸的核心部门，依托集团多年教育服务经验，联合华南师范大学基础教育研究院、本地优质教培机构及非遗传承人资源，构建"教育+科技+文化"三位一体的课后服务生态体系。</p>
+                    <p><strong>核心业务：</strong>数字化管理平台（智能排课、学情追踪、家校互动）；素质课程矩阵（编程启蒙、STEAM创客、非遗手作、体育运动、心理健康）；普惠托管解决方案；区域化服务网络，年服务学生超10万人次。</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="dept-card">
+                    <h5><i class="bi bi-compass me-2" style="color:var(--accent)"></i>研学服务事业部</h5>
+                    <p>粤教研学服务事业部是集团链接"课堂知识"与"真实世界"的实践平台，整合广东省博物馆、岭南中医药博物馆、港珠澳大桥科普基地等超200个在地化研学资源，联合广东省研学旅行协会、华南农业大学等机构，打造"主题研学+劳动教育+职业体验"多维产品体系。</p>
+                    <p><strong>核心优势：</strong>课程研发能力（30+主题线路）；安全保障体系；定制化服务（年均执行超500场次）；产学研联动（与中山大学环境学院、广东科学中心合作）。</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mx-auto">
+                <div class="dept-card">
+                    <h5><i class="bi bi-trophy me-2" style="color:var(--accent)"></i>科技赛事事业部</h5>
+                    <p>粤教科技赛事事业部是集团赋能青少年科技创新能力培养的专业赛道，依托广东省青少年科技教育协会、粤港澳大湾区人工智能教育联盟等资源网络，聚焦"以赛促学、以赛促创"，打造覆盖全学段、多领域的赛事服务矩阵。</p>
+                    <p><strong>核心业务：</strong>权威赛事承办（世界机器人大会、全国青少年人工智能创新挑战赛等）；备赛赋能体系；创新成果孵化（粤教青少年创新基金）；科技素养普及（年覆盖学生超2万人次）。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <h2 class="section-title" style="color:#fff">联系我们</h2>
+        <p class="section-subtitle" style="color:rgba(255,255,255,.7)">期待与您携手共创美好未来</p>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="contact-item"><i class="bi bi-geo-alt-fill"></i><span>广东省广州市越秀区东风东路723号<br>高教大厦二楼</span></div>
+                        <div class="contact-item"><i class="bi bi-mailbox"></i><span>邮政编码：510599</span></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="contact-item"><i class="bi bi-telephone-fill"></i><span>020-37628058</span></div>
+                        <div class="contact-item"><i class="bi bi-envelope-fill"></i><span>postmaster@ges1981.com</span></div>
+                        <div class="contact-item"><i class="bi bi-wechat"></i><span>公众号：gdjfgs333</span></div>
+                        <div class="contact-item"><i class="bi bi-globe"></i><span>http://www.gdjyfw.cn</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p class="mb-1">© 2024 广东省教育服务有限公司 版权所有</p>
+        <p class="mb-0">地址：广东省广州市越秀区东风东路723号高教大厦二楼 | 电话：020-37628058</p>
+    </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+            const offset = 70;
+            const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        // Close mobile menu
+        const navCollapse = document.getElementById('navContent');
+        if (navCollapse.classList.contains('show')) {
+            bootstrap.Collapse.getOrCreateInstance(navCollapse).hide();
+        }
+    });
+});
+
+// Active nav on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.navbar-custom .nav-link');
+window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    sections.forEach(sec => {
+        const top = sec.offsetTop - 100;
+        const height = sec.offsetHeight;
+        const id = sec.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            document.querySelector(`.navbar-custom .nav-link[href="#${id}"]`)?.classList.add('active');
+        }
+    });
+});
+
+// Scroll to top button
+window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scrollTopBtn');
+    btn.style.display = window.pageYOffset > 400 ? 'flex' : 'none';
+});
+
+// Navbar background on scroll
+</script>
+
+<!-- Dify Chatbot -->
+<script>
+ window.difyChatbotConfig = {
+  token: 'Re37EYEAos2FH8h5',
+  baseUrl: 'http://192.168.184.128',
+  inputs: {
+    // You can define the inputs from the Start node here
+    // key is the variable name
+    // e.g.
+    // name: "NAME"
+  },
+  systemVariables: {
+    // user_id: 'YOU CAN DEFINE USER ID HERE',
+    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+  },
+  userVariables: {
+    // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
+    // name: 'YOU CAN DEFINE USER NAME HERE',
+  },
+ }
+</script>
+<script
+ src="http://192.168.184.128/embed.min.js"
+ id="Re37EYEAos2FH8h5"
+ defer>
+</script>
+<style>
+  #dify-chatbot-bubble-button {
+    background-color: #1C64F2 !important;
+    position: fixed !important;
+    right: 16px !important;
+    left: auto !important;
+    bottom: 16px !important;
+    z-index: 9999 !important;
+  }
+  #dify-chatbot-bubble-window {
+    width: 24rem !important;
+    height: 40rem !important;
+    position: fixed !important;
+    right: 16px !important;
+    left: auto !important;
+    bottom: 80px !important;
+    z-index: 9999 !important;
+  }
+</style>
+</body>
+</html>

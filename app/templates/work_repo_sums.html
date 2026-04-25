@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block title %}工作日报总结{% endblock %}
+{% block content %}
+<div class="page-header d-flex justify-content-between align-items-center">
+    <h3><i class="bi bi-clipboard-data"></i> 工作日报总结</h3>
+    <button class="btn btn-primary" onclick="showGenerateModal()"><i class="bi bi-magic"></i> 生成日报总结</button>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-2"><input type="date" class="form-control" id="searchDate" placeholder="指定日期"></div>
+            <div class="col-md-2"><input type="date" class="form-control" id="searchStartDate" placeholder="开始日期"></div>
+            <div class="col-md-2"><input type="date" class="form-control" id="searchEndDate" placeholder="结束日期"></div>
+            <div class="col-md-2"><button class="btn btn-primary" onclick="loadWorkRepoSums()"><i class="bi bi-search"></i> 搜索</button></div>
+        </div>
+        <table class="table table-hover">
+            <thead><tr><th>ID</th><th>总结日期</th><th>标题</th><th>创建时间</th><th>操作</th></tr></thead>
+            <tbody id="sumTable"></tbody>
+        </table>
+        <nav><ul class="pagination" id="pagination"></ul></nav>
+    </div>
+</div>
+
+<!-- 生成确认弹窗 -->
+<div class="modal fade" id="generateModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title">生成工作日报总结</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label class="form-label">选择日期</label>
+                    <input type="date" class="form-control" id="genDate">
+                </div>
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i> 将调用AI接口生成该日期的员工工作日报总结，生成过程可能需要数十秒，请耐心等待。
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="generateBtn" onclick="generateSum()">
+                    <span class="spinner-border spinner-border-sm d-none" id="genSpinner"></span>
+                    <span id="genBtnText">确认生成</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 详情弹窗 -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title" id="detailTitle">日报总结详情</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <div id="detailContent" style="white-space: pre-wrap; line-height: 1.8;"></div>
+            </div>
+            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentPage = 1;
+
+async function loadWorkRepoSums(page = 1) {
+    currentPage = page;
+    const ws_date = document.getElementById('searchDate').value;
+    const start_date = document.getElementById('searchStartDate').value;
+    const end_date = document.getElementById('searchEndDate').value;
+    let url = `/api/work-repo-sums?page=${page}&size=10`;
+    if (ws_date) url += `&ws_date=${ws_date}`;
+    if (start_date) url += `&start_date=${start_date}`;
+    if (end_date) url += `&end_date=${end_date}`;
+    try {
+        const res = await apiGet(url);
+        const items = res.data?.items || [];
+        document.getElementById('sumTable').innerHTML = items.map(s => `<tr>
+            <td>${s.ws_id}</td>
+            <td>${s.ws_date}</td>
+            <td>${s.ws_title}</td>
+            <td>${formatDate(s.create_time)}</td>
+            <td>
+                <button class="btn btn-sm btn-outline-primary" onclick="viewDetail(${s.ws_id})"><i class="bi bi-eye"></i></button>
+                <button class="btn btn-sm btn-outline-danger" onclick="deleteSum(${s.ws_id})"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>`).join('');
+        const total = res.data?.total || 0;
+        const pages = Math.ceil(total / 10);
+        let html = '';
+        for (let i = 1; i <= pages; i++) html += `<li class="page-item ${i===currentPage?'active':''}"><a class="page-link" href="#" onclick="loadWorkRepoSums(${i})">${i}</a></li>`;
+        document.getElementById('pagination').innerHTML = html;
+    } catch(e) { document.getElementById('sumTable').innerHTML = '<tr><td colspan="5" class="text-center text-muted">无权限</td></tr>'; }
+}
+
+function showGenerateModal() {
+    document.getElementById('genDate').value = new Date().toISOString().split('T')[0];
+    new bootstrap.Modal(document.getElementById('generateModal')).show();
+}
+
+async function generateSum() {
+    const ws_date = document.getElementById('genDate').value;
+    if (!ws_date) { showToast('请选择日期', 'warning'); return; }
+    const spinner = document.getElementById('genSpinner');
+    const btnText = document.getElementById('genBtnText');
+    spinner.classList.remove('d-none');
+    btnText.textContent = '生成中...';
+    try {
+        const res = await apiPost(`/api/work-repo-sums/generate?ws_date=${ws_date}`);
+        if (res.code === 200) {
+            showToast('生成成功');
+            bootstrap.Modal.getInstance(document.getElementById('generateModal')).hide();
+            loadWorkRepoSums(currentPage);
+        } else {
+            showToast(res.msg || '生成失败', 'danger');
+        }
+    } catch(e) {
+        showToast('生成失败', 'danger');
+    } finally {
+        spinner.classList.add('d-none');
+        btnText.textContent = '确认生成';
+    }
+}
+
+async function viewDetail(ws_id) {
+    const res = await apiGet(`/api/work-repo-sums/${ws_id}`);
+    const s = res.data;
+    document.getElementById('detailTitle').textContent = s.ws_title;
+    document.getElementById('detailContent').textContent = s.content || '暂无内容';
+    new bootstrap.Modal(document.getElementById('detailModal')).show();
+}
+
+async function deleteSum(ws_id) {
+    if (!confirm('确认删除该日报总结？')) return;
+    await apiDelete(`/api/work-repo-sums/${ws_id}`);
+    showToast('删除成功');
+    loadWorkRepoSums(currentPage);
+}
+
+loadWorkRepoSums();
+</script>
+{% endblock %}

@@ -1,0 +1,4 @@
+2026-04-25 09:25:22 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:24 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:26 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:26 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed

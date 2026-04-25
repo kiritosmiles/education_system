@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% block title %}用户管理{% endblock %}
+{% block content %}
+<div class="page-header d-flex justify-content-between align-items-center">
+    <h3><i class="bi bi-people"></i> 用户管理</h3>
+    <button class="btn btn-primary" onclick="showAddModal()"><i class="bi bi-plus-lg"></i> 新增用户</button>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row mb-3">
+            <div class="col-md-3"><input type="text" class="form-control" id="searchUsername" placeholder="搜索用户名"></div>
+            <div class="col-md-3"><input type="text" class="form-control" id="searchName" placeholder="搜索姓名"></div>
+            <div class="col-md-3">
+                <select class="form-select" id="searchRole">
+                    <option value="">全部角色</option>
+                    <option value="0">管理员</option>
+                    <option value="1">普通员工</option>
+                    <option value="2">经理</option>
+                    <option value="3">学生</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="searchGender">
+                    <option value="">全部性别</option>
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </div>
+            <div class="col-md-3"><button class="btn btn-primary" onclick="loadUsers()"><i class="bi bi-search"></i> 搜索</button></div>
+        </div>
+        <table class="table table-hover">
+            <thead><tr><th>ID</th><th>用户名</th><th>姓名</th><th>性别</th><th>邮箱</th><th>手机</th><th>角色</th><th>创建时间</th><th>操作</th></tr></thead>
+            <tbody id="userTable"></tbody>
+        </table>
+        <nav><ul class="pagination" id="pagination"></ul></nav>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="userModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title" id="modalTitle">新增用户</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <form id="userForm">
+                    <input type="hidden" id="editUid">
+                    <div class="mb-3"><label class="form-label">用户名</label><input type="text" class="form-control" id="f_username" minlength="6" maxlength="20" required></div>
+                    <div class="mb-3" id="pwdGroup"><label class="form-label">密码</label><input type="password" class="form-control" id="f_pwd" minlength="6" maxlength="20"></div>
+                    <div class="mb-3"><label class="form-label">姓名</label><input type="text" class="form-control" id="f_name" minlength="2" maxlength="20" required></div>
+                    <div class="mb-3"><label class="form-label">性别</label><select class="form-select" id="f_gender"><option value="0">男</option><option value="1">女</option></select></div>
+                    <div class="mb-3"><label class="form-label">邮箱</label><input type="email" class="form-control" id="f_email"></div>
+                    <div class="mb-3"><label class="form-label">手机</label><input type="text" class="form-control" id="f_phone" maxlength="11"></div>
+                    <div class="mb-3"><label class="form-label">角色</label><select class="form-select" id="f_role"><option value="0">管理员</option><option value="1">普通员工</option><option value="2">经理</option><option value="3">学生</option></select></div>
+                </form>
+            </div>
+            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button><button type="button" class="btn btn-primary" onclick="saveUser()">保存</button></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+let currentPage = 1;
+async function loadUsers(page = 1) {
+    currentPage = page;
+    const username = document.getElementById('searchUsername').value;
+    const name = document.getElementById('searchName').value;
+    const role = document.getElementById('searchRole').value;
+    let url = `/api/users?page=${page}&size=10`;
+    if (username) url += `&username=${username}`;
+    if (name) url += `&name=${name}`;
+    if (role !== '') url += `&role=${role}`;
+    const gender = document.getElementById('searchGender').value;
+    if (gender !== '') url += `&gender=${gender}`;
+    const res = await apiGet(url);
+    const items = res.data?.items || [];
+    document.getElementById('userTable').innerHTML = items.map(u => `<tr>
+        <td>${u.uid}</td><td>${u.username}</td><td>${u.name}</td><td>${genderText(u.gender)}</td>
+        <td>${u.email||'-'}</td><td>${u.phone||'-'}</td><td>${roleText(u.role)}</td><td>${formatDate(u.create_time)}</td>
+        <td><button class="btn btn-sm btn-outline-primary" onclick="editUser(${u.uid})"><i class="bi bi-pencil"></i></button>
+        <button class="btn btn-sm btn-outline-danger" onclick="deleteUser(${u.uid})"><i class="bi bi-trash"></i></button></td>
+    </tr>`).join('');
+    renderPagination(res.data?.total || 0);
+}
+
+function renderPagination(total) {
+    const pages = Math.ceil(total / 10);
+    let html = '';
+    for (let i = 1; i <= pages; i++) {
+        html += `<li class="page-item ${i===currentPage?'active':''}"><a class="page-link" href="#" onclick="loadUsers(${i})">${i}</a></li>`;
+    }
+    document.getElementById('pagination').innerHTML = html;
+}
+
+function showAddModal() {
+    document.getElementById('modalTitle').textContent = '新增用户';
+    document.getElementById('editUid').value = '';
+    document.getElementById('userForm').reset();
+    document.getElementById('pwdGroup').style.display = 'block';
+    new bootstrap.Modal(document.getElementById('userModal')).show();
+}
+
+async function editUser(uid) {
+    const res = await apiGet(`/api/users/${uid}`);
+    const u = res.data;
+    document.getElementById('modalTitle').textContent = '编辑用户';
+    document.getElementById('editUid').value = u.uid;
+    document.getElementById('f_username').value = u.username;
+    document.getElementById('f_name').value = u.name;
+    document.getElementById('f_gender').value = u.gender;
+    document.getElementById('f_email').value = u.email || '';
+    document.getElementById('f_phone').value = u.phone || '';
+    document.getElementById('f_role').value = u.role;
+    document.getElementById('pwdGroup').style.display = 'none';
+    new bootstrap.Modal(document.getElementById('userModal')).show();
+}
+
+async function saveUser() {
+    const uid = document.getElementById('editUid').value;
+    const data = {
+        username: document.getElementById('f_username').value,
+        name: document.getElementById('f_name').value,
+        gender: parseInt(document.getElementById('f_gender').value),
+        email: document.getElementById('f_email').value || null,
+        phone: document.getElementById('f_phone').value || null,
+        role: parseInt(document.getElementById('f_role').value)
+    };
+    if (uid) {
+        await apiPut(`/api/users/${uid}`, data);
+    } else {
+        data.pwd = document.getElementById('f_pwd').value;
+        await apiPost('/api/users', data);
+    }
+    bootstrap.Modal.getInstance(document.getElementById('userModal')).hide();
+    showToast(uid ? '修改成功' : '创建成功');
+    loadUsers(currentPage);
+}
+
+async function deleteUser(uid) {
+    if (!confirm('确认删除该用户？')) return;
+    await apiDelete(`/api/users/${uid}`);
+    showToast('删除成功');
+    loadUsers(currentPage);
+}
+
+loadUsers();
+</script>
+{% endblock %}

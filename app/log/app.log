@@ -1,0 +1,3 @@
+2026-04-23 20:07:29 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-23 20:07:29 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\app\log\app.log
+2026-04-23 20:07:29 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\app\log\app_error.log

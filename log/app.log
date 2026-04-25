@@ -1,0 +1,31 @@
+2026-04-25 09:24:34 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 09:24:34 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 09:24:34 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 09:24:35 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 09:24:35 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 09:24:35 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 09:24:36 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 09:24:36 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 09:24:36 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 09:24:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 23.08ms
+2026-04-25 09:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 4.00ms
+2026-04-25 09:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.24ms
+2026-04-25 09:25:01 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 09:25:03 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 09:25:05 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 09:25:05 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 09:25:22 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 21165.60ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 14.00ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 11.00ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 11.00ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-25 09:25:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 09:25:24 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 21038.70ms
+2026-04-25 09:25:26 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 21030.33ms
+2026-04-25 09:25:26 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-25 09:25:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 21027.35ms

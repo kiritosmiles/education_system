@@ -1,0 +1,59 @@
+2026-04-23 20:07:54 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-23 20:07:54 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-23 20:07:54 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-23 20:08:24 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-23 20:08:24 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-23 20:08:24 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 23.00ms
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 1.00ms
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 81.08ms
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.00ms
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:20:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 14.00ms
+2026-04-23 21:20:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:20:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 13.01ms
+2026-04-23 21:20:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:20:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 12.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 14.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 13.00ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.88ms
+2026-04-23 21:20:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
+2026-04-23 21:22:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
+2026-04-23 21:22:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-23 21:22:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:22:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.04ms
+2026-04-23 21:22:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
+2026-04-23 21:22:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-23 21:24:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/customers - 状态码: 200 - 耗时: 14.00ms
+2026-04-23 21:24:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.05ms
+2026-04-23 21:24:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers/1 - 状态码: 200 - 耗时: 6.99ms
+2026-04-23 21:24:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - PUT /api/customers/1 - 状态码: 200 - 耗时: 9.94ms
+2026-04-23 21:24:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-23 21:24:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers/1 - 状态码: 200 - 耗时: 4.00ms
+2026-04-23 21:24:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - PUT /api/customers/1 - 状态码: 200 - 耗时: 10.00ms
+2026-04-23 21:24:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
+2026-04-23 21:24:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:24:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
+2026-04-23 21:24:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/20 - 状态码: 200 - 耗时: 6.00ms
+2026-04-23 21:24:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:24:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
+2026-04-23 21:24:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:24:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 1.00ms
+2026-04-23 21:24:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/text2sql/query - 状态码: 200 - 耗时: 639.31ms
+2026-04-23 21:24:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:24:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
+2026-04-23 21:24:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 0.00ms
+2026-04-23 21:24:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.89ms
+2026-04-23 21:25:20 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 5.00ms
+2026-04-23 21:25:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:28:03 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 4.00ms
+2026-04-23 21:30:02 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/auth/login - 状态码: 200 - 耗时: 3.00ms
+2026-04-23 21:32:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/customers - 状态码: 422 - 耗时: 7.00ms
