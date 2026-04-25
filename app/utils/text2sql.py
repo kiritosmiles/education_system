@@ -1,3 +1,4 @@
+import os
 import dashscope
 from dashscope import Generation
 from app.config import get_settings
@@ -114,6 +115,12 @@ DB_SCHEMA = """
 
 
 def text2sql(question: str) -> dict:
+    # 确保 dashscope 不走代理
+    for key in ('HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY', 'all_proxy'):
+        os.environ.pop(key, None)
+    os.environ['NO_PROXY'] = '*'
+    os.environ['no_proxy'] = '*'
+
     dashscope.api_key = settings.DASHSCOPE_API_KEY
 
     prompt = f"""你是一个专业的SQL转换专家。根据以下完整的数据库表结构定义，将用户的中文自然语言问题精准转换为MySQL SELECT查询语句。

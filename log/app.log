@@ -747,3 +747,206 @@ token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc
 2026-04-25 22:27:18 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/work-repos/all/list - 状态码: 422 - 耗时: 10.00ms
 2026-04-25 22:27:18 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
 2026-04-25 22:27:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 4879.61ms
+2026-04-25 22:29:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 5.00ms
+2026-04-25 22:30:00 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 22:30:00 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 22:30:00 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 22:30:02 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 22:30:02 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 22:30:02 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 22:30:02 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 22:30:02 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 22:30:02 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 22:30:02 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-25 22:30:02 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 22:30:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-25 22:30:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 10.00ms
+2026-04-25 22:30:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 4.00ms
+2026-04-25 22:30:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 30.21ms
+2026-04-25 22:30:47 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 22:30:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/industry-repos/generate - 状态码: 200 - 耗时: 25686.03ms
+2026-04-25 22:30:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 5.00ms
+2026-04-25 22:30:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos/6 - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 22:33:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 3.00ms
+2026-04-25 22:34:30 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 22:34:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 30112.45ms
+2026-04-25 22:38:24 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 22:38:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 32091.14ms
+2026-04-25 22:57:20 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 22:57:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 18759.04ms
+2026-04-25 23:02:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 4.97ms
+2026-04-25 23:02:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.00ms
+2026-04-25 23:02:46 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=2, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 23:02:47 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=2, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 23:02:48 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:02:48 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：2
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInJvbGUiOjEsImV4cCI6MTc3NzIxNTc2Nn0.LXz
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2140.67ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 8.00ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.01ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 18.00ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 9.00ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
+2026-04-25 23:02:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 10.00ms
+2026-04-25 23:02:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-25 23:02:50 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:02:50 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：2
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInJvbGUiOjEsImV4cCI6MTc3NzIxNTc2N30.KUo
+2026-04-25 23:02:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3221.18ms
+2026-04-25 23:03:14 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:03:14 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 31.92ms
+2026-04-25 23:03:14 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:03:14 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 17.11ms
+2026-04-25 23:03:15 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:03:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 25.08ms
+2026-04-25 23:03:15 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:03:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 29.12ms
+2026-04-25 23:03:15 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:03:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 19578.07ms
+2026-04-25 23:04:06 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:04:06 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 17.19ms
+2026-04-25 23:04:07 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:04:07 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 23.64ms
+2026-04-25 23:04:07 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:04:07 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 40.13ms
+2026-04-25 23:04:07 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:04:07 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 21.28ms
+2026-04-25 23:04:07 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:04:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 13248.06ms
+2026-04-25 23:06:00 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
+2026-04-25 23:06:00 - app.utils.dify_client - ERROR - dify_client.py:55 - Dify API错误: status=400, body={"code":"invalid_param","message":"Run failed: req_id: 37e26ae920 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
+
+2026-04-25 23:06:00 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify API错误(400): {"code":"invalid_param","message":"Run failed: req_id: 37e26ae920 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
+
+2026-04-25 23:06:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 20560.77ms
+2026-04-25 23:06:06 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 23:06:06 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 23:06:06 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 23:06:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 23:06:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 23:06:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 23:06:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-25 23:06:06 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 23:06:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 11.00ms
+2026-04-25 23:06:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-25 23:06:40 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:06:40 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 41.56ms
+2026-04-25 23:06:40 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:06:40 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 16.50ms
+2026-04-25 23:06:40 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:06:40 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 13.57ms
+2026-04-25 23:06:41 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:06:41 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 15.87ms
+2026-04-25 23:06:41 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:06:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 14113.55ms
+2026-04-25 23:07:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-25 23:07:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-25 23:07:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
+2026-04-25 23:08:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 4.00ms
+2026-04-25 23:08:02 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 23:08:04 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:08:04 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzIxNjA4Mn0.uFK
+2026-04-25 23:08:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 1748.59ms
+2026-04-25 23:08:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
+2026-04-25 23:08:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 35.00ms
+2026-04-25 23:08:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 43.00ms
+2026-04-25 23:08:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 48.00ms
+2026-04-25 23:08:07 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 23:08:07 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 23:08:07 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 23:08:07 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 23:08:07 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 23:08:07 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 23:08:07 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-25 23:08:07 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 23:08:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 16.00ms
+2026-04-25 23:08:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 49.00ms
+2026-04-25 23:08:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.97ms
+2026-04-25 23:08:24 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:08:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 27.13ms
+2026-04-25 23:08:24 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:08:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 18.50ms
+2026-04-25 23:08:24 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:08:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 28.86ms
+2026-04-25 23:08:24 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:08:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 27.55ms
+2026-04-25 23:08:24 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:08:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 12123.42ms
+2026-04-25 23:09:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-25 23:09:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 113.27ms
+2026-04-25 23:09:58 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:09:58 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 21.81ms
+2026-04-25 23:09:58 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:09:58 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 25.02ms
+2026-04-25 23:09:58 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:09:58 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 19.37ms
+2026-04-25 23:09:58 - dashscope - ERROR - http_request.py:500 - HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: /api/v1/services/aigc/text-generation/generation (Caused by ProxyError('Unable to connect to proxy', SSLError(SSLEOFError(8, 'EOF occurred in violation of protocol (_ssl.c:997)'))))
+2026-04-25 23:09:58 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 500 - 耗时: 16.43ms
+2026-04-25 23:09:59 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:09:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 8732.14ms
+2026-04-25 23:12:04 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 23:12:04 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 23:12:04 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 23:12:06 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 23:12:06 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 23:12:06 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 23:12:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 23:12:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 23:12:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 23:12:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-25 23:12:06 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 23:12:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 9.00ms
+2026-04-25 23:12:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
+2026-04-25 23:12:26 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1419.37ms
+2026-04-25 23:12:35 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:12:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 22894.61ms
+2026-04-25 23:14:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 400 - 耗时: 6.00ms
+2026-04-25 23:14:07 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 23:14:09 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:14:09 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzIxNjQ0N30.0vS
+2026-04-25 23:14:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 1991.70ms
+2026-04-25 23:14:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 13.00ms
+2026-04-25 23:16:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1315.27ms
+2026-04-25 23:16:21 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:16:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 22139.06ms
+2026-04-25 23:16:51 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 781.25ms
+2026-04-25 23:17:04 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:17:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 19744.52ms
+2026-04-25 23:17:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.01ms
+2026-04-25 23:17:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 16.92ms
+2026-04-25 23:17:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 3.00ms
+2026-04-25 23:17:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 12.00ms
+2026-04-25 23:17:21 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/work-repos/all/list - 状态码: 200 - 耗时: 9.00ms
+2026-04-25 23:17:37 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:17:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/work-repo-sums/generate - 状态码: 200 - 耗时: 20528.38ms
+2026-04-25 23:17:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 23:17:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums/15 - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 23:22:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /docs - 状态码: 200 - 耗时: 0.00ms
+2026-04-25 23:22:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /openapi.json - 状态码: 200 - 耗时: 78.94ms
+2026-04-25 23:22:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 23:22:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-25 23:22:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
+2026-04-25 23:22:54 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 23:22:55 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-25 23:22:58 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:22:58 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzIxNjk3NX0.kw9
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2064.20ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 2.00ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 17.00ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 20.00ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 12.01ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 12.94ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 11.65ms
+2026-04-25 23:22:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
+2026-04-25 23:23:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
+2026-04-25 23:23:06 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:23:06 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
+token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzIxNjk3NH0.tx9
+2026-04-25 23:23:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 12691.19ms
+2026-04-25 23:23:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 891.51ms
+2026-04-25 23:23:29 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 23:23:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 20925.75ms

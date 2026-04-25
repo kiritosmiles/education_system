@@ -1,7 +1,14 @@
 import logging
+import os
 import uuid
 import httpx
 from app.config import get_settings
+
+# 清除代理设置，确保直连 Dify API
+for _key in ('HTTP_PROXY', 'HTTPS_PROXY', 'http_proxy', 'https_proxy', 'ALL_PROXY', 'all_proxy'):
+    os.environ.pop(_key, None)
+os.environ['NO_PROXY'] = '*'
+os.environ['no_proxy'] = '*'
 
 settings = get_settings()
 logger = logging.getLogger(__name__)
