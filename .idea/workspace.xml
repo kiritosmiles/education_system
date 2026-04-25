@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="优化前端内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/text2sql_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/text2sql_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/ai_chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ai_chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/text2sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/text2sql.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +138,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777125094447</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="优化前端内容">
+      <option name="closed" value="true" />
+      <created>1777125561135</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777125561135</updated>
+    </task>
+    <task id="LOCAL-00007" summary="优化前端内容">
+      <option name="closed" value="true" />
+      <created>1777125717920</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777125717920</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
