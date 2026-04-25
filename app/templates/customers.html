@@ -8,8 +8,9 @@
 <div class="card">
     <div class="card-body">
         <div class="row mb-3">
-            <div class="col-md-3"><input type="text" class="form-control" id="searchName" placeholder="搜索姓名"></div>
-            <div class="col-md-3">
+            <div class="col-md-2"><input type="text" class="form-control" id="searchName" placeholder="搜索姓名"></div>
+            <div class="col-md-2"><input type="text" class="form-control" id="searchPhone" placeholder="搜索手机号"></div>
+            <div class="col-md-2">
                 <select class="form-select" id="searchStatus">
                     <option value="">全部状态</option>
                     <option value="0">未联系</option>
@@ -29,7 +30,7 @@
                     <option value="D">D级-边缘顾客</option>
                 </select>
             </div>
-            <div class="col-md-3"><button class="btn btn-primary" onclick="loadCustomers()"><i class="bi bi-search"></i> 搜索</button></div>
+            <div class="col-md-2"><button class="btn btn-primary" onclick="loadCustomers()"><i class="bi bi-search"></i> 搜索</button></div>
         </div>
         <table class="table table-hover">
             <thead><tr><th>ID</th><th>姓名</th><th>年龄</th><th>性别</th><th>手机</th><th>邮箱</th><th>学历</th><th>评级</th><th>状态</th><th>创建时间</th><th>操作</th></tr></thead>
@@ -52,7 +53,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3"><label class="form-label">性别</label><select class="form-select" id="f_c_gender"><option value="0">男</option><option value="1">女</option></select></div>
-                        <div class="col-md-6 mb-3"><label class="form-label">手机</label><input type="text" class="form-control" id="f_c_phone" maxlength="11"></div>
+                        <div class="col-md-6 mb-3"><label class="form-label">手机</label><input type="text" class="form-control" id="f_c_phone" maxlength="11" required></div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3"><label class="form-label">邮箱</label><input type="email" class="form-control" id="f_c_email"></div>
@@ -88,9 +89,11 @@ let currentPage = 1;
 async function loadCustomers(page = 1) {
     currentPage = page;
     const c_name = document.getElementById('searchName').value;
+    const c_phone = document.getElementById('searchPhone').value;
     const c_status = document.getElementById('searchStatus').value;
     let url = `/api/customers?page=${page}&size=10`;
     if (c_name) url += `&c_name=${c_name}`;
+    if (c_phone) url += `&c_phone=${c_phone}`;
     if (c_status !== '') url += `&c_status=${c_status}`;
     const c_rank = document.getElementById('searchRank').value;
     if (c_rank !== '') url += `&c_rank=${c_rank}`;

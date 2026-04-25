@@ -13,7 +13,7 @@ class User(Base):
     name = Column(String(20), nullable=False)
     gender = Column(Integer, default=0, comment="0-男,1-女")
     email = Column(String(100), nullable=True)
-    phone = Column(String(11), nullable=True)
+    phone = Column(String(11), nullable=False)
     role = Column(Integer, default=1, comment="0-admin,1-normal,2-manager,3-student")
     create_time = Column(DateTime, default=datetime.now)
     is_del = Column(Integer, default=0, comment="0-存在,1-删除")

@@ -18,6 +18,7 @@ from app.controllers.industry_repo_controller import router as industry_repo_rou
 from app.controllers.email_controller import router as email_router
 from app.controllers.text2sql_controller import router as text2sql_router
 from app.controllers.work_repo_sum_controller import router as work_repo_sum_router
+from app.controllers.ai_chat_controller import router as ai_chat_router
 
 # 初始化日志
 setup_logging()
@@ -71,6 +72,7 @@ app.include_router(industry_repo_router)
 app.include_router(email_router)
 app.include_router(text2sql_router)
 app.include_router(work_repo_sum_router)
+app.include_router(ai_chat_router)
 
 
 # ============ Frontend Pages ============

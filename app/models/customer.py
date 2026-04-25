@@ -11,7 +11,7 @@ class Customer(Base):
     c_name = Column(String(20), nullable=False)
     c_age = Column(Integer, nullable=True)
     c_gender = Column(Integer, default=0, comment="0-男,1-女")
-    c_phone = Column(String(11), nullable=True)
+    c_phone = Column(String(11), nullable=False)
     c_email = Column(String(100), nullable=True)
     c_degree = Column(String(20), nullable=True)
     c_region = Column(String(20), nullable=True, comment="籍贯")

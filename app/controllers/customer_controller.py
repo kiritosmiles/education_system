@@ -14,6 +14,7 @@ router = APIRouter(prefix="/api/customers", tags=["顾客管理"])
 @router.get("")
 def list_customers(
     c_name: Optional[str] = None,
+    c_phone: Optional[str] = None,
     c_status: Optional[int] = None,
     c_suit_project: Optional[int] = None,
     c_rank: Optional[str] = None,
@@ -31,6 +32,8 @@ def list_customers(
     # role=0 admin: 可以查看所有
     if c_name:
         query = query.filter(Customer.c_name.like(f"%{c_name}%"))
+    if c_phone:
+        query = query.filter(Customer.c_phone.like(f"%{c_phone}%"))
     if c_status is not None:
         query = query.filter(Customer.c_status == c_status)
     if c_suit_project is not None:

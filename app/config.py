@@ -33,6 +33,7 @@ class Settings(BaseSettings):
     DIFY_BASE_URL: str = "http://192.168.184.128"
     DIFY_WORK_REPO_SUM_API_KEY: str = ""
     DIFY_INDUSTRY_REPO_API_KEY: str = ""
+    DIFY_CHAT_API_KEY: str = ""
 
     @property
     def DATABASE_URL(self) -> str:
