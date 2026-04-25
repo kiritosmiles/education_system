@@ -570,3 +570,56 @@ token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInJvbGUiOjEsImV4cCI6MTc
 2026-04-25 21:26:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 564.94ms
 2026-04-25 21:26:52 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
 2026-04-25 21:26:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 40411.27ms
+2026-04-25 21:31:00 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
+2026-04-25 21:31:00 - app.utils.dify_client - ERROR - dify_client.py:82 - Dify文件上传错误: status=201, body={"id":"0db4ba88-e1dd-48c4-ad9f-024793c3f5e4","name":"\u66f9\u6587\u680b-\u7b80\u5386.pdf","size":1653774,"extension":"pdf","mime_type":"application\/pdf","created_by":"762e4b31-8fba-4bdf-863c-4efaea094651","created_at":1777123860,"preview_url":null,"source_url":"\/files\/0db4ba88-e1dd-48c4-ad9f-024793c3f5e4\/file-preview?timestamp=1777123860&nonce=71de3bd36c62c6c73cf6c024a0706f5e&sign=PZneiPh_pTmJQg13_9yGDPRAA6hI84Diwkjrz6X8AYk%3D"}
+
+2026-04-25 21:31:00 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify文件上传错误(201): {"id":"0db4ba88-e1dd-48c4-ad9f-024793c3f5e4","name":"\u66f9\u6587\u680b-\u7b80\u5386.pdf","size":1653774,"extension":"pdf","mime_type":"application\/pdf","created_by":"762e4b31-8fba-4bdf-863c-4efaea094651","created_at":1777123860,"preview_url":null,"source_url":"\/files\/0db4ba88-e1dd-48c4-ad9f-024793c3f5e4\/file-preview?timestamp=1777123860&nonce=71de3bd36c62c6c73cf6c024a0706f5e&sign=PZneiPh_pTmJQg13_9yGDPRAA6hI84Diwkjrz6X8AYk%3D"}
+
+2026-04-25 21:31:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 129.83ms
+2026-04-25 21:31:49 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
+2026-04-25 21:31:49 - app.utils.dify_client - ERROR - dify_client.py:82 - Dify文件上传错误: status=201, body={"id":"a201e604-cc78-4c9e-8320-7033ae1e96d3","name":"\u66f9\u6587\u680b-\u7b80\u5386.pdf","size":1653774,"extension":"pdf","mime_type":"application\/pdf","created_by":"762e4b31-8fba-4bdf-863c-4efaea094651","created_at":1777123909,"preview_url":null,"source_url":"\/files\/a201e604-cc78-4c9e-8320-7033ae1e96d3\/file-preview?timestamp=1777123909&nonce=ddfbbf917002cdaf8c8abcd5a249786f&sign=qrqiqo8VKhDk-s0FH0t8W6vgNerCGzk5DBWaSq4My-U%3D"}
+
+2026-04-25 21:31:49 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify文件上传错误(201): {"id":"a201e604-cc78-4c9e-8320-7033ae1e96d3","name":"\u66f9\u6587\u680b-\u7b80\u5386.pdf","size":1653774,"extension":"pdf","mime_type":"application\/pdf","created_by":"762e4b31-8fba-4bdf-863c-4efaea094651","created_at":1777123909,"preview_url":null,"source_url":"\/files\/a201e604-cc78-4c9e-8320-7033ae1e96d3\/file-preview?timestamp=1777123909&nonce=ddfbbf917002cdaf8c8abcd5a249786f&sign=qrqiqo8VKhDk-s0FH0t8W6vgNerCGzk5DBWaSq4My-U%3D"}
+
+2026-04-25 21:31:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 98.00ms
+2026-04-25 21:32:58 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 21:32:58 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 21:32:58 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 21:32:58 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 21:32:58 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 21:32:58 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 21:32:58 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-25 21:32:58 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 21:34:02 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 21:34:02 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 21:34:02 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 21:34:04 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-25 21:34:04 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-25 21:34:04 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-25 21:34:04 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 21:34:04 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-25 21:34:04 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-25 21:34:04 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-25 21:34:04 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-25 21:34:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 10.00ms
+2026-04-25 21:34:13 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
+2026-04-25 21:35:16 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 24.00ms
+2026-04-25 21:35:18 - access - INFO - access_mw.py:26 - 192.168.110.84 - PUT /api/customers/2 - 状态码: 200 - 耗时: 18.00ms
+2026-04-25 21:35:18 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 21:35:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 65400.20ms
+2026-04-25 21:36:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
+2026-04-25 21:36:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-25 21:36:11 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
+2026-04-25 21:37:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 11.00ms
+2026-04-25 21:37:16 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 5.00ms
+2026-04-25 21:37:16 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 21:37:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 65406.37ms
+2026-04-25 21:39:59 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 401 - 耗时: 4.00ms
+2026-04-25 21:44:03 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
+2026-04-25 21:45:02 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 21:45:09 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 3.00ms
+2026-04-25 21:45:09 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
+2026-04-25 21:45:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 65281.43ms
+2026-04-25 21:46:33 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 401 - 耗时: 1.00ms
+2026-04-25 21:49:47 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 11.56ms
+2026-04-25 21:49:48 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 3.99ms

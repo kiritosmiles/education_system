@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 {% block title %}AI智能助手{% endblock %}
 {% block content %}
-<div class="page-header">
+<style>
+    .main-content { padding: 20px 0 20px 20px !important; }
+    #chatCard { height: calc(100vh - 100px); }
+    #chatContainer { height: calc(100vh - 240px) !important; }
+</style>
+<div class="page-header" style="padding-right:20px;">
     <h3><i class="bi bi-chat-dots-fill"></i> AI智能助手</h3>
 </div>
-<div class="card">
-    <div class="card-body p-0">
+<div class="card" id="chatCard">
+    <div class="card-body p-0 d-flex flex-column">
         <!-- 对话窗口 -->
-        <div id="chatContainer" style="height: 560px; overflow-y: auto; padding: 20px; background: #f8f9fa;">
+        <div id="chatContainer" style="flex:1; overflow-y: auto; padding: 20px; background: #f8f9fa;">
             <div class="text-center text-muted py-5">
                 <i class="bi bi-robot" style="font-size:3rem;color:#1C64F2;"></i>
                 <p class="mt-2 mb-0">粤教智能助手，随时为您服务</p>
@@ -15,7 +20,7 @@
             </div>
         </div>
         <!-- 输入区域 -->
-        <div class="border-top p-3" style="background: #fff;">
+        <div class="border-top p-3" style="background: #fff; flex-shrink:0;">
             <!-- 文件预览 -->
             <div id="filePreview" class="mb-2" style="display:none;">
                 <div class="d-flex align-items-center gap-2 flex-wrap" id="filePreviewList"></div>
@@ -222,7 +227,8 @@ async function sendMessage() {
             conversationId = data.data.conversation_id || '';
             appendMessage('assistant', data.data.answer, true, elapsed);
         } else {
-            appendMessage('assistant', '抱歉，请求出错，请稍后重试。', false, elapsed);
+            const errMsg = data.msg || data.detail || '抱歉，请求出错，请稍后重试。';
+            appendMessage('assistant', errMsg, false, elapsed);
         }
     } catch (e) {
         const elapsed = Date.now() - queryStart;

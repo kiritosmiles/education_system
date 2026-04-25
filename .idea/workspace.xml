@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="调整顾客等级">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="调整AI助手窗口调用Dify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/customer_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/customer_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/customer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/customer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/schemas/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/ai_chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ai_chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/utils/dify_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/dify_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app_error.log" afterDir="false" />
@@ -132,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777108368389</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="调整AI助手窗口调用Dify">
+      <option name="closed" value="true" />
+      <created>1777123630711</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1777123630711</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="education_system upload" />
     <MESSAGE value="调整顾客等级" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整顾客等级" />
+    <MESSAGE value="调整AI助手窗口调用Dify" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整AI助手窗口调用Dify" />
   </component>
 </project>

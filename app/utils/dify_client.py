@@ -78,7 +78,7 @@ async def upload_file(file_bytes: bytes, filename: str, user: str, api_key: str 
             data={"user": user},
             files={"file": (filename, file_bytes)},
         )
-        if response.status_code != 200:
+        if response.status_code not in (200, 201):
             logger.error(f"Dify文件上传错误: status={response.status_code}, body={response.text}")
             raise Exception(f"Dify文件上传错误({response.status_code}): {response.text}")
         return response.json()
