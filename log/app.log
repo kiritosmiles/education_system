@@ -623,3 +623,6 @@ token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInJvbGUiOjEsImV4cCI6MTc
 2026-04-25 21:46:33 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 401 - 耗时: 1.00ms
 2026-04-25 21:49:47 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 11.56ms
 2026-04-25 21:49:48 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 3.99ms
+2026-04-25 21:52:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 3.00ms
+2026-04-25 21:53:22 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
+2026-04-25 21:53:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 422 - 耗时: 5.00ms

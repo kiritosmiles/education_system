@@ -13,31 +13,23 @@ class CustomerCreate(BaseModel):
     c_phone: str
     c_email: Optional[str] = None
     c_degree: Optional[str] = None
-    c_region: Optional[str] = Field(None, min_length=1, max_length=20)
+    c_region: Optional[str] = None
     c_suit_project: int = Field(0, ge=0, le=3)
     c_rank: str = Field("C", pattern="^[SABCD]$")
     link_uid: Optional[int] = None
     c_status: int = Field(0, ge=0, le=4)
     c_analyze_info: Optional[str] = None
 
-    @field_validator("c_email", mode="before")
+    @field_validator("c_degree", "c_region", "c_analyze_info", mode="before")
     @classmethod
-    def validate_email(cls, v):
-        if v:
+    def strip_to_none(cls, v):
+        if isinstance(v, str):
             v = v.strip()
-            pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-            if not re.match(pattern, v):
-                raise ValueError("邮箱格式不正确")
+            if not v:
+                return None
         return v
 
-    @field_validator("c_phone", mode="before")
-    @classmethod
-    def validate_phone(cls, v):
-        if v:
-            v = v.strip()
-        if not re.match(r'^\d{11}$', v):
-            raise ValueError("手机号必须为11位数字")
-        return v
+    @field_validator("c_email", mode="before")
 
 
 class CustomerUpdate(BaseModel):
@@ -47,18 +39,29 @@ class CustomerUpdate(BaseModel):
     c_phone: Optional[str] = Field(None, min_length=11, max_length=11)
     c_email: Optional[str] = None
     c_degree: Optional[str] = None
-    c_region: Optional[str] = Field(None, min_length=1, max_length=20)
+    c_region: Optional[str] = None
     c_suit_project: Optional[int] = Field(None, ge=0, le=3)
     c_rank: Optional[str] = Field(None, pattern="^[SABCD]$")
     link_uid: Optional[int] = None
     c_status: Optional[int] = Field(None, ge=0, le=4)
     c_analyze_info: Optional[str] = None
 
+    @field_validator("c_degree", "c_region", "c_analyze_info", mode="before")
+    @classmethod
+    def strip_to_none(cls, v):
+        if isinstance(v, str):
+            v = v.strip()
+            if not v:
+                return None
+        return v
+
     @field_validator("c_email", mode="before")
     @classmethod
     def validate_email(cls, v):
         if v:
             v = v.strip()
+            if not v:
+                return None
             pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
             if not re.match(pattern, v):
                 raise ValueError("邮箱格式不正确")
