@@ -81,7 +81,7 @@ async def generate_work_repo_sum(
     # 调用Dify Chatbot API生成总结
     try:
         result = await chat_message(
-            query=f"生成{ws_date}的员工总结报告",
+            query=f"生成{ws_date}的所有员工总结报告",
             user=f"uid_{current_user.uid}",
             inputs={"yesterday": str(ws_date)},
             uid=str(current_user.uid),
@@ -132,7 +132,7 @@ async def scheduled_generate_work_repo_sum():
 
         # 调用Dify Chatbot API
         result = await chat_message(
-            query=f"生成{yesterday}的员工总结报告",
+            query=f"生成{yesterday} 所有员工工作日报总结",
             user="system_scheduled",
             inputs={"yesterday": str(yesterday)}
         )

@@ -16,7 +16,7 @@ class Customer(Base):
     c_degree = Column(String(20), nullable=True)
     c_region = Column(String(20), nullable=True, comment="籍贯")
     c_suit_project = Column(Integer, default=0, comment="0-所有项目都符合,1-所有项目都不符合,2-新加坡国际本硕升学计划,3-中德精英人才共建计划")
-    c_rank = Column(Integer, default=3, comment="0-核心顾客,1-重要顾客,2-普通顾客,3-边缘顾客")
+    c_rank = Column(String(1), default="C", comment="S-核心顾客,A-重要顾客,B-普通顾客,C-一般顾客,D-边缘顾客")
     create_time = Column(DateTime, default=datetime.now)
     update_time = Column(DateTime, default=datetime.now, onupdate=datetime.now)
     link_uid = Column(Integer, ForeignKey("users.uid"), nullable=True)

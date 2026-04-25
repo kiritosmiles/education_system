@@ -134,9 +134,12 @@ async def work_repo_sums_page(request: Request):
 async def startup_event():
     from apscheduler.schedulers.asyncio import AsyncIOScheduler
     from app.controllers.work_repo_sum_controller import scheduled_generate_work_repo_sum
+    from app.controllers.industry_repo_controller import scheduled_generate_industry_repo
     scheduler = AsyncIOScheduler()
     # 每天8:00生成昨日工作日报总结
     scheduler.add_job(scheduled_generate_work_repo_sum, 'cron', hour=8, minute=0)
+    # 每周一8:30生成上周行业周报
+    scheduler.add_job(scheduled_generate_industry_repo, 'cron', day_of_week='mon', hour=8, minute=30)
     scheduler.start()
     app.state.scheduler = scheduler
 

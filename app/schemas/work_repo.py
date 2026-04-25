@@ -5,13 +5,13 @@ from pydantic import BaseModel, Field
 
 class WorkRepoCreate(BaseModel):
     w_date: date
-    w_title: str = Field(..., max_length=20)
+    w_title: str = Field(..., max_length=100)
     content: Optional[str] = None
 
 
 class WorkRepoUpdate(BaseModel):
     w_date: Optional[date] = None
-    w_title: Optional[str] = Field(None, max_length=20)
+    w_title: Optional[str] = Field(None, max_length=100)
     content: Optional[str] = None
 
 

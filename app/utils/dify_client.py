@@ -7,7 +7,7 @@ settings = get_settings()
 logger = logging.getLogger(__name__)
 
 
-async def chat_message(query: str, user: str = "system", inputs: dict = None, uid: str = "", token: str = "") -> dict:
+async def chat_message(query: str, user: str = "system", inputs: dict = None, uid: str = "", token: str = "", api_key: str = "") -> dict:
     """
     调用Dify Chatbot API（阻塞模式）
     :param query: 用户提问内容
@@ -15,11 +15,13 @@ async def chat_message(query: str, user: str = "system", inputs: dict = None, ui
     :param inputs: 工作流输入变量
     :param uid: 用户uid
     :param token: 用户token
+    :param api_key: 自定义API Key，为空则使用默认DIFY_WORK_REPO_SUM_API_KEY
     :return: API返回结果
     """
     url = f"{settings.DIFY_BASE_URL}/v1/chat-messages"
+    key = api_key or settings.DIFY_WORK_REPO_SUM_API_KEY
     headers = {
-        "Authorization": f"Bearer {settings.DIFY_WORK_REPO_SUM_API_KEY}",
+        "Authorization": f"Bearer {key}",
         "Content-Type": "application/json"
     }
     final_inputs = dict(inputs or {})

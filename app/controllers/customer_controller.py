@@ -16,7 +16,7 @@ def list_customers(
     c_name: Optional[str] = None,
     c_status: Optional[int] = None,
     c_suit_project: Optional[int] = None,
-    c_rank: Optional[int] = None,
+    c_rank: Optional[str] = None,
     link_uid: Optional[int] = None,
     page: int = Query(1, ge=1),
     size: int = Query(10, ge=1, le=100),

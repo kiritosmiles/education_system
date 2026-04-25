@@ -22,10 +22,11 @@
             <div class="col-md-3">
                 <select class="form-select" id="searchRank">
                     <option value="">全部评级</option>
-                    <option value="0">核心顾客</option>
-                    <option value="1">重要顾客</option>
-                    <option value="2">普通顾客</option>
-                    <option value="3">边缘顾客</option>
+                    <option value="S">S级-核心顾客</option>
+                    <option value="A">A级-重要顾客</option>
+                    <option value="B">B级-普通顾客</option>
+                    <option value="C">C级-一般顾客</option>
+                    <option value="D">D级-边缘顾客</option>
                 </select>
             </div>
             <div class="col-md-3"><button class="btn btn-primary" onclick="loadCustomers()"><i class="bi bi-search"></i> 搜索</button></div>
@@ -67,8 +68,9 @@
                         </div>
                         <div class="col-md-6 mb-3"><label class="form-label">顾客评级</label>
                             <select class="form-select" id="f_c_rank">
-                                <option value="0">核心顾客</option><option value="1">重要顾客</option>
-                                <option value="2">普通顾客</option><option value="3">边缘顾客</option>
+                                <option value="S">S级-核心顾客</option><option value="A">A级-重要顾客</option>
+                                <option value="B">B级-普通顾客</option><option value="C" selected>C级-一般顾客</option>
+                                <option value="D">D级-边缘顾客</option>
                             </select>
                         </div>
                     </div>
@@ -128,7 +130,7 @@ async function editCustomer(c_id) {
     document.getElementById('f_c_degree').value = c.c_degree || '';
     document.getElementById('f_link_uid').value = c.link_uid || '';
     document.getElementById('f_c_status').value = c.c_status;
-    document.getElementById('f_c_rank').value = c.c_rank ?? 3;
+    document.getElementById('f_c_rank').value = c.c_rank ?? 'C';
     document.getElementById('f_c_analyze_info').value = c.c_analyze_info || '';
     new bootstrap.Modal(document.getElementById('customerModal')).show();
 }
@@ -144,7 +146,7 @@ async function saveCustomer() {
         c_degree: document.getElementById('f_c_degree').value || null,
         link_uid: document.getElementById('f_link_uid').value ? parseInt(document.getElementById('f_link_uid').value) : null,
         c_status: parseInt(document.getElementById('f_c_status').value),
-        c_rank: parseInt(document.getElementById('f_c_rank').value),
+        c_rank: document.getElementById('f_c_rank').value,
         c_analyze_info: document.getElementById('f_c_analyze_info').value || null
     };
     if (c_id) { await apiPut(`/api/customers/${c_id}`, data); }
@@ -162,8 +164,8 @@ async function deleteCustomer(c_id) {
 }
 
 function rankBadge(rank) {
-    const map = {0:'核心顾客',1:'重要顾客',2:'普通顾客',3:'边缘顾客'};
-    const colorMap = {0:'danger',1:'warning',2:'info',3:'secondary'};
+    const map = {'S':'S级-核心顾客','A':'A级-重要顾客','B':'B级-普通顾客','C':'C级-一般顾客','D':'D级-边缘顾客'};
+    const colorMap = {'S':'danger','A':'warning','B':'info','C':'primary','D':'secondary'};
     return `<span class="badge bg-${colorMap[rank]??'secondary'}">${map[rank]??'未知'}</span>`;
 }
 

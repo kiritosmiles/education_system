@@ -3,7 +3,10 @@
 {% block content %}
 <div class="page-header d-flex justify-content-between align-items-center">
     <h3><i class="bi bi-newspaper"></i> 行业周报</h3>
-    <button class="btn btn-primary" onclick="showAddModal()"><i class="bi bi-plus-lg"></i> 新增周报</button>
+    <div>
+        <button class="btn btn-success me-2" onclick="showGenerateModal()"><i class="bi bi-magic"></i> 生成行业周报</button>
+        <button class="btn btn-primary" onclick="showAddModal()"><i class="bi bi-plus-lg"></i> 新增周报</button>
+    </div>
 </div>
 <div class="card">
     <div class="card-body">
@@ -19,6 +22,51 @@
     </div>
 </div>
 
+<!-- 生成行业周报弹窗 -->
+<div class="modal fade" id="generateModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title">生成行业周报</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">开始日期</label>
+                        <input type="date" class="form-control" id="genStartDate">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">结束日期</label>
+                        <input type="date" class="form-control" id="genEndDate">
+                    </div>
+                </div>
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle"></i> 将调用AI接口生成指定日期范围的行业周报，生成过程可能需要数十秒，请耐心等待。
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-success" id="generateBtn" onclick="generateIndustryRepo()">
+                    <span class="spinner-border spinner-border-sm d-none" id="genSpinner"></span>
+                    <span id="genBtnText">确认生成</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 详情弹窗 -->
+<div class="modal fade" id="detailModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title" id="detailTitle">周报详情</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+            <div class="modal-body">
+                <div id="detailContent" style="white-space: pre-wrap; line-height: 1.8;"></div>
+            </div>
+            <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button></div>
+        </div>
+    </div>
+</div>
+
+<!-- 新增/编辑弹窗 -->
 <div class="modal fade" id="industryModal" tabindex="-1">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -38,6 +86,7 @@
 {% block scripts %}
 <script>
 let currentPage = 1;
+
 async function loadIndustryRepos(page = 1) {
     currentPage = page;
     const i_title = document.getElementById('searchTitle').value;
@@ -47,14 +96,68 @@ async function loadIndustryRepos(page = 1) {
     const items = res.data?.items || [];
     document.getElementById('industryTable').innerHTML = items.map(i => `<tr>
         <td>${i.i_id}</td><td>${i.i_title}</td><td>${formatDate(i.create_time)}</td>
-        <td><button class="btn btn-sm btn-outline-primary" onclick="editIndustryRepo(${i.i_id})"><i class="bi bi-pencil"></i></button>
-        <button class="btn btn-sm btn-outline-danger" onclick="deleteIndustryRepo(${i.i_id})"><i class="bi bi-trash"></i></button></td>
+        <td>
+            <button class="btn btn-sm btn-outline-primary" onclick="viewDetail(${i.i_id})"><i class="bi bi-eye"></i></button>
+            <button class="btn btn-sm btn-outline-warning" onclick="editIndustryRepo(${i.i_id})"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteIndustryRepo(${i.i_id})"><i class="bi bi-trash"></i></button>
+        </td>
     </tr>`).join('');
     const total = res.data?.total || 0;
     const pages = Math.ceil(total / 10);
     let html = '';
     for (let p = 1; p <= pages; p++) html += `<li class="page-item ${p===currentPage?'active':''}"><a class="page-link" href="#" onclick="loadIndustryRepos(${p})">${p}</a></li>`;
     document.getElementById('pagination').innerHTML = html;
+}
+
+function showGenerateModal() {
+    // 默认填充上周的日期范围（上周一到上周日）
+    const today = new Date();
+    const dayOfWeek = today.getDay() || 7; // Sunday=7
+    const lastMonday = new Date(today);
+    lastMonday.setDate(today.getDate() - dayOfWeek - 6);
+    const lastSunday = new Date(lastMonday);
+    lastSunday.setDate(lastMonday.getDate() + 6);
+    document.getElementById('genStartDate').value = formatDateInput(lastMonday);
+    document.getElementById('genEndDate').value = formatDateInput(lastSunday);
+    new bootstrap.Modal(document.getElementById('generateModal')).show();
+}
+
+function formatDateInput(d) {
+    return d.toISOString().split('T')[0];
+}
+
+async function generateIndustryRepo() {
+    const start_date = document.getElementById('genStartDate').value;
+    const end_date = document.getElementById('genEndDate').value;
+    if (!start_date || !end_date) { showToast('请选择开始和结束日期', 'warning'); return; }
+    if (start_date > end_date) { showToast('开始日期不能晚于结束日期', 'warning'); return; }
+    const spinner = document.getElementById('genSpinner');
+    const btnText = document.getElementById('genBtnText');
+    spinner.classList.remove('d-none');
+    btnText.textContent = '生成中...';
+    try {
+        const res = await apiPost(`/api/industry-repos/generate?start_date=${start_date}&end_date=${end_date}`);
+        if (res.code === 200) {
+            showToast('生成成功');
+            bootstrap.Modal.getInstance(document.getElementById('generateModal')).hide();
+            loadIndustryRepos(currentPage);
+        } else {
+            showToast(res.msg || '生成失败', 'danger');
+        }
+    } catch(e) {
+        showToast('生成失败', 'danger');
+    } finally {
+        spinner.classList.add('d-none');
+        btnText.textContent = '确认生成';
+    }
+}
+
+async function viewDetail(i_id) {
+    const res = await apiGet(`/api/industry-repos/${i_id}`);
+    const d = res.data;
+    document.getElementById('detailTitle').textContent = d.i_title;
+    document.getElementById('detailContent').textContent = d.content || '暂无内容';
+    new bootstrap.Modal(document.getElementById('detailModal')).show();
 }
 
 function showAddModal() {

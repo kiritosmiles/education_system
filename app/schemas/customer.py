@@ -1,7 +1,9 @@
 from datetime import datetime
-from typing import Optional
+from typing import Literal, Optional
 from pydantic import BaseModel, Field, field_validator
 import re
+
+RANK_VALUES = ("S", "A", "B", "C", "D")
 
 
 class CustomerCreate(BaseModel):
@@ -13,7 +15,7 @@ class CustomerCreate(BaseModel):
     c_degree: Optional[str] = None
     c_region: Optional[str] = Field(None, min_length=1, max_length=20)
     c_suit_project: int = Field(0, ge=0, le=3)
-    c_rank: int = Field(3, ge=0, le=3)
+    c_rank: str = Field("C", pattern="^[SABCD]$")
     link_uid: Optional[int] = None
     c_status: int = Field(0, ge=0, le=4)
     c_analyze_info: Optional[str] = None
@@ -44,7 +46,7 @@ class CustomerUpdate(BaseModel):
     c_degree: Optional[str] = None
     c_region: Optional[str] = Field(None, min_length=1, max_length=20)
     c_suit_project: Optional[int] = Field(None, ge=0, le=3)
-    c_rank: Optional[int] = Field(None, ge=0, le=3)
+    c_rank: Optional[str] = Field(None, pattern="^[SABCD]$")
     link_uid: Optional[int] = None
     c_status: Optional[int] = Field(None, ge=0, le=4)
     c_analyze_info: Optional[str] = None
@@ -76,7 +78,7 @@ class CustomerOut(BaseModel):
     c_degree: Optional[str] = None
     c_region: Optional[str] = None
     c_suit_project: int = 0
-    c_rank: int = 3
+    c_rank: str = "C"
     create_time: datetime
     update_time: datetime
     link_uid: Optional[int] = None

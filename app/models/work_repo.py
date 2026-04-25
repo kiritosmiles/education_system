@@ -9,7 +9,7 @@ class WorkRepo(Base):
 
     w_id = Column(Integer, primary_key=True, autoincrement=True)
     w_date = Column(Date, nullable=False)
-    w_title = Column(String(20), nullable=False)
+    w_title = Column(String(100), nullable=False)
     u_id = Column(Integer, ForeignKey("users.uid"), nullable=False)
     content = Column(Text, nullable=True)
     create_time = Column(DateTime, default=datetime.now)

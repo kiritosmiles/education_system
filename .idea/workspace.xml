@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/education_system.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="education_system upload">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_check_dify.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_test_dify.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_test_login_dify.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/customer_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/customer_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/industry_repo_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/industry_repo_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/work_repo_sum_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/work_repo_sum_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/industry_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/industry_repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/work_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/work_repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/work_repo_sum.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/work_repo_sum.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/schemas/work_repo.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/schemas/work_repo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/industry_repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/industry_repos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/dify_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/dify_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "kiritosmiles"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/kiritosmiles/education_system.git",
+    "accountId": "07568897-f96f-4307-bf04-63a23c905a70"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
   &quot;fromUser&quot;: false
@@ -26,21 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/0309AI/AI大模型学习/education_system&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/0309AI/AI大模型学习/education_system",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="education_system" />
@@ -87,10 +113,23 @@
       <option name="presentableId" value="Default" />
       <updated>1776937142287</updated>
     </task>
+    <task id="LOCAL-00001" summary="education_system upload">
+      <option name="closed" value="true" />
+      <created>1777080938544</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777080938545</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="education_system upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="education_system upload" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
