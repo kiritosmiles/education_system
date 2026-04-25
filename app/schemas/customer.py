@@ -30,6 +30,25 @@ class CustomerCreate(BaseModel):
         return v
 
     @field_validator("c_email", mode="before")
+    @classmethod
+    def validate_email(cls, v):
+        if v:
+            v = v.strip()
+            if not v:
+                return None
+            pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+            if not re.match(pattern, v):
+                raise ValueError("邮箱格式不正确")
+        return v
+
+    @field_validator("c_phone", mode="before")
+    @classmethod
+    def validate_phone(cls, v):
+        if v:
+            v = v.strip()
+        if not re.match(r'^\d{11}$', v):
+            raise ValueError("手机号必须为11位数字")
+        return v
 
 
 class CustomerUpdate(BaseModel):
