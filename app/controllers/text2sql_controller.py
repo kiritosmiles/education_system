@@ -19,6 +19,32 @@ TABLE_LABELS = {
     "industry_repo": "行业周报表",
 }
 
+# ── Text2SQL 表级权限配置 ──
+# role -> 允许查询的表名集合（None 表示全部允许）
+ROLE_TABLE_PERMISSIONS = {
+    0: None,                        # 管理员：所有表
+    1: {"customers", "work_repo", "industry_repo"},   # 普通员工
+    2: {"users", "customers", "work_repo", "work_repo_sum", "industry_repo"},  # 经理
+    3: {"customers"},              # 学生
+}
+
+# ── Text2SQL 行级权限配置 ──
+# role -> {表名 -> WHERE 条件模板}，{uid} 占位符会在运行时替换
+# 注意：列名在本数据库中设计为唯一的（u_id仅work_repo有，link_uid仅customers有），
+#       因此不需要加表名前缀，避免与LLM生成的表别名冲突
+ROLE_ROW_FILTERS = {
+    1: {"work_repo": "u_id = {uid}"},                           # 普通员工只能查自己的日报
+    3: {"customers": "link_uid = {uid}"},                       # 学生只能查关联自己的顾客
+}
+
+# ── Text2SQL 列级权限配置 ──
+# role -> 该角色不可见的字段（结果中自动过滤）
+ROLE_HIDDEN_COLUMNS = {
+    1: {"pwd", "is_del", "uid", "username", "email", "phone"},      # 普通员工：users表隐藏敏感字段
+    2: {"pwd", "is_del"},                                            # 经理：隐藏密码和删除标记
+    3: {"pwd", "is_del", "uid", "username", "email", "phone"},      # 学生：users表隐藏敏感字段
+}
+
 # 字段英文 -> 中文映射（按表分组，支持同名字段区分）
 COLUMN_LABELS = {
     # users
@@ -99,6 +125,39 @@ def _resolve_column_label(col_name: str) -> str:
     return col_name
 
 
+def _extract_tables(sql: str) -> set:
+    """从 SQL 中提取涉及的表名（FROM / JOIN 后面的表名）"""
+    sql_upper = sql.upper()
+    tables = set()
+    # 匹配 FROM / JOIN 后的表名（支持别名）
+    for match in re.finditer(r'(?:FROM|JOIN)\s+(\w+)', sql_upper):
+        tbl = match.group(1).lower()
+        if tbl in TABLE_LABELS:
+            tables.add(tbl)
+    return tables
+
+
+def _apply_row_filter(sql: str, table: str, condition: str, uid: int) -> str:
+    """将行级过滤条件注入 SQL 的 WHERE 子句"""
+    where_clause = condition.format(uid=uid)
+    sql_upper = sql.upper()
+    if ' WHERE ' in sql_upper:
+        # 已有 WHERE，用 AND 追加（使用 sql_upper 定位，避免大小写不匹配）
+        where_pos = sql_upper.index(' WHERE ')
+        insert_pos = where_pos + len(' WHERE ')
+        sql = sql[:insert_pos] + f"({where_clause}) AND " + sql[insert_pos:]
+    else:
+        # 没有 WHERE，在 LIMIT/ORDER BY/GROUP BY 之前插入
+        for keyword in [' GROUP BY ', ' ORDER BY ', ' LIMIT ']:
+            kw_idx = sql_upper.find(keyword)
+            if kw_idx != -1:
+                sql = sql[:kw_idx] + f" WHERE ({where_clause})" + sql[kw_idx:]
+                return sql
+        # 都没有，追加到末尾
+        sql = sql.rstrip(';') + f" WHERE ({where_clause})"
+    return sql
+
+
 @router.post("/query")
 def query_by_natural_language(
     data: Text2SQLRequest,
@@ -144,11 +203,28 @@ def query_by_natural_language(
     if not re.search(r'\bLIMIT\s+\d+', sql_upper):
         sql = sql.rstrip(";") + " LIMIT 100"
 
+    # ── 表级权限检查 ──
+    queried_tables = _extract_tables(sql)
+    allowed_tables = ROLE_TABLE_PERMISSIONS.get(current_user.role)
+    if allowed_tables is not None:
+        forbidden = queried_tables - allowed_tables
+        if forbidden:
+            names = "、".join(TABLE_LABELS.get(t, t) for t in forbidden)
+            raise HTTPException(status_code=403, detail=f"当前角色无权查询{names}")
+
+    # ── 行级权限过滤 ──
+    row_filters = ROLE_ROW_FILTERS.get(current_user.role, {})
+    for tbl, condition in row_filters.items():
+        if tbl in queried_tables:
+            sql = _apply_row_filter(sql, tbl, condition, current_user.uid)
+
     try:
         rows = db.execute(text(sql)).fetchall()
         columns = list(rows[0]._mapping.keys()) if rows else []
-        # 过滤敏感字段
-        safe_columns = [c for c in columns if c not in HIDDEN_COLUMNS]
+        # 合并全局敏感字段和角色专属隐藏字段
+        hidden = HIDDEN_COLUMNS | ROLE_HIDDEN_COLUMNS.get(current_user.role, set())
+        # 过滤敏感字段（同时处理 "字段名" 和 "表别名.字段名" 格式）
+        safe_columns = [c for c in columns if c not in hidden and c.split('.')[-1] not in hidden]
         data_list = []
         for row in rows:
             row_dict = dict(row._mapping)

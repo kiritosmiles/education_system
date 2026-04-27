@@ -53,11 +53,16 @@ async function loadWorkRepos(page = 1) {
     try {
         const res = await apiGet(url);
         const items = res.data?.items || [];
-        document.getElementById('workTable').innerHTML = items.map(w => `<tr>
+        const isAdmin = currentUser.role === 0;
+        document.getElementById('workTable').innerHTML = items.map(w => {
+            const isOwner = w.u_id === currentUser.uid;
+            const canEdit = isAdmin || isOwner;
+            return `<tr>
             <td>${w.w_id}</td><td>${formatDate(w.w_date)}</td><td>${w.w_title}</td><td>${w.u_id}</td><td>${formatDate(w.create_time)}</td>
-            <td><button class="btn btn-sm btn-outline-primary" onclick="editWorkRepo(${w.w_id})"><i class="bi bi-pencil"></i></button>
-            <button class="btn btn-sm btn-outline-danger" onclick="deleteWorkRepo(${w.w_id})"><i class="bi bi-trash"></i></button></td>
-        </tr>`).join('');
+            <td>${canEdit ? `<button class="btn btn-sm btn-outline-primary" onclick="editWorkRepo(${w.w_id})"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteWorkRepo(${w.w_id})"><i class="bi bi-trash"></i></button>` : '<span class="text-muted">-</span>'}</td>
+        </tr>`;
+        }).join('');
         const total = res.data?.total || 0;
         const pages = Math.ceil(total / 10);
         let html = '';

@@ -277,6 +277,37 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **安全限制**：仅允许 SELECT 查询，自动拦截 INSERT/UPDATE/DELETE/DROP 等危险操作
 - **敏感字段过滤**：自动隐藏 `pwd`、`is_del` 等敏感/内部字段
 - **SQL注入防护**：过滤注释、拦截危险关键字和文件操作
+- **三级权限控制**：
+  - **表级权限**：不同角色只能查询允许的表（如学生只能查顾客表）
+  - **行级权限**：自动注入 WHERE 条件限制数据范围（如普通员工只能查自己的日报）
+  - **列级权限**：按角色过滤结果中的敏感字段（如普通员工不可见 uid/username/email/phone）
+
+#### Text2SQL 权限配置详情
+
+**表级权限**（`ROLE_TABLE_PERMISSIONS`）：
+
+|| 角色 | 允许查询的表 |
+||------|-------------|
+|| 管理员(0) | 所有表 |
+|| 普通员工(1) | customers, work_repo, industry_repo |
+|| 经理(2) | users, customers, work_repo, work_repo_sum, industry_repo |
+|| 学生(3) | customers |
+
+**行级权限**（`ROLE_ROW_FILTERS`）：
+
+|| 角色 | 表 | 过滤条件 |
+||------|-----|---------|
+|| 普通员工(1) | work_repo | `u_id = 当前用户uid`（只能查自己的日报） |
+|| 学生(3) | customers | `link_uid = 当前用户uid`（只能查关联自己的顾客） |
+
+**列级权限**（`ROLE_HIDDEN_COLUMNS`，结果自动过滤）：
+
+|| 角色 | 隐藏字段 |
+||------|---------|
+|| 管理员(0) | pwd, is_del |
+|| 普通员工(1) | pwd, is_del, uid, username, email, phone |
+|| 经理(2) | pwd, is_del |
+|| 学生(3) | pwd, is_del, uid, username, email, phone |
 
 ## 定时任务
 

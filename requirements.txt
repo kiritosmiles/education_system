@@ -14,19 +14,11 @@ pydantic_settings==2.13.1
 
 # 认证
 python-jose[cryptography]==3.3.0
-passlib[bcrypt]==1.7.4
-
-# 日志
-loguru==0.7.3
-
-# 数据可视化
-matplotlib==3.10.8
 
 # HTTP客户端（Dify API调用）
 httpx==0.28.1
 
 # AI/大模型
-openai>=1.0.0
 dashscope>=1.20.0
 
 # 邮件
@@ -35,7 +27,6 @@ email-validator>=2.2.0
 
 # 模板
 jinja2>=3.1.4
-aiofiles>=24.1.0
 
 # 配置
 python-dotenv>=1.0.0

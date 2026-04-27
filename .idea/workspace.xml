@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="优化前端内容">
+    <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="修改Text2SQL的权限分配">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/ai_chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ai_chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/customers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/work_repo_sums.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/work_repo_sums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/text2sql_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/text2sql_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/work_repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/work_repos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app_error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +180,23 @@
       <option name="project" value="LOCAL" />
       <updated>1777130724569</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="增加看板娘">
+      <option name="closed" value="true" />
+      <created>1777269948588</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777269948588</updated>
+    </task>
+    <task id="LOCAL-00012" summary="修改Text2SQL的权限分配">
+      <option name="closed" value="true" />
+      <created>1777274184897</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777274184897</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +210,8 @@
     <MESSAGE value="调整顾客等级" />
     <MESSAGE value="调整AI助手窗口调用Dify" />
     <MESSAGE value="优化前端内容" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化前端内容" />
+    <MESSAGE value="增加看板娘" />
+    <MESSAGE value="修改Text2SQL的权限分配" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改Text2SQL的权限分配" />
   </component>
 </project>
