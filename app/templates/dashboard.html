@@ -1,37 +1,164 @@
 {% extends "base.html" %}
 {% block title %}仪表盘{% endblock %}
 {% block content %}
+<style>
+    .stat-card {
+        border-radius: 14px;
+        padding: 24px 20px;
+        color: #fce4ec;
+        position: relative;
+        overflow: hidden;
+        transition: transform .25s, box-shadow .25s;
+        cursor: default;
+    }
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(233,30,99,.25);
+    }
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: -30px; right: -30px;
+        width: 100px; height: 100px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.06);
+    }
+    .stat-card::after {
+        content: '';
+        position: absolute;
+        bottom: -20px; left: -20px;
+        width: 60px; height: 60px;
+        border-radius: 50%;
+        background: rgba(255,255,255,.04);
+    }
+    .stat-card.card-pink    { background: linear-gradient(135deg, #e91e63, #c2185b); }
+    .stat-card.card-purple  { background: linear-gradient(135deg, #7b1fa2, #533483); }
+    .stat-card.card-lavender{ background: linear-gradient(135deg, #ce93d8, #8e24aa); }
+    .stat-card.card-dark    { background: linear-gradient(135deg, #1e1e36, #533483); }
+
+    .stat-card .stat-icon {
+        font-size: 2.2rem;
+        opacity: .85;
+        margin-bottom: 8px;
+    }
+    .stat-card .stat-label {
+        font-size: .85rem;
+        opacity: .8;
+        letter-spacing: 1px;
+    }
+    .stat-card .stat-value {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .data-card {
+        border: 1px solid rgba(179,157,219,.12);
+        background: var(--jirai-card);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0,0,0,.3);
+        border-radius: 14px;
+        overflow: hidden;
+    }
+    .data-card .data-card-header {
+        background: rgba(83,52,131,.25);
+        border-bottom: 1px solid rgba(179,157,219,.12);
+        padding: 14px 20px;
+        font-weight: 600;
+        color: #fce4ec;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .data-card .data-card-header i {
+        color: #e91e63;
+    }
+    .data-card .data-card-body {
+        padding: 16px 20px;
+        color: #ce93d8;
+    }
+    .data-card .table {
+        margin-bottom: 0;
+        color: #ce93d8;
+    }
+    .data-card .table thead th {
+        background: rgba(83,52,131,.25);
+        color: #fce4ec;
+        border-color: rgba(179,157,219,.15);
+        font-weight: 600;
+        font-size: .85rem;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+    }
+    .data-card .table tbody td {
+        border-color: rgba(179,157,219,.1);
+        vertical-align: middle;
+    }
+    .data-card .table-hover tbody tr {
+        transition: background .2s;
+    }
+    .data-card .table-hover tbody tr:hover {
+        background: rgba(233,30,99,.08);
+        color: #fce4ec;
+    }
+    .data-card .text-muted {
+        color: var(--jirai-text-dim) !important;
+    }
+</style>
+
 <div class="page-header">
     <h3><i class="bi bi-speedometer2"></i> 仪表盘</h3>
 </div>
-<div class="row" id="statsCards">
+
+<!-- 统计卡片 -->
+<div class="row g-4 mb-4" id="statsCards">
     <div class="col-md-3">
-        <div class="card text-white bg-primary">
-            <div class="card-body"><h5>用户总数</h5><h2 id="statUsers">-</h2></div>
+        <div class="stat-card card-pink">
+            <div class="stat-icon"><i class="bi bi-people-fill"></i></div>
+            <div class="stat-label">用户总数</div>
+            <div class="stat-value" id="statUsers">-</div>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="card text-white bg-success">
-            <div class="card-body"><h5>顾客总数</h5><h2 id="statCustomers">-</h2></div>
+        <div class="stat-card card-purple">
+            <div class="stat-icon"><i class="bi bi-person-lines-fill"></i></div>
+            <div class="stat-label">顾客总数</div>
+            <div class="stat-value" id="statCustomers">-</div>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="card text-white bg-warning">
-            <div class="card-body"><h5>工作日报</h5><h2 id="statWork">-</h2></div>
+        <div class="stat-card card-lavender">
+            <div class="stat-icon"><i class="bi bi-journal-text"></i></div>
+            <div class="stat-label">工作日报</div>
+            <div class="stat-value" id="statWork">-</div>
         </div>
     </div>
     <div class="col-md-3">
-        <div class="card text-white bg-info">
-            <div class="card-body"><h5>行业周报</h5><h2 id="statIndustry">-</h2></div>
+        <div class="stat-card card-dark">
+            <div class="stat-icon"><i class="bi bi-newspaper"></i></div>
+            <div class="stat-label">行业周报</div>
+            <div class="stat-value" id="statIndustry">-</div>
         </div>
     </div>
 </div>
-<div class="row">
+
+<!-- 数据表格 -->
+<div class="row g-4">
     <div class="col-md-6">
-        <div class="card"><div class="card-header">最近顾客</div><div class="card-body" id="recentCustomers">加载中...</div></div>
+        <div class="data-card">
+            <div class="data-card-header"><i class="bi bi-person-lines-fill"></i> 最近顾客</div>
+            <div class="data-card-body" id="recentCustomers">
+                <p class="text-muted mb-0" style="text-align:center;padding:20px 0;">加载中...</p>
+            </div>
+        </div>
     </div>
     <div class="col-md-6">
-        <div class="card"><div class="card-header">最近工作日报</div><div class="card-body" id="recentWork">加载中...</div></div>
+        <div class="data-card">
+            <div class="data-card-header"><i class="bi bi-journal-text"></i> 最近工作日报</div>
+            <div class="data-card-body" id="recentWork">
+                <p class="text-muted mb-0" style="text-align:center;padding:20px 0;">加载中...</p>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -55,19 +182,19 @@ async function loadDashboard() {
         const res = await apiGet('/api/customers?page=1&size=5');
         const items = res.data?.items || [];
         document.getElementById('recentCustomers').innerHTML = items.length ?
-            '<table class="table table-sm"><tr><th>姓名</th><th>状态</th><th>创建时间</th></tr>' +
-            items.map(c => `<tr><td>${c.c_name}</td><td>${customerStatusBadge(c.c_status)}</td><td>${formatDate(c.create_time)}</td></tr>`).join('') + '</table>' :
-            '<p class="text-muted">暂无数据</p>';
-    } catch(e) { document.getElementById('recentCustomers').innerHTML = '<p class="text-muted">无权限</p>'; }
+            '<table class="table table-sm table-hover"><thead><tr><th>姓名</th><th>状态</th><th>创建时间</th></tr></thead><tbody>' +
+            items.map(c => `<tr><td class="nowrap">${c.c_name}</td><td>${customerStatusBadge(c.c_status)}</td><td>${formatDate(c.create_time)}</td></tr>`).join('') + '</tbody></table>' :
+            '<p class="text-muted mb-0" style="text-align:center;padding:20px 0;">暂无数据</p>';
+    } catch(e) { document.getElementById('recentCustomers').innerHTML = '<p class="text-muted mb-0" style="text-align:center;padding:20px 0;">无权限</p>'; }
 
     try {
         const res = await apiGet('/api/work-repos?page=1&size=5');
         const items = res.data?.items || [];
         document.getElementById('recentWork').innerHTML = items.length ?
-            '<table class="table table-sm"><tr><th>标题</th><th>日期</th></tr>' +
-            items.map(w => `<tr><td>${w.w_title}</td><td>${formatDate(w.w_date)}</td></tr>`).join('') + '</table>' :
-            '<p class="text-muted">暂无数据</p>';
-    } catch(e) { document.getElementById('recentWork').innerHTML = '<p class="text-muted">无权限</p>'; }
+            '<table class="table table-sm table-hover"><thead><tr><th>标题</th><th>日期</th></tr></thead><tbody>' +
+            items.map(w => `<tr><td>${w.w_title}</td><td>${formatDate(w.w_date)}</td></tr>`).join('') + '</tbody></table>' :
+            '<p class="text-muted mb-0" style="text-align:center;padding:20px 0;">暂无数据</p>';
+    } catch(e) { document.getElementById('recentWork').innerHTML = '<p class="text-muted mb-0" style="text-align:center;padding:20px 0;">无权限</p>'; }
 }
 loadDashboard();
 </script>

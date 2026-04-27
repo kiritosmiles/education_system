@@ -8,10 +8,10 @@
 <div class="card">
     <div class="card-body">
         <div class="row mb-3">
-            <div class="col-md-2"><input type="date" class="form-control" id="searchDate" placeholder="指定日期"></div>
-            <div class="col-md-2"><input type="date" class="form-control" id="searchStartDate" placeholder="开始日期"></div>
-            <div class="col-md-2"><input type="date" class="form-control" id="searchEndDate" placeholder="结束日期"></div>
-            <div class="col-md-2"><button class="btn btn-primary" onclick="loadWorkRepoSums()"><i class="bi bi-search"></i> 搜索</button></div>
+            <div class="col-md-2"><label class="form-label">指定日期</label><input type="date" class="form-control" id="searchDate"></div>
+            <div class="col-md-2"><label class="form-label">开始日期</label><input type="date" class="form-control" id="searchStartDate"></div>
+            <div class="col-md-2"><label class="form-label">结束日期</label><input type="date" class="form-control" id="searchEndDate"></div>
+            <div class="col-md-2"><label class="form-label">&nbsp;</label><button class="btn btn-primary w-100" onclick="loadWorkRepoSums()"><i class="bi bi-search"></i> 搜索</button></div>
         </div>
         <table class="table table-hover">
             <thead><tr><th>ID</th><th>总结日期</th><th>标题</th><th>创建时间</th><th>操作</th></tr></thead>

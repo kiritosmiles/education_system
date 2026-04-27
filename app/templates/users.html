@@ -75,7 +75,7 @@ async function loadUsers(page = 1) {
     const res = await apiGet(url);
     const items = res.data?.items || [];
     document.getElementById('userTable').innerHTML = items.map(u => `<tr>
-        <td>${u.uid}</td><td>${u.username}</td><td>${u.name}</td><td>${genderText(u.gender)}</td>
+        <td>${u.uid}</td><td>${u.username}</td><td class="nowrap">${u.name}</td><td>${genderText(u.gender)}</td>
         <td>${u.email||'-'}</td><td>${u.phone||'-'}</td><td>${roleText(u.role)}</td><td>${formatDate(u.create_time)}</td>
         <td><button class="btn btn-sm btn-outline-primary" onclick="editUser(${u.uid})"><i class="bi bi-pencil"></i></button>
         <button class="btn btn-sm btn-outline-danger" onclick="deleteUser(${u.uid})"><i class="bi bi-trash"></i></button></td>

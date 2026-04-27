@@ -5,38 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>广东省教育服务有限公司</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         :root {
-            --primary: #1a3a5c;
-            --accent: #c8102e;
-            --gold: #b8860b;
-            --light-bg: #f8f9fa;
+            --primary: #1a1a2e;
+            --accent: #e91e63;
+            --purple: #533483;
+            --gold: #b39ddb;
+            --light-bg: #0f0c29;
             --section-padding: 80px 0;
         }
         * { box-sizing: border-box; }
-        body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; color: #333; }
+        body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; color: #e1bee7; background: #0f0c29; }
 
         /* Navbar */
         .navbar-custom {
-            background: linear-gradient(135deg, var(--primary) 0%, #0d2137 100%);
+            background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 100%);
             padding: 12px 0;
-            box-shadow: 0 2px 15px rgba(0,0,0,.15);
+            box-shadow: 0 2px 15px rgba(233,30,99,.15);
+            border-bottom: 1px solid rgba(233,30,99,.2);
         }
         .navbar-custom .navbar-brand {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #fff !important;
+            color: #fce4ec !important;
             letter-spacing: 1px;
         }
-        .navbar-custom .nav-link { color: rgba(255,255,255,.85) !important; font-weight: 500; padding: 8px 18px !important; transition: .3s; }
-        .navbar-custom .nav-link:hover { color: #fff !important; }
-        .navbar-custom .btn-login { background: var(--accent); border: none; color: #fff; border-radius: 20px; padding: 6px 24px; font-weight: 600; }
-        .navbar-custom .btn-login:hover { background: #a50d26; }
+        .navbar-custom .navbar-brand i { color: #e91e63; }
+        .navbar-custom .nav-link { color: rgba(225,190,231,.8) !important; font-weight: 500; padding: 8px 18px !important; transition: .3s; }
+        .navbar-custom .nav-link:hover { color: #fce4ec !important; }
+        .navbar-custom .btn-login { background: linear-gradient(135deg, #e91e63, #533483); border: none; color: #fff; border-radius: 20px; padding: 6px 24px; font-weight: 600; }
+        .navbar-custom .btn-login:hover { box-shadow: 0 3px 15px rgba(233,30,99,.4); }
 
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #0a1929 60%, var(--accent) 100%);
+            background: linear-gradient(135deg, #0f0c29 0%, #1a1a2e 40%, #533483 80%, #e91e63 100%);
             color: #fff;
             padding: 100px 0 80px;
             position: relative;
@@ -47,20 +50,20 @@
             position: absolute;
             top: -50%; left: -50%;
             width: 200%; height: 200%;
-            background: radial-gradient(circle at 30% 50%, rgba(200,16,46,.15) 0%, transparent 50%),
-                        radial-gradient(circle at 70% 30%, rgba(184,134,11,.1) 0%, transparent 40%);
+            background: radial-gradient(circle at 30% 50%, rgba(233,30,99,.2) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(83,52,131,.15) 0%, transparent 40%);
             animation: heroFloat 20s ease-in-out infinite;
         }
         @keyframes heroFloat { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-2%,2%); } }
-        .hero h1 { font-size: 2.8rem; font-weight: 800; text-shadow: 0 2px 10px rgba(0,0,0,.3); }
-        .hero .lead { font-size: 1.25rem; opacity: .9; max-width: 700px; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; text-shadow: 0 2px 20px rgba(233,30,99,.4); color: #fce4ec; }
+        .hero .lead { font-size: 1.25rem; opacity: .9; max-width: 700px; color: #e1bee7; }
 
         /* Sections */
         section { padding: var(--section-padding); }
         .section-title {
             font-size: 2rem;
             font-weight: 700;
-            color: var(--primary);
+            color: #fce4ec;
             text-align: center;
             margin-bottom: 12px;
             position: relative;
@@ -70,104 +73,112 @@
             display: block;
             width: 60px;
             height: 3px;
-            background: var(--accent);
+            background: linear-gradient(90deg, #e91e63, #533483);
             margin: 12px auto 0;
             border-radius: 2px;
         }
-        .section-subtitle { text-align: center; color: #666; margin-bottom: 50px; font-size: 1.05rem; }
+        .section-subtitle { text-align: center; color: #b39ddb; margin-bottom: 50px; font-size: 1.05rem; }
 
         /* Cards */
         .info-card {
-            background: #fff;
+            background: rgba(26,26,46,.8);
             border-radius: 12px;
             padding: 35px 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            box-shadow: 0 4px 20px rgba(233,30,99,.08);
             height: 100%;
             transition: transform .3s, box-shadow .3s;
             border-top: 3px solid transparent;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(179,157,219,.12);
         }
-        .info-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,.1); }
+        .info-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(233,30,99,.15); }
         .info-card .card-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .info-card h5 { font-weight: 700; color: var(--primary); margin-bottom: 12px; }
-        .info-card p { color: #555; line-height: 1.8; font-size: .95rem; }
+        .info-card h5 { font-weight: 700; color: #fce4ec; margin-bottom: 12px; }
+        .info-card p { color: #ce93d8; line-height: 1.8; font-size: .95rem; }
 
         /* Mission & Values */
-        .mv-section { background: var(--light-bg); }
+        .mv-section { background: rgba(15,12,41,.5); }
         .mv-card {
-            background: #fff;
+            background: rgba(26,26,46,.8);
             border-radius: 12px;
             padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            box-shadow: 0 4px 20px rgba(0,0,0,.2);
+            border: 1px solid rgba(179,157,219,.12);
+            backdrop-filter: blur(10px);
         }
-        .mv-card h4 { color: var(--accent); font-weight: 700; margin-bottom: 20px; }
-        .mv-card .mv-item { padding: 12px 0; border-bottom: 1px dashed #e0e0e0; }
+        .mv-card h4 { color: #e91e63; font-weight: 700; margin-bottom: 20px; }
+        .mv-card .mv-item { padding: 12px 0; border-bottom: 1px dashed rgba(179,157,219,.15); }
         .mv-card .mv-item:last-child { border-bottom: none; }
-        .mv-card .mv-item p { margin-bottom: 0; color: #555; line-height: 1.8; }
+        .mv-card .mv-item p { margin-bottom: 0; color: #ce93d8; line-height: 1.8; }
 
         /* Business */
         .biz-card {
-            background: #fff;
+            background: rgba(26,26,46,.8);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            box-shadow: 0 4px 20px rgba(233,30,99,.08);
             height: 100%;
             transition: transform .3s;
+            border: 1px solid rgba(179,157,219,.12);
         }
         .biz-card:hover { transform: translateY(-4px); }
         .biz-card .biz-header {
-            background: linear-gradient(135deg, var(--primary), #2c5f8a);
+            background: linear-gradient(135deg, #e91e63, #533483);
             color: #fff;
             padding: 25px 30px;
             font-size: 1.3rem;
             font-weight: 700;
         }
         .biz-card .biz-body { padding: 25px 30px; }
-        .biz-card .biz-body p { color: #555; line-height: 1.8; font-size: .95rem; text-indent: 2em; }
+        .biz-card .biz-body p { color: #ce93d8; line-height: 1.8; font-size: .95rem; text-indent: 2em; }
 
         /* Departments */
-        .dept-section { background: var(--light-bg); }
+        .dept-section { background: rgba(15,12,41,.5); }
         .dept-card {
-            background: #fff;
+            background: rgba(26,26,46,.8);
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,.06);
+            box-shadow: 0 4px 20px rgba(0,0,0,.2);
             height: 100%;
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid #e91e63;
             transition: transform .3s;
+            border: 1px solid rgba(179,157,219,.12);
+            border-left: 4px solid #e91e63;
         }
         .dept-card:hover { transform: translateY(-3px); }
-        .dept-card h5 { color: var(--primary); font-weight: 700; margin-bottom: 12px; }
-        .dept-card p { color: #555; line-height: 1.8; font-size: .93rem; text-indent: 2em; }
+        .dept-card h5 { color: #fce4ec; font-weight: 700; margin-bottom: 12px; }
+        .dept-card p { color: #ce93d8; line-height: 1.8; font-size: .93rem; text-indent: 2em; }
 
         /* Sub-project tabs */
         .sub-project-section { padding: 40px 0 0; }
         .sub-nav .nav-link {
-            color: #555;
+            color: #ce93d8;
             font-weight: 600;
-            border: 2px solid #e0e0e0;
+            border: 2px solid rgba(179,157,219,.2);
             border-radius: 25px;
             padding: 8px 24px;
             margin: 0 5px 10px;
             transition: .3s;
+            background: transparent;
         }
         .sub-nav .nav-link.active, .sub-nav .nav-link:hover {
-            background: var(--primary);
+            background: linear-gradient(135deg, #e91e63, #533483);
             color: #fff;
-            border-color: var(--primary);
+            border-color: #e91e63;
         }
         .sub-content { padding: 30px 0; }
-        .sub-content p { color: #555; line-height: 2; text-indent: 2em; }
+        .sub-content p { color: #ce93d8; line-height: 2; text-indent: 2em; }
 
         /* Contact */
-        .contact-section { background: linear-gradient(135deg, var(--primary), #0d2137); color: #fff; }
+        .contact-section { background: linear-gradient(135deg, #0f0c29, #1a1a2e); color: #e1bee7; }
         .contact-item { display: flex; align-items: flex-start; margin-bottom: 18px; }
-        .contact-item i { font-size: 1.3rem; margin-right: 15px; color: var(--gold); margin-top: 3px; }
-        .contact-item span { line-height: 1.6; }
+        .contact-item i { font-size: 1.3rem; margin-right: 15px; color: #e91e63; margin-top: 3px; }
+        .contact-item span { line-height: 1.6; color: #ce93d8; }
 
         /* Footer */
         footer {
-            background: #0a1929;
-            color: rgba(255,255,255,.6);
+            background: #0a0a1a;
+            color: rgba(179,157,219,.5);
             padding: 25px 0;
             text-align: center;
             font-size: .9rem;
@@ -181,14 +192,14 @@
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: var(--primary);
+            background: linear-gradient(135deg, #e91e63, #533483);
             color: #fff;
             border: none;
             font-size: 1.2rem;
             display: none;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,.2);
+            box-shadow: 0 4px 12px rgba(233,30,99,.3);
             z-index: 999;
             cursor: pointer;
         }
@@ -231,7 +242,7 @@
                 <p class="lead" style="opacity:.8">致力让生活更美好 · 向上向善，实干笃行</p>
                 <div class="mt-4">
                     <a href="#about" class="btn btn-outline-light btn-lg me-2" style="border-radius:25px;padding:10px 30px">了解更多</a>
-                    <a href="#business" class="btn btn-lg" style="background:var(--accent);border:none;border-radius:25px;padding:10px 30px;color:#fff">主营业务</a>
+                    <a href="#business" class="btn btn-lg" style="background:linear-gradient(135deg,#e91e63,#533483);border:none;border-radius:25px;padding:10px 30px;color:#fff">主营业务</a>
                 </div>
             </div>
         </div>
@@ -311,29 +322,29 @@
         <!-- 四大业务概览 -->
         <div class="row g-4 mb-5">
             <div class="col-lg-3 col-md-6">
-                <div class="info-card text-center" style="border-top-color:#c8102e">
-                    <div class="card-icon"><i class="bi bi-globe-americas" style="color:#c8102e"></i></div>
+                <div class="info-card text-center" style="border-top-color:#e91e63">
+                    <div class="card-icon"><i class="bi bi-globe-americas" style="color:#e91e63"></i></div>
                     <h5>国际教育</h5>
                     <p>双元制教育、学历提升、国际留学、国际研学，培养兼具本土情怀与国际视野的复合型人才</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="info-card text-center" style="border-top-color:#1a3a5c">
-                    <div class="card-icon"><i class="bi bi-cpu" style="color:#1a3a5c"></i></div>
+                <div class="info-card text-center" style="border-top-color:#533483">
+                    <div class="card-icon"><i class="bi bi-cpu" style="color:#533483"></i></div>
                     <h5>智慧教育</h5>
                     <p>智慧校园、AI助教、类脑计算实验室、人工智能与大数据实验室，推动教育智能化转型</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="info-card text-center" style="border-top-color:#b8860b">
-                    <div class="card-icon"><i class="bi bi-palette" style="color:#b8860b"></i></div>
+                <div class="info-card text-center" style="border-top-color:#b39ddb">
+                    <div class="card-icon"><i class="bi bi-palette" style="color:#b39ddb"></i></div>
                     <h5>素质教育</h5>
                     <p>课后服务、编程启蒙、STEAM创客、非遗手作，构建"教育+科技+文化"生态体系</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
-                <div class="info-card text-center" style="border-top-color:#28a745">
-                    <div class="card-icon"><i class="bi bi-building" style="color:#28a745"></i></div>
+                <div class="info-card text-center" style="border-top-color:#7b1fa2">
+                    <div class="card-icon"><i class="bi bi-building" style="color:#7b1fa2"></i></div>
                     <h5>实体教育</h5>
                     <p>智能装备、新能源基础设施、光储充停一体化，赋能校园与城市智慧化建设</p>
                 </div>
@@ -469,6 +480,291 @@
 <!-- Scroll to top -->
 <button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-chevron-up"></i></button>
 
+<!-- Live2D 加藤惠 -->
+<div id="landlord">
+    <div class="message" id="live2d-message"></div>
+    <canvas id="live2d" width="280" height="320"></canvas>
+    <div class="hide-button" id="hideButton">隐藏</div>
+    <div class="live_ico_box">
+        <div class="live_ico_item type_quit" id="quitButton" title="隐藏惠惠"></div>
+    </div>
+</div>
+<button id="open_live2d">召唤惠惠</button>
+
+<link rel="stylesheet" href="/static/live2d/katou/css/live2d.css">
+<style>
+    #landlord {
+        user-select: none;
+        position: fixed;
+        right: 20px;
+        bottom: 0;
+        width: 280px;
+        height: 320px;
+        z-index: 10000;
+        font-size: 0;
+        display: none;
+        cursor: grab;
+    }
+    #landlord:active { cursor: grabbing; }
+    #live2d {
+        width: 280px !important;
+        height: 320px !important;
+        position: relative;
+        z-index: 3;
+    }
+    .message {
+        opacity: 0;
+        color: #fce4ec;
+        box-sizing: border-box;
+        width: 260px;
+        height: auto;
+        margin: auto;
+        padding: 10px 14px;
+        bottom: 320px;
+        right: 10px;
+        text-align: center;
+        border: 1px solid rgba(233,30,99,.4);
+        border-radius: 10px;
+        background: rgba(30,30,54,.92);
+        backdrop-filter: blur(8px);
+        font-size: 13px;
+        font-weight: 400;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        position: absolute;
+        pointer-events: none;
+        box-shadow: 0 4px 15px rgba(233,30,99,.15);
+        transition: opacity .3s;
+    }
+    .hide-button {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        display: none;
+        overflow: hidden;
+        width: 60px;
+        height: 20px;
+        border: 1px solid rgba(233,30,99,.4);
+        border-radius: 12px;
+        background: rgba(233,30,99,.15);
+        box-shadow: 0 2px 8px rgba(233,30,99,.2);
+        text-align: center;
+        font-size: 11px;
+        color: #fce4ec;
+        cursor: pointer;
+        line-height: 20px;
+    }
+    .hide-button:hover {
+        background: rgba(233,30,99,.3);
+        border-color: #e91e63;
+    }
+    .live_ico_box {
+        width: 20px;
+        position: absolute;
+        z-index: 5;
+        right: 0;
+        top: 8px;
+        opacity: .8;
+        display: none;
+    }
+    .live_ico_item {
+        width: 20px;
+        height: 24px;
+        cursor: pointer;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+    }
+    .live_ico_item.type_quit {
+        background-image: url(/static/live2d/katou/images/quite.png);
+    }
+    #open_live2d {
+        border: 1px solid rgba(233,30,99,.5);
+        border-radius: 25px;
+        background: linear-gradient(135deg, rgba(233,30,99,.6), rgba(83,52,131,.6));
+        backdrop-filter: blur(8px);
+        padding: 8px 20px;
+        color: #fce4ec;
+        height: auto;
+        line-height: 1.4;
+        font-size: 13px;
+        font-weight: 600;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 10000;
+        cursor: pointer;
+        display: none;
+        box-shadow: 0 4px 15px rgba(233,30,99,.25);
+        transition: transform .2s, box-shadow .2s;
+    }
+    #open_live2d:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(233,30,99,.35);
+    }
+    @media (max-width: 860px) {
+        #landlord { display: none !important; }
+        #open_live2d { display: none !important; }
+    }
+</style>
+
+<input type="hidden" id="live_talk" value="0">
+<script src="/static/live2d/katou/js/live2d.js"></script>
+<script>
+(function() {
+    var modelBase = '/static/live2d/katou/';
+    var modelUrl = modelBase + 'model/katou_01/katou_01.model.json';
+    var msgEl = document.getElementById('live2d-message');
+    var landlordEl = document.getElementById('landlord');
+    var openBtn = document.getElementById('open_live2d');
+    var hideBtn = document.getElementById('hideButton');
+    var quitBtn = document.getElementById('quitButton');
+    var fadeFlag = false;
+
+    function showMessage(text, duration) {
+        if (Array.isArray(text)) text = text[Math.floor(Math.random() * text.length)];
+        msgEl.innerHTML = text;
+        msgEl.style.opacity = '1';
+        if (duration && duration > 0) {
+            setTimeout(function() { msgEl.style.opacity = '0'; }, duration);
+        }
+    }
+
+    var hour = new Date().getHours();
+    var greeting = '';
+    if (hour > 23 || hour <= 5) greeting = '你是夜猫子呀？这么晚还不睡觉，明天起得来嘛？';
+    else if (hour <= 7) greeting = '早上好！一日之计在于晨，美好的一天就要开始了！';
+    else if (hour <= 11) greeting = '上午好！工作顺利嘛，不要久坐，多起来走动走动哦！';
+    else if (hour <= 14) greeting = '中午了，工作了一个上午，现在是午餐时间！';
+    else if (hour <= 17) greeting = '午后很容易犯困呢，今天的运动目标完成了吗？';
+    else if (hour <= 19) greeting = '傍晚了！窗外夕阳的景色很美丽呢~';
+    else if (hour <= 21) greeting = '晚上好，今天过得怎么样？';
+    else greeting = '已经这么晚了呀，早点休息吧，晚安~~';
+
+    var clickTexts = [
+        '有什么事要吩咐吗？',
+        '那个……如果太过强硬，惠惠会不自觉长出角的！',
+        '如果一直这样的话，惠惠可是会生气的哦！',
+        '头晕目眩~',
+        '要是能再温柔一点的话……'
+    ];
+
+    function showLandlord() {
+        if (fadeFlag) return;
+        fadeFlag = true;
+        localStorage.setItem('live2dhidden', '1');
+        openBtn.style.display = 'none';
+        landlordEl.style.display = 'block';
+        landlordEl.style.opacity = '0';
+        var op = 0;
+        var timer = setInterval(function() {
+            op += 0.1;
+            if (op >= 1) { op = 1; clearInterval(timer); fadeFlag = false; }
+            landlordEl.style.opacity = op;
+        }, 20);
+    }
+
+    function hideLandlord() {
+        if (fadeFlag) return;
+        fadeFlag = true;
+        localStorage.setItem('live2dhidden', '0');
+        var op = 1;
+        var timer = setInterval(function() {
+            op -= 0.1;
+            if (op <= 0) {
+                op = 0; clearInterval(timer); fadeFlag = false;
+                landlordEl.style.display = 'none';
+                openBtn.style.display = 'block';
+            }
+            landlordEl.style.opacity = op;
+        }, 20);
+    }
+
+    openBtn.addEventListener('click', showLandlord);
+    hideBtn.addEventListener('click', hideLandlord);
+    quitBtn.addEventListener('click', hideLandlord);
+
+    landlordEl.addEventListener('mouseenter', function() {
+        hideBtn.style.display = 'block';
+        quitBtn.style.display = 'block';
+    });
+    landlordEl.addEventListener('mouseleave', function() {
+        hideBtn.style.display = 'none';
+        quitBtn.style.display = 'none';
+    });
+
+    document.getElementById('live2d').addEventListener('click', function() {
+        showMessage(clickTexts[Math.floor(Math.random() * clickTexts.length)], 4000);
+        var difyBtn = document.getElementById('dify-chatbot-bubble-button');
+        if (difyBtn) difyBtn.click();
+    });
+
+    // Drag
+    (function() {
+        var moveX = 0, moveY = 0, moveBottom = 0, moveLeft = 0, moveable = false;
+        landlordEl.addEventListener('mousedown', function(e) {
+            if (e.target.id === 'hideButton' || e.target.id === 'quitButton') return;
+            moveable = true;
+            moveX = e.clientX;
+            moveY = e.clientY;
+            var rect = landlordEl.getBoundingClientRect();
+            moveLeft = rect.left;
+            moveBottom = window.innerHeight - rect.bottom;
+            e.preventDefault();
+        });
+        document.addEventListener('mousemove', function(e) {
+            if (moveable) {
+                landlordEl.style.right = 'auto';
+                landlordEl.style.left = (moveLeft + (e.clientX - moveX)) + 'px';
+                landlordEl.style.bottom = (moveBottom + (moveY - e.clientY)) + 'px';
+            }
+        });
+        document.addEventListener('mouseup', function() {
+            if (moveable) {
+                moveable = false;
+                var hW = landlordEl.style.left.replace('px', '');
+                var hH = landlordEl.style.bottom.replace('px', '');
+                sessionStorage.setItem('historywidth', hW);
+                sessionStorage.setItem('historyheight', hH);
+            }
+        });
+    })();
+
+    // Wait for Live2D SDK to be ready, then load model
+    function tryLoadModel() {
+        if (typeof loadlive2d === 'function') {
+            var hidden = localStorage.getItem('live2dhidden');
+            if (hidden === '0') {
+                setTimeout(function() { openBtn.style.display = 'block'; }, 500);
+            } else {
+                setTimeout(function() {
+                    landlordEl.style.display = 'block';
+                    landlordEl.style.opacity = '1';
+                }, 500);
+            }
+            setTimeout(function() {
+                try {
+                    loadlive2d('live2d', modelUrl);
+                    showMessage(greeting, 8000);
+                    console.log('Live2D model loading:', modelUrl);
+                } catch(e) {
+                    console.error('Live2D load error:', e);
+                }
+            }, 300);
+        } else {
+            console.warn('loadlive2d not ready, retrying...');
+            setTimeout(tryLoadModel, 300);
+        }
+    }
+
+    if (document.readyState === 'complete') {
+        tryLoadModel();
+    } else {
+        window.addEventListener('load', tryLoadModel);
+    }
+})();
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 // Smooth scroll for nav links
@@ -544,12 +840,22 @@ window.addEventListener('scroll', () => {
 </script>
 <style>
   #dify-chatbot-bubble-button {
-    background-color: #1C64F2 !important;
+    background-color: transparent !important;
     position: fixed !important;
-    right: 16px !important;
+    right: 20px !important;
     left: auto !important;
-    bottom: 16px !important;
-    z-index: 9999 !important;
+    bottom: 20px !important;
+    z-index: 9998 !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
   #dify-chatbot-bubble-window {
     width: 24rem !important;

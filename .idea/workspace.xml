@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7f8207f8-246f-45e3-bcf4-869f4ec53e0e" name="Changes" comment="优化前端内容">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/dify_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/dify_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/text2sql.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/text2sql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/ai_chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/ai_chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/customers.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/customers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/work_repo_sums.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/work_repo_sums.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/work_repos.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/work_repos.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/app_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/app_error.log" afterDir="false" />
     </list>
@@ -16,18 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kiritosmiles"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kiritosmiles&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kiritosmiles/education_system.git",
-    "accountId": "07568897-f96f-4307-bf04-63a23c905a70"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kiritosmiles/education_system.git&quot;,
+    &quot;accountId&quot;: &quot;07568897-f96f-4307-bf04-63a23c905a70&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7,
   &quot;fromUser&quot;: false
@@ -37,21 +45,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/0309AI/AI大模型学习/education_system",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/0309AI/AI大模型学习/education_system&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="education_system" />
@@ -170,11 +178,22 @@
       <option name="project" value="LOCAL" />
       <updated>1777127349866</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="优化前端内容">
+      <option name="closed" value="true" />
+      <created>1777130724569</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777130724569</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ps1" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="education_system upload" />

@@ -35,7 +35,8 @@ education_system/
 │   │   ├── work_repo_sum_controller.py    # 工作日报总结（含AI生成+定时任务）
 │   │   ├── industry_repo_controller.py    # 行业周报CRUD（含AI生成+定时任务）
 │   │   ├── email_controller.py            # 邮件推送
-│   │   └── text2sql_controller.py         # Text2SQL智能查询
+│   │   ├── text2sql_controller.py         # Text2SQL智能查询
+│   │   └── ai_chat_controller.py          # AI智能助手（Dify Chat API）
 │   ├── middleware/            # 中间件
 │   │   ├── __init__.py
 │   │   ├── logging_mw.py     # 日志初始化（控制台彩色 + 文件轮转）
@@ -58,7 +59,7 @@ education_system/
 │   │   ├── industry_repos.html # 行业周报
 │   │   ├── email.html         # 邮件推送
 │   │   ├── text2sql.html      # 智能查询
-│   │   └── ai_chat.html       # AI智能助手（含Dify聊天机器人）
+│   │   └── ai_chat.html       # AI智能助手（Dify Chat API，Markdown渲染，表格/代码块优化）
 │   └── static/                # 静态资源
 │       ├── css/
 │       └── js/
@@ -178,6 +179,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 | 行业周报 | DELETE | `/api/industry-repos/{i_id}` | 删除周报 |
 | 邮件 | POST | `/api/email/send` | 发送邮件 |
 | 智能查询 | POST | `/api/text2sql/query` | 自然语言转SQL查询 |
+| AI助手 | POST | `/api/ai-chat/message` | AI对话（支持文件上传） |
 
 ## 权限说明
 
@@ -209,7 +211,15 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **行业周报**：调用 Dify Chatbot API，根据指定日期范围自动生成行业周报
   - 手动触发：POST `/api/industry-repos/generate?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD`
   - 定时任务：每周一 8:30 自动生成上周行业周报
-- **AI 聊天助手**：前端页面嵌入 Dify Chatbot Widget，支持实时对话
+- **AI 聊天助手**：基于 Dify Chat API 的智能对话，支持多轮对话、文件上传、Markdown 渲染
+  - 接口：POST `/api/ai-chat/message`
+  - 支持上传图片/文档，AI 自动识别内容
+  - 多轮对话：通过 `conversation_id` 保持上下文
+  - 前端渲染优化：
+    - 表格横向滚动（`.table-wrapper`），蓝色表头 + 斑马纹 + 悬停高亮
+    - 代码块深色主题 + 一键复制按钮，HTML 转义防 XSS
+    - Markdown 标题/列表/引用/分割线/段落排版优化
+    - AI 回复气泡宽度 90%，充分利用空间
 
 ### Text2SQL 智能查询
 
@@ -247,5 +257,5 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **定时任务**: APScheduler
 - **HTTP客户端**: httpx（Dify API调用）
 - **日志**: Python logging + TimedRotatingFileHandler
-- **前端**: Bootstrap 5 + Jinja2模板
+- **前端**: Bootstrap 5 + Jinja2模板 + Marked.js v4（Markdown渲染）
 - **数据库**: MySQL 8.0

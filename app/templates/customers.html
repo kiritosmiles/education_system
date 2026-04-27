@@ -100,7 +100,7 @@ async function loadCustomers(page = 1) {
     const res = await apiGet(url);
     const items = res.data?.items || [];
     document.getElementById('customerTable').innerHTML = items.map(c => `<tr>
-        <td>${c.c_id}</td><td>${c.c_name}</td><td>${c.c_age??'-'}</td><td>${genderText(c.c_gender)}</td>
+        <td>${c.c_id}</td><td class="nowrap">${c.c_name}</td><td>${c.c_age??'-'}</td><td>${genderText(c.c_gender)}</td>
         <td>${c.c_phone||'-'}</td><td>${c.c_email||'-'}</td><td>${c.c_degree||'-'}</td>
         <td>${rankBadge(c.c_rank)}</td><td>${customerStatusBadge(c.c_status)}</td><td>${formatDate(c.create_time)}</td>
         <td><button class="btn btn-sm btn-outline-primary" onclick="editCustomer(${c.c_id})"><i class="bi bi-pencil"></i></button>
