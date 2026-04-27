@@ -1,0 +1,4473 @@
+app:
+  description: '教育提升系统
+
+    '
+  icon: 👨‍🎓
+  icon_background: '#E0F2FE'
+  mode: advanced-chat
+  name: education_system
+  use_icon_as_answer_icon: true
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.1.36@73e3e28eca163b96da65ef9eab8633f9e7257213ff0d2f2bed93b28b552d2cda
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: wjdsg/163-smtp-send-mail:0.0.1@53922437a73d6512114f3e915dcad3b7c85b7df687ae2013d96e97e6e3b6fd6a
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tavily:0.1.5@d155ce82c081df2a32a7bf4bd9ded15028dee4cc5c54ad1bd39c9a2726e8cbe4
+    version: null
+kind: app
+version: 0.5.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: a02351a4-93b6-4e45-98f3-993f0a50cea4
+    name: localhost_port
+    selector:
+    - env
+    - localhost_port
+    value: http://192.168.110.84:8000
+    value_type: string
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - document
+      allowed_file_upload_methods:
+      - local_file
+      enabled: true
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: 你好，请问有什么可以帮到你吗？
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: question-classifier
+      id: 1776944640787-1776945781114-1776946131543-target
+      selected: false
+      source: '1776944640787'
+      sourceHandle: '1776945781114'
+      target: '1776946131543'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: document-extractor
+        targetType: llm
+      id: 1776999450102-source-1776946809394-target
+      selected: false
+      source: '1776999450102'
+      sourceHandle: source
+      target: '1776946809394'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: http-request
+      id: 1776946131543-1776946160782-17770225467550-target
+      selected: false
+      source: '1776946131543'
+      sourceHandle: '1776946160782'
+      target: '17770225467550'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 17770225467550-source-1777022663122-target
+      selected: false
+      source: '17770225467550'
+      sourceHandle: source
+      target: '1777022663122'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1777022663122-source-1777022669378-target
+      selected: false
+      source: '1777022663122'
+      sourceHandle: source
+      target: '1777022669378'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777081069094-fail-branch-1777082061030-target
+      selected: false
+      source: '1777081069094'
+      sourceHandle: fail-branch
+      target: '1777082061030'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 1777081069094-source-1777082141718-target
+      selected: false
+      source: '1777081069094'
+      sourceHandle: source
+      target: '1777082141718'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1777083035394-source-1777082570243-target
+      selected: false
+      source: '1777083035394'
+      sourceHandle: source
+      target: '1777082570243'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1777082141718-source-1777083035394-target
+      selected: false
+      source: '1777082141718'
+      sourceHandle: source
+      target: '1777083035394'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1777095176722-source-1777095196322-target
+      selected: false
+      source: '1777095176722'
+      sourceHandle: source
+      target: '1777095196322'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1777103000027-source-1777103237876-target
+      selected: false
+      source: '1777103000027'
+      sourceHandle: source
+      target: '1777103237876'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: 1777103936925-source-1777103452242-target
+      selected: false
+      source: '1777103936925'
+      sourceHandle: source
+      target: '1777103452242'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: parameter-extractor
+      id: 1776944640787-1777101175549-1777104500089-target
+      selected: false
+      source: '1776944640787'
+      sourceHandle: '1777101175549'
+      target: '1777104500089'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: parameter-extractor
+        targetType: if-else
+      id: 1777104500089-source-1777104548537-target
+      selected: false
+      source: '1777104500089'
+      sourceHandle: source
+      target: '1777104548537'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1777104548537-false-1777103000027-target
+      selected: false
+      source: '1777104548537'
+      sourceHandle: 'false'
+      target: '1777103000027'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777103452242-source-1777104671945-target
+      selected: false
+      source: '1777103452242'
+      sourceHandle: source
+      target: '1777104671945'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: llm
+      id: 1777104548537-true-1777104908909-target
+      selected: false
+      source: '1777104548537'
+      sourceHandle: 'true'
+      target: '1777104908909'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1777104908909-source-1777103936925-target
+      selected: false
+      source: '1777104908909'
+      sourceHandle: source
+      target: '1777103936925'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777103452242-fail-branch-1777105120106-target
+      selected: false
+      source: '1777103452242'
+      sourceHandle: fail-branch
+      target: '1777105120106'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: question-classifier
+      id: 1776943088398-source-1777107492023-target
+      selected: false
+      source: '1776943088398'
+      sourceHandle: source
+      target: '1777107492023'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: answer
+      id: 1777107492023-1-1777036301211-target
+      selected: false
+      source: '1777107492023'
+      sourceHandle: '1'
+      target: '1777036301211'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: question-classifier
+      id: 1777107492023-2-1776944640787-target
+      selected: false
+      source: '1777107492023'
+      sourceHandle: '2'
+      target: '1776944640787'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: code
+      id: 1776946809394-source-1777109443285-target
+      selected: false
+      source: '1776946809394'
+      sourceHandle: source
+      target: '1777109443285'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: document-extractor
+      id: 1776944640787-1-1776999450102-target
+      selected: false
+      source: '1776944640787'
+      sourceHandle: '1'
+      target: '1776999450102'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: llm
+      id: 1777109443285-source-1777109628138-target
+      selected: false
+      source: '1777109443285'
+      sourceHandle: source
+      target: '1777109628138'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: parameter-extractor
+      id: 1777109628138-source-1776950054526-target
+      selected: false
+      source: '1777109628138'
+      sourceHandle: source
+      target: '1776950054526'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: parameter-extractor
+        targetType: parameter-extractor
+      id: 1776950054526-source-1777113692726-target
+      selected: false
+      source: '1776950054526'
+      sourceHandle: source
+      target: '1777113692726'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777113981302-fail-branch-1777116925902-target
+      selected: false
+      source: '1777113981302'
+      sourceHandle: fail-branch
+      target: '1777116925902'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: parameter-extractor
+      id: 1777113981302-source-1777116986374-target
+      selected: false
+      source: '1777113981302'
+      sourceHandle: source
+      target: '1777116986374'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: parameter-extractor
+        targetType: if-else
+      id: 1777116986374-source-1777116973934-target
+      selected: false
+      source: '1777116986374'
+      sourceHandle: source
+      target: '1777116973934'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1777116973934-true-1777117127912-target
+      selected: false
+      source: '1777116973934'
+      sourceHandle: 'true'
+      target: '1777117127912'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1777116973934-false-1777117131559-target
+      selected: false
+      source: '1777116973934'
+      sourceHandle: 'false'
+      target: '1777117131559'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777117127912-fail-branch-1777117692468-target
+      selected: false
+      source: '1777117127912'
+      sourceHandle: fail-branch
+      target: '1777117692468'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777117131559-fail-branch-1777117907881-target
+      selected: false
+      source: '1777117131559'
+      sourceHandle: fail-branch
+      target: '1777117907881'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777117127912-source-1777121237870-target
+      selected: false
+      source: '1777117127912'
+      sourceHandle: source
+      target: '1777121237870'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 1777117131559-source-1777121253381-target
+      selected: false
+      source: '1777117131559'
+      sourceHandle: source
+      target: '1777121253381'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: http-request
+      id: 1776946131543-1777090726824-17770225467550-target
+      selected: false
+      source: '1776946131543'
+      sourceHandle: '1777090726824'
+      target: '17770225467550'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: parameter-extractor
+        targetType: if-else
+      id: 1777113692726-source-1777124505244-target
+      selected: false
+      source: '1777113692726'
+      sourceHandle: source
+      target: '1777124505244'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1777124505244-true-1777113981302-target
+      selected: false
+      source: '1777124505244'
+      sourceHandle: 'true'
+      target: '1777113981302'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1777124505244-false-1777124533988-target
+      selected: false
+      source: '1777124505244'
+      sourceHandle: 'false'
+      target: '1777124533988'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: http-request
+      id: 1776946131543-1-17770225467550-target
+      selected: false
+      source: '1776946131543'
+      sourceHandle: '1'
+      target: '17770225467550'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: knowledge-retrieval
+      id: 1776946131543-1777127521606-1777127537298-target
+      selected: false
+      source: '1776946131543'
+      sourceHandle: '1777127521606'
+      target: '1777127537298'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1777127537298-source-1777127577353-target
+      selected: false
+      source: '1777127537298'
+      sourceHandle: source
+      target: '1777127577353'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: answer
+      id: 1777127577353-source-1777127587153-target
+      selected: false
+      source: '1777127577353'
+      sourceHandle: source
+      target: '1777127587153'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: if-else
+      id: 1776944640787-1776945751010-1777128453008-target
+      selected: false
+      source: '1776944640787'
+      sourceHandle: '1776945751010'
+      target: '1777128453008'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: http-request
+      id: 1777128453008-true-1777081069094-target
+      selected: false
+      source: '1777128453008'
+      sourceHandle: 'true'
+      target: '1777081069094'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: code
+      id: 1777128453008-false-1777128478367-target
+      selected: false
+      source: '1777128453008'
+      sourceHandle: 'false'
+      target: '1777128478367'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: code
+        targetType: http-request
+      id: 1777128478367-source-17771285878540-target
+      selected: false
+      source: '1777128478367'
+      sourceHandle: source
+      target: '17771285878540'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: llm
+      id: 17771285878540-source-1777082141718-target
+      selected: false
+      source: '17771285878540'
+      sourceHandle: source
+      target: '1777082141718'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: http-request
+        targetType: answer
+      id: 17771285878540-fail-branch-1777082061030-target
+      selected: false
+      source: '17771285878540'
+      sourceHandle: fail-branch
+      target: '1777082061030'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: if-else
+      id: 1776944640787-1776945767082-1777128726055-target
+      selected: false
+      source: '1776944640787'
+      sourceHandle: '1776945767082'
+      target: '1777128726055'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: code
+      id: 1777128726055-true-17771287681410-target
+      selected: false
+      source: '1777128726055'
+      sourceHandle: 'true'
+      target: '17771287681410'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 17771288744550-source-1777095176722-target
+      selected: false
+      source: '17771288744550'
+      sourceHandle: source
+      target: '1777095176722'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: http-request
+        targetType: if-else
+      id: 17770225467550-fail-branch-1777271934343-target
+      selected: false
+      source: '17770225467550'
+      sourceHandle: fail-branch
+      target: '1777271934343'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1777271934343-true-1777034139712-target
+      selected: false
+      source: '1777271934343'
+      sourceHandle: 'true'
+      target: '1777034139712'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: if-else
+        targetType: answer
+      id: 1777271934343-false-1777271997711-target
+      selected: false
+      source: '1777271934343'
+      sourceHandle: 'false'
+      target: '1777271997711'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: llm
+        targetType: tool
+      id: 1777094206429-source-1777279725865-target
+      selected: false
+      source: '1777094206429'
+      sourceHandle: source
+      target: '1777279725865'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: tool
+        targetType: answer
+      id: 1777279725865-source-1777279842953-target
+      selected: false
+      source: '1777279725865'
+      sourceHandle: source
+      target: '1777279842953'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: code
+        targetType: tool
+      id: 17771287681410-source-1777281171866-target
+      selected: false
+      source: '17771287681410'
+      sourceHandle: source
+      target: '1777281171866'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: llm
+      id: 1777281171866-source-17771288744550-target
+      source: '1777281171866'
+      sourceHandle: source
+      target: '17771288744550'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: if-else
+        targetType: tool
+      id: 1777128726055-false-17772812867980-target
+      source: '1777128726055'
+      sourceHandle: 'false'
+      target: '17772812867980'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: tool
+        targetType: llm
+      id: 17772812867980-source-1777094206429-target
+      source: '17772812867980'
+      sourceHandle: source
+      target: '1777094206429'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - default: ''
+          hint: ''
+          label: uid
+          max_length: 48
+          options: []
+          placeholder: ''
+          required: true
+          type: number
+          variable: uid
+        - default: ''
+          hint: ''
+          label: token
+          max_length: 512
+          options: []
+          placeholder: ''
+          required: true
+          type: paragraph
+          variable: token
+        - default: ''
+          hint: ''
+          label: yesterday
+          max_length: 48
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: yesterday
+        - default: ''
+          hint: ''
+          label: start_date
+          max_length: 48
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: start_date
+        - default: ''
+          hint: ''
+          label: end_date
+          max_length: 48
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: end_date
+      height: 212
+      id: '1776943088398'
+      position:
+        x: 1420.1149248342006
+        y: 255
+      positionAbsolute:
+        x: 1420.1149248342006
+        y: 255
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        classes:
+        - id: '1'
+          name: 通过员工输入的顾客信息和上传的顾客相关的文件，对潜在客户进行研判
+        - id: '1777101175549'
+          name: 生成员工个人工作日报和上传员工个人工作日报
+        - id: '1776945751010'
+          name: 生成所有员工工作日报总结
+        - id: '1776945767082'
+          name: 生成行业周报
+        - id: '1776945781114'
+          name: 查询信息，包括查询员工信息、顾客信息、个人工作日报、工作日报总结、行业周报
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        query_variable_selector:
+        - '1776943088398'
+        - sys.query
+        selected: false
+        title: 问题分类器
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 347
+      id: '1776944640787'
+      position:
+        x: 2329.1588267077905
+        y: 263.87426746791675
+      positionAbsolute:
+        x: 2329.1588267077905
+        y: 263.87426746791675
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        classes:
+        - id: '1'
+          name: 查询员工信息
+        - id: '1777090726824'
+          name: 查询员工工作日报
+        - id: '1776946160782'
+          name: 使用Text2SQL查询客户信息
+        - id: '1777127521606'
+          name: 公司信息
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        query_variable_selector:
+        - '1776943088398'
+        - sys.query
+        selected: false
+        title: 查询分类
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 245
+      id: '1776946131543'
+      position:
+        x: 2729.7444845788377
+        y: 1904.1781279130857
+      positionAbsolute:
+        x: 2729.7444845788377
+        y: 1904.1781279130857
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: c846b7ce-e723-48ba-8efb-f643579169ee
+          role: system
+          text: "你是一个用户画像分析专家。请根据用户提供的文本{{#context#}}{{#1776999450102.text#}}（可能是简历、自我介绍或对话记录），提取以下信息。如果某项信息无法确定，则输出空字符串或\
+            \ null。必须输出合法的 JSON 格式，不要包含其他解释文字。\n\n**输出 JSON 结构：**\n{\n  \"c_name\"\
+            : \"姓名（必填，从文本中提取，若没有则为空字符串）\",\n  \"c_phone\": \"手机号（11位数字，必填）\",\n  \"\
+            c_age\": 年龄（整数）,\n  \"c_region\": \"籍贯（省份或城市）\",\n  \"c_gender\": 性别（0-男,\
+            \ 1-女）,\n  \"c_email\": \"邮箱地址（严格按照邮箱格式）\",\n  \"c_degree\": \"学历（例如：初中、高中、大专、本科、硕士）\"\
+            ,\n  \n  // 新加坡项目所需因子（根据文本推理等级）\n  \"study_intent\": \"升学需求等级（strong/medium/weak/none）\"\
+            ,\n  \"job_intent\": \"就业需求等级（strong/medium/weak/none）\",\n  \"family_income\"\
+            : \"家庭经济状况（high/medium/low/very_low）\",\n  \"english_level\": \"英语水平（fluent/good/basic/poor）\"\
+            ,\n  \"study_abroad_intent\": \"留学意愿（strong/medium/weak/none）\",\n  \"\
+            policy_concern\": \"政策关注度（active/passive/none）\",\n  \n  // 德国项目所需额外因子\n\
+            \  \"immigration_intent\": \"移民需求（strong/medium/weak/none）\",\n  \"hands_on_ability\"\
+            : \"动手能力（strong/medium/weak/none）\",\n  \"logic_ability\": \"逻辑思维（strong/medium/weak/none）\"\
+            ,\n  \"german_level\": \"德语水平（b1+/a2/a1/none/learning）\",\n  \"family_support\"\
+            : \"家庭支持（strong/medium/weak/none）\",\n  \"economic_rational\": \"经济理性（true/false）\"\
+            ,\n  \"learning_attitude\": \"学习态度（strong/medium/weak/none）\"\n}\n\n**用户文本：**\n\
+            {{#sys.query#}}"
+        selected: false
+        structured_output_enabled: true
+        title: JSON参数提取
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1776946809394'
+      position:
+        x: 3116.5532130447755
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 3116.5532130447755
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        instruction: 根据LLM模型输出的text数据{{#1776946809394.text#}}提取所有对应的参数。如果没有则为空。顾客邮箱地址需要严格按照邮箱格式提取。
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        parameters:
+        - description: 顾客籍贯
+          name: c_region
+          required: false
+          type: string
+        - description: 顾客性别，0是男，1是女
+          name: c_gender
+          required: false
+          type: number
+        - description: 顾客学历
+          name: c_degree
+          required: false
+          type: string
+        - description: 顾客邮箱
+          name: c_email
+          required: false
+          type: string
+        query:
+        - '1776946809394'
+        - text
+        reasoning_mode: prompt
+        selected: false
+        title: 参数提取器 2
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 87
+      id: '1776950054526'
+      position:
+        x: 4029.7332598828616
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 4029.7332598828616
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        is_array_file: true
+        selected: false
+        title: 文档提取器
+        type: document-extractor
+        variable_selector:
+        - sys
+        - files
+      height: 103
+      id: '1776999450102'
+      position:
+        x: 2816.5532130447755
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 2816.5532130447755
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-12484
+            key: ''
+            type: text
+            value: "{\n  \"question\": {{#sys.query#}}\n}"
+          type: json
+        error_strategy: fail-branch
+        headers: ''
+        method: post
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: Text2SQL
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/text2sql/query'
+        variables: []
+      height: 176
+      id: '17770225467550'
+      position:
+        x: 3183.540478053364
+        y: 1932.4348305878955
+      positionAbsolute:
+        x: 3183.540478053364
+        y: 1932.4348305878955
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17770225467550'
+          - body
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: ebbdd7cc-a49b-4462-88a7-03f5e42942a7
+          role: system
+          text: '美化展示数据{{#context#}}，数据按照表格统一展示，包括标题和数据，标题用数据的key值解析成中文，展示所有数据信息，其他说明和参考全部删掉。
+
+            按照Markdown 表格（适用于文档/笔记）'
+        selected: false
+        title: LLM 6
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777022663122'
+      position:
+        x: 3518.17858823911
+        y: 1923.3405311888332
+      positionAbsolute:
+        x: 3518.17858823911
+        y: 1923.3405311888332
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#1777022663122.text#}}'
+        selected: false
+        title: 直接回复 8
+        type: answer
+        variables: []
+      height: 102
+      id: '1777022669378'
+      position:
+        x: 3814.338134440866
+        y: 1923.3405311888332
+      positionAbsolute:
+        x: 3814.338134440866
+        y: 1923.3405311888332
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '调用Text2SQL失败，权限不足。
+
+          '
+        selected: false
+        title: 直接回复 10
+        type: answer
+        variables: []
+      height: 99
+      id: '1777034139712'
+      position:
+        x: 3814.338134440866
+        y: 2057.1153226771225
+      positionAbsolute:
+        x: 3814.338134440866
+        y: 2057.1153226771225
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: 'uid：{{#1776943088398.uid#}}
+
+          token：{{#1776943088398.token#}}'
+        selected: false
+        title: 用户登录认证成功
+        type: answer
+        variables: []
+      height: 121
+      id: '1777036301211'
+      position:
+        x: 2340.45306678813
+        y: 8.36560076062105
+      positionAbsolute:
+        x: 2340.45306678813
+        y: 8.36560076062105
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        error_strategy: fail-branch
+        headers: ''
+        method: get
+        params: w_date:{{#1776943088398.yesterday#}}
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: 员工日报查询
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/work-repos/all/list'
+        variables: []
+      height: 147
+      id: '1777081069094'
+      position:
+        x: 3448.310040184915
+        y: 716.2541036917979
+      positionAbsolute:
+        x: 3448.310040184915
+        y: 716.2541036917979
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '员工日报总结错误
+
+          Error_type：{{#1777081069094.error_type#}}
+
+          Error_msg：{{#1777081069094.error_message#}}'
+        selected: false
+        title: 员工日报总结错误
+        type: answer
+        variables: []
+      height: 153
+      id: '1777082061030'
+      position:
+        x: 3765.7026260624093
+        y: 918.1912374257565
+      positionAbsolute:
+        x: 3765.7026260624093
+        y: 918.1912374257565
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1777081069094'
+          - body
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 9a9fc2a5-3a19-4053-b0e8-4a115e251654
+          role: system
+          text: "``` xml\n<instruction>\n你是一名专业的行政助理，负责根据提供的员工日报数据生成一份给领导的工作日报总结。请严格按照以下步骤执行：\n\
+            \n1. **数据统计**：首先分析输入变量 {{#context#}}，统计其中有多少位不同的员工（基于 `u_id` 或data数组条目数量）提交了日报。\n\
+            2. **内容汇总**：仔细阅读每条日报中的 `content` 字段，提取关键工作成果、进展和下一步计划。忽略技术元数据如 `create_time`、`update_time`、`is_del`\
+            \ 等，除非它们对理解工作时效性至关重要。\n3. **撰写总结**：\n   - 将提取的信息整合成一篇流畅、专业的汇报文本。\n   -\
+            \ 语气应正式、客观且积极。\n   - 重点突出关键业绩和重要进展。\n   - 字数严格控制在 300-500 字之间。如果原始内容较少，请适当润色连接词以确保通顺，但不要捏造事实；如果内容较多，请精简冗余描述，保留核心信息。\n\
+            4. **格式要求**：\n   - 输出纯文本，不要包含任何 XML 标签（如 <summary> 等）。\n   - 不要输出 Markdown\
+            \ 格式的代码块标记。\n   - 直接输出总结内容。\n\n输入数据格式说明：\n{{#1777081069094.body#}} 是一个\
+            \ JSON 数组，每个对象代表一条日报记录，包含 `w_title`（工作标题）、`content`（详细内容）等字段。\n</instruction>\n\
+            \n<input>\n{{#1777081069094.body#}}\n</input>\n\n<example>\n输入:\n[\n \
+            \   {\n      \"w_id\": 21,\n      \"w_date\": \"2026-04-24\",\n      \"\
+            w_title\": \"客户跟进与方案整理\",\n      \"u_id\": 1,\n      \"content\": \"今日主要完成了3位意向客户的电话回访，其中张先生对国际留学项目表示浓厚兴趣，已安排下周面谈。下午整理了双元制教育的合作方案文档，并发送给合作院校审阅。\"\
+            ,\n      \"create_time\": \"2026-04-24T19:59:11\",\n      \"update_time\"\
+            : \"2026-04-24T19:59:11\",\n      \"is_del\": 0\n    },\n    {\n     \
+            \ \"w_id\": 22,\n      \"w_date\": \"2026-04-24\",\n      \"w_title\"\
+            : \"市场调研\",\n      \"u_id\": 2,\n      \"content\": \"分析了竞争对手最新的定价策略，完成了Q2市场趋势分析报告初稿，发现高端市场需求有上升趋势。\"\
+            ,\n      \"create_time\": \"2026-04-24T20:10:00\",\n      \"update_time\"\
+            : \"2026-04-24T20:10:00\",\n      \"is_del\": 0\n    }\n]\n\n输出:\n昨日共有2位员工完成了工作日报提交，整体工作进展顺利，主要集中在客户拓展与市场策略分析两个核心领域。\n\
+            \n在客户跟进方面，团队成员积极落实意向客户的沟通工作。通过高效的电话回访，成功挖掘了潜在商机，特别是针对国际留学项目，已与高意向客户张先生建立深度联系，并确立了下周的面谈计划，这为后续转化奠定了良好基础。同时，双元制教育项目的合作推进也取得了实质性进展，合作方案文档已完成整理并发送至合作院校进行审阅，预计近期将获得反馈，有助于加速合作落地。\n\
+            \n在市场调研方面，团队对竞争环境进行了深入剖析。通过对竞争对手最新定价策略的细致分析，结合Q2市场趋势分析报告的初稿完成情况，我们洞察到高端市场需求呈现上升趋势。这一发现为公司调整产品定位和优化营销策略提供了重要的数据支持。\n\
+            \n总体而言，昨日工作在维护现有客户关系、拓展新业务渠道以及深化市场认知方面均取得了显著成效。建议接下来重点关注张先生面谈的准备工作，以及跟踪合作院校的审阅反馈，同时利用市场分析结果优化下季度的销售重点。\n\
+            </example>\n```"
+        selected: false
+        title: LLM 7
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777082141718'
+      position:
+        x: 3765.7026260624093
+        y: 760.2541036917979
+      positionAbsolute:
+        x: 3765.7026260624093
+        y: 760.2541036917979
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#1777082141718.text#}}'
+        selected: false
+        title: 直接回复 11
+        type: answer
+        variables: []
+      height: 102
+      id: '1777082570243'
+      position:
+        x: 4464.219940907194
+        y: 760.2541036917979
+      positionAbsolute:
+        x: 4464.219940907194
+        y: 760.2541036917979
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Email username
+            ja_JP: Email username
+            pt_BR: Email username
+            zh_Hans: 邮箱用户名
+          label:
+            en_US: Email username
+            ja_JP: Email username
+            pt_BR: Email username
+            zh_Hans: 邮箱用户名
+          llm_description: Email username
+          max: null
+          min: null
+          name: username_send
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: AUTHORIZE CODE
+            ja_JP: AUTHORIZE CODE
+            pt_BR: CODE DE AUTORIZAÇÃO
+            zh_Hans: 授权码
+          label:
+            en_US: AUTHORIZE CODE
+            ja_JP: AUTHORIZE CODE
+            pt_BR: CODE DE AUTORIZAÇÃO
+            zh_Hans: 授权码
+          llm_description: AUTHORIZE CODE
+          max: null
+          min: null
+          name: authorization_code
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Recipient mailbox, multiple mailboxes separated by commas
+            ja_JP: Recipient mailbox, multiple mailboxes separated by commas
+            pt_BR: Recipiente de correio electrónico, endereços de correio electrónico
+              múltiplos separados por vírgulas
+            zh_Hans: 收件人邮箱，多个邮箱逗号隔开
+          label:
+            en_US: Recipient mailbox, multiple mailboxes separated by commas
+            ja_JP: Recipient mailbox, multiple mailboxes separated by commas
+            pt_BR: Recipiente de correio electrónico, endereços de correio electrónico
+              múltiplos separados por vírgulas
+            zh_Hans: 收件人邮箱，多个邮箱逗号隔开
+          llm_description: Recipient mailbox, multiple mailboxes separated by commas
+          max: null
+          min: null
+          name: username_recv
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: subject
+            ja_JP: subject
+            pt_BR: tema
+            zh_Hans: 主题
+          label:
+            en_US: subject
+            ja_JP: subject
+            pt_BR: tema
+            zh_Hans: 主题
+          llm_description: subject
+          max: null
+          min: null
+          name: subject
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: content
+            ja_JP: content
+            pt_BR: conteúdo
+            zh_Hans: 内容
+          label:
+            en_US: content
+            ja_JP: content
+            pt_BR: conteúdo
+            zh_Hans: 内容
+          llm_description: 内容
+          max: null
+          min: null
+          name: content
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        params:
+          authorization_code: ''
+          content: ''
+          subject: ''
+          username_recv: ''
+          username_send: ''
+        plugin_id: wjdsg/163-smtp-send-mail
+        plugin_unique_identifier: wjdsg/163-smtp-send-mail:0.0.1@53922437a73d6512114f3e915dcad3b7c85b7df687ae2013d96e97e6e3b6fd6a
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=b2ddbc49-0ce9-43aa-9cb6-5b3c0f9d0883&filename=d34785dd2b36ddffe8dc7c28d648a5a18e590831169662dd0f37d0cc48d3d203.svg
+        provider_id: wjdsg/163-smtp-send-mail/163-smtp-send-mail
+        provider_name: wjdsg/163-smtp-send-mail/163-smtp-send-mail
+        provider_type: builtin
+        selected: false
+        title: 163SMTP邮件发送
+        tool_configurations: {}
+        tool_description: 163SMTP邮件发送
+        tool_label: 163SMTP邮件发送
+        tool_name: 163-smtp-send-mail
+        tool_node_version: '2'
+        tool_parameters:
+          authorization_code:
+            type: mixed
+            value: DRVX3zQzsX7JTvyt
+          content:
+            type: mixed
+            value: '{{#1777082141718.text#}}'
+          subject:
+            type: mixed
+            value: '{{#sys.query#}}'
+          username_recv:
+            type: mixed
+            value: kiritomoe@163.com
+          username_send:
+            type: mixed
+            value: kiritomoe@163.com
+        type: tool
+      height: 51
+      id: '1777083035394'
+      position:
+        x: 4103.159246080462
+        y: 760.2541036917979
+      positionAbsolute:
+        x: 4103.159246080462
+        y: 760.2541036917979
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '17772812867980'
+          - text
+        model:
+          completion_params:
+            enable_search: true
+          mode: chat
+          name: qwen3.6-plus-2026-04-02
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 09079edb-4528-4f99-bef5-8c6191cf0873
+          role: system
+          text: "```xml\n<instruction>\n你是一位资深教育行业分析师，现在领导要求你撰写一份专业的《教育服务行业周报》{{#context#}},1000字内。请联网搜索查询一周（开始时间{{#1776943088398.start_date#}}~结束时间{{#1776943088398.end_date#}}）内的［教育服务行业］\
+            \ 政策动态、资本动向、重大事件。\n\n请遵循以下步骤完成任务：\n1. **信息筛选与整合**：筛选出在1周内发生的、对教育服务行业有显著影响的关键事件、政策变动或市场动态。\n\
+            2. **撰写周报概要**：用简练的语言概括本周行业的整体态势，突出核心趋势。\n3. **整理热点详情**：挑选1-3个最具代表性的热点事件，按照“时间+详情”的格式进行陈述，确保事实准确、描述清晰，附加网页链接url。\n\
+            4. **深度周报分析**：结合行业背景，对上述热点事件进行深度解读，分析其背后的原因、对相关企业或细分市场的影响，以及潜在的未来走向。\n\
+            5. **生成周报总结**：基于以上分析，给出简明扼要的结论性总结，并可适当提供简短的建议或展望。\n6. **格式检查**：确保输出内容严格遵循指定的Markdown结构，且**不包含任何XML标签**（如<root>,\
+            \ <section>等）。\n\n注意：\n- 保持专业、客观的语气。\n- 请基于现有信息进行合理推导或注明“暂无相关数据”，不要编造虚假事实。\n\
+            - 输出语言为中文。\n</instruction>\n\n<output_format>\n请严格按照以下Markdown结构输出：\n\n\
+            ## 周报概要\n    [在此处填写本周教育服务行业的整体概况]\n\n## 热点详情\n**热点事件一**\n- 热点事件时间：[具体时间]\n\
+            - 热点事件详情：[详细描述]\n- 链接：[url]\n\n**热点事件二**（如有）\n- 热点事件时间：[具体时间]\n- 热点事件详情：[详细描述]\n\
+            - 链接：[url]\n\n## 周报分析\n    [在此处进行深入的行业分析，包括事件影响、趋势解读等]\n\n## 周报总结\n  \
+            \  [在此处填写最终总结与建议]\n</output_format>\n\n<example>\n## 周报概要\n    本周教育服务行业受新政影响较大，在线职业教育板块出现明显波动，头部企业纷纷调整业务重心转向成人技能提升领域。同时，AI在教育场景的应用落地加速，多家机构发布智能助教产品。\n\
+            \n## 热点详情\n**热点事件一**\n- 热点事件时间：2023年10月23日\n- 热点事件详情：教育部发布《关于规范非学科类校外培训的指导意见》，明确要求各地加强对科技、文化艺术等非学科类培训的监管，设定了资金监管和预收费上限的新标准。\n\
+            \n**热点事件二**\n- 热点事件时间：2023年10月25日\n- 热点事件详情：某知名在线教育公司宣布推出“AI个性化学习伴侣”，利用大模型技术为学生提供实时答疑和学习路径规划，首日用户注册量突破10万。\n\
+            \n## 周报分析\n    新政的出台标志着非学科类培训进入强监管时代，短期内可能导致部分中小机构退出市场，但长期来看有利于行业规范化发展，头部合规企业将受益。此外，AI产品的密集发布显示技术驱动已成为行业共识，预计未来季度内，具备技术研发能力的教育机构将获得更高的市场估值。投资者应关注政策合规性强且技术储备深厚的标的。\n\
+            \n## 周报总结\n    本周行业处于政策调整与技术革新的交汇点。建议从业者重点关注合规成本控制及AI技术的实际应用场景落地，避免盲目扩张。\n\
+            </example>\n```"
+        selected: false
+        title: 行业周报分析
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777094206429'
+      position:
+        x: 3398.72889121398
+        y: 1538.2621255346332
+      positionAbsolute:
+        x: 3398.72889121398
+        y: 1538.2621255346332
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Email username
+            ja_JP: Email username
+            pt_BR: Email username
+            zh_Hans: 邮箱用户名
+          label:
+            en_US: Email username
+            ja_JP: Email username
+            pt_BR: Email username
+            zh_Hans: 邮箱用户名
+          llm_description: Email username
+          max: null
+          min: null
+          name: username_send
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: AUTHORIZE CODE
+            ja_JP: AUTHORIZE CODE
+            pt_BR: CODE DE AUTORIZAÇÃO
+            zh_Hans: 授权码
+          label:
+            en_US: AUTHORIZE CODE
+            ja_JP: AUTHORIZE CODE
+            pt_BR: CODE DE AUTORIZAÇÃO
+            zh_Hans: 授权码
+          llm_description: AUTHORIZE CODE
+          max: null
+          min: null
+          name: authorization_code
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Recipient mailbox, multiple mailboxes separated by commas
+            ja_JP: Recipient mailbox, multiple mailboxes separated by commas
+            pt_BR: Recipiente de correio electrónico, endereços de correio electrónico
+              múltiplos separados por vírgulas
+            zh_Hans: 收件人邮箱，多个邮箱逗号隔开
+          label:
+            en_US: Recipient mailbox, multiple mailboxes separated by commas
+            ja_JP: Recipient mailbox, multiple mailboxes separated by commas
+            pt_BR: Recipiente de correio electrónico, endereços de correio electrónico
+              múltiplos separados por vírgulas
+            zh_Hans: 收件人邮箱，多个邮箱逗号隔开
+          llm_description: Recipient mailbox, multiple mailboxes separated by commas
+          max: null
+          min: null
+          name: username_recv
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: subject
+            ja_JP: subject
+            pt_BR: tema
+            zh_Hans: 主题
+          label:
+            en_US: subject
+            ja_JP: subject
+            pt_BR: tema
+            zh_Hans: 主题
+          llm_description: subject
+          max: null
+          min: null
+          name: subject
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: content
+            ja_JP: content
+            pt_BR: conteúdo
+            zh_Hans: 内容
+          label:
+            en_US: content
+            ja_JP: content
+            pt_BR: conteúdo
+            zh_Hans: 内容
+          llm_description: 内容
+          max: null
+          min: null
+          name: content
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        params:
+          authorization_code: ''
+          content: ''
+          subject: ''
+          username_recv: ''
+          username_send: ''
+        plugin_id: wjdsg/163-smtp-send-mail
+        plugin_unique_identifier: wjdsg/163-smtp-send-mail:0.0.1@53922437a73d6512114f3e915dcad3b7c85b7df687ae2013d96e97e6e3b6fd6a
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=b2ddbc49-0ce9-43aa-9cb6-5b3c0f9d0883&filename=d34785dd2b36ddffe8dc7c28d648a5a18e590831169662dd0f37d0cc48d3d203.svg
+        provider_id: wjdsg/163-smtp-send-mail/163-smtp-send-mail
+        provider_name: wjdsg/163-smtp-send-mail/163-smtp-send-mail
+        provider_type: builtin
+        selected: false
+        title: 163SMTP邮件发送
+        tool_configurations: {}
+        tool_description: 163SMTP邮件发送
+        tool_label: 163SMTP邮件发送
+        tool_name: 163-smtp-send-mail
+        tool_node_version: '2'
+        tool_parameters:
+          authorization_code:
+            type: mixed
+            value: DRVX3zQzsX7JTvyt
+          content:
+            type: mixed
+            value: '{{#17771288744550.text#}}'
+          subject:
+            type: mixed
+            value: '{{#17771287681410.this_start_date#}}-{{#17771287681410.this_end_date#}}行业周报分析'
+          username_recv:
+            type: mixed
+            value: kiritomoe@163.com
+          username_send:
+            type: mixed
+            value: kiritomoe@163.com
+        type: tool
+      height: 51
+      id: '1777095176722'
+      position:
+        x: 4167.460766860111
+        y: 1130.3915567372119
+      positionAbsolute:
+        x: 4167.460766860111
+        y: 1130.3915567372119
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#17771288744550.text#}}'
+        selected: false
+        title: 直接回复 12
+        type: answer
+        variables: []
+      height: 102
+      id: '1777095196322'
+      position:
+        x: 4488.677940115048
+        y: 1130.3915567372119
+      positionAbsolute:
+        x: 4488.677940115048
+        y: 1130.3915567372119
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 6e5151e8-7085-4e46-a559-eda9089e7500
+          role: system
+          text: "```xml\n<instruction>\n你是一位专业的职场沟通与效率优化专家。你的任务是根据用户提供的原始工作日报草稿，对其进行润色、优化和结构化处理，使其更加专业、清晰且重点突出。\n\
+            \n请遵循以下步骤处理输入变量{{#context#}}：\n\n1. **分析与理解**：仔细阅读用户输入的内容，识别其中的关键工作内容、完成进度、遇到的问题以及明日计划。\n\
+            2. **语言润色**：\n   - 将口语化、模糊的表达转化为专业、精准的职场用语。\n   - 使用强动词（如“主导”、“实现”、“优化”、“解决”）来增强行动力。\n\
+            \   - 确保语气客观、积极且自信。\n3. **结构优化**：\n   - 如果原内容缺乏结构，请将其重组为标准的日报格式，通常包括：“今日重点工作”、“工作进展/成果”、“存在问题/需要支持”、“明日计划”。\n\
+            \   - 使用清晰的列表（子弹点）来呈现各项内容，避免大段文字。\n4. **重点突出**：\n   - 量化成果（如果原文中有数据，请保留并突出；如果没有，保持原意但不虚构数据）。\n\
+            \   - 区分任务的优先级，将重要事项前置。\n5. **输出检查**：\n   - 确保最终输出不包含任何 XML 标签。\n   -\
+            \ 确保内容简洁明了，无冗余信息。\n\n最终输出应为优化后的日报文本，直接呈现结果，无需额外的解释性前言或后语。\n</instruction>\n\
+            \n<example>\n<input>\n用户输入: 今天修了几个bug，主要是登录那个地方的，还有跟后端对了一下接口。明天打算写一下新页面的代码。有点累，感觉进度有点慢。\n\
+            </input>\n<output>\n【今日重点工作】\n1. 系统缺陷修复：定位并修复了用户登录模块的关键 Bug，提升了登录稳定性。\n\
+            2. 接口联调：与后端团队完成核心接口的对接与调试，确保数据传输准确无误。\n\n【明日计划】\n1. 新功能开发：启动新页面前端代码的编写工作。\n\
+            \n【备注】\n当前进度符合预期，将持续关注开发效率。\n</output>\n</example>\n\n<example>\n<input>\n\
+            用户输入: 写了周报，开了个会，讨论了下季度的目标。帮同事看了下他的PPT。\n</input>\n<output>\n【今日重点工作】\n\
+            1. 文档撰写：完成本周工作周报的梳理与提交。\n2. 战略会议：参与下季度目标规划会议，明确团队核心发展方向及关键指标。\n3. 团队协作：协助同事优化项目汇报\
+            \ PPT，提供内容建议与视觉调整支持。\n\n【明日计划】\n1. 根据会议结论，拆解个人下季度执行目标。\n</output>\n</example>\n\
+            \n<input>\n{{#sys.query#}}\n</input>\n\n<output>\n(在此处生成优化后的日报内容，严禁包含\
+            \ XML 标签)\n</output>\n```"
+        selected: false
+        structured_output_enabled: false
+        title: LLM 9
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777103000027'
+      position:
+        x: 3451.353461824085
+        y: 507.136496984956
+      positionAbsolute:
+        x: 3451.353461824085
+        y: 507.136496984956
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#1777103000027.text#}}
+
+          ----
+
+          是否需要帮你上传到系统？'
+        selected: false
+        title: 直接回复 13
+        type: answer
+        variables: []
+      height: 118
+      id: '1777103237876'
+      position:
+        x: 3752.353461824085
+        y: 507.136496984956
+      positionAbsolute:
+        x: 3752.353461824085
+        y: 507.136496984956
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-593
+            key: ''
+            type: text
+            value: "{\n  \"w_date\": {{#1777103936925.result#}},\n  \"w_title\": “{{#1777103936925.result#}}-个人工作日报”,\n\
+              \  \"content\": {{#1777104908909.text#}}\n}"
+          type: json
+        error_strategy: fail-branch
+        headers: ''
+        method: post
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: 新建个人日报
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/work-repos'
+        variables: []
+      height: 147
+      id: '1777103452242'
+      position:
+        x: 4054.0945629506773
+        y: 364.71389041131096
+      positionAbsolute:
+        x: 4054.0945629506773
+        y: 364.71389041131096
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "\ndef main():\n    from datetime import date\n    current_date = str(date.today())\n\
+          \    return {\n        \"result\": current_date\n    }\n"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 今天日期
+        type: code
+        variables: []
+      height: 51
+      id: '1777103936925'
+      position:
+        x: 3748.310040184915
+        y: 364.71389041131096
+      positionAbsolute:
+        x: 3748.310040184915
+        y: 364.71389041131096
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        instruction: 提取是否将个人日报上传到系统的关键词：True、False
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        parameters:
+        - description: 是否将个人日报上传到系统
+          name: is_upload
+          required: false
+          type: boolean
+        query:
+        - sys
+        - query
+        reasoning_mode: prompt
+        selected: false
+        title: 参数提取器 3
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 87
+      id: '1777104500089'
+      position:
+        x: 2762.9036884893135
+        y: 400.7892362388317
+      positionAbsolute:
+        x: 2762.9036884893135
+        y: 400.7892362388317
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: is
+            id: 65428907-6975-4dae-939a-37ecee08775d
+            value: true
+            varType: boolean
+            variable_selector:
+            - '1777104500089'
+            - is_upload
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 条件分支 2
+        type: if-else
+      height: 123
+      id: '1777104548537'
+      position:
+        x: 3103.9016502439413
+        y: 400.7892362388317
+      positionAbsolute:
+        x: 3103.9016502439413
+        y: 400.7892362388317
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: 上传个人工作日报成功！
+        selected: false
+        title: 直接回复 14
+        type: answer
+        variables: []
+      height: 99
+      id: '1777104671945'
+      position:
+        x: 4355.094562950677
+        y: 364.71389041131096
+      positionAbsolute:
+        x: 4355.094562950677
+        y: 364.71389041131096
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - sys
+          - query
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 50
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 4189c754-c02c-4d18-88c4-f09e51fe1656
+          role: system
+          text: 从用户输入{{#context#}}中只提取出个人工作日报内容并输出，个人工作日报不做任何修改。
+        selected: false
+        title: LLM 10
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777104908909'
+      position:
+        x: 3448.310040184915
+        y: 364.71389041131096
+      positionAbsolute:
+        x: 3448.310040184915
+        y: 364.71389041131096
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '上传失败
+
+          type:{{#1777103452242.error_type#}}
+
+          msg:{{#1777103452242.error_message#}}
+
+          {{#1777103452242.body#}}'
+        selected: false
+        title: 直接回复 15
+        type: answer
+        variables: []
+      height: 156
+      id: '1777105120106'
+      position:
+        x: 4700.677940115048
+        y: 458.75810998250944
+      positionAbsolute:
+        x: 4700.677940115048
+        y: 458.75810998250944
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        classes:
+        - id: '1'
+          name: 用户登录认证成功
+        - id: '2'
+          name: 其他
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        query_variable_selector:
+        - '1776943088398'
+        - sys.query
+        selected: false
+        title: 问题分类器 3
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 169
+      id: '1777107492023'
+      position:
+        x: 1859.1514701682295
+        y: 276
+      positionAbsolute:
+        x: 1859.1514701682295
+        y: 276
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "\nimport json\n\ndef main(extracted_data: str):\n    # 解析输入的 JSON\n\
+          \    try:\n        data = json.loads(extracted_data)\n    except:\n    \
+          \    return {\"error\": \"解析用户数据失败\", \"total_score_sg\": 0, \"total_score_de\"\
+          : 0}\n    \n    # ========== 新加坡项目评分 ==========\n    score_sg = 0\n    breakdown_sg\
+          \ = {}\n    \n    # 1. 年龄/学段匹配 (0-18)\n    age = data.get(\"c_age\")\n \
+          \   degree = data.get(\"c_degree\", \"\")\n    if age is not None:\n   \
+          \     if 14 <= age <= 16 and \"初中\" in degree:\n            age_match =\
+          \ 18\n        elif 16 <= age <= 19 and (\"高中\" in degree or \"中职\" in degree):\n\
+          \            age_match = 16\n        elif age >= 17 and (\"职高\" in degree\
+          \ or \"中专\" in degree or \"技校\" in degree):\n            age_match = 14\n\
+          \        elif \"专科\" in degree:\n            age_match = 10\n        elif\
+          \ \"本科\" in degree:\n            age_match = 8\n        else:\n        \
+          \    age_match = 0\n    else:\n        age_match = 0\n    score_sg += age_match\n\
+          \    breakdown_sg[\"age_match\"] = age_match\n    \n    # 2. 学历层次 (0-12)\n\
+          \    if \"初中\" in degree:\n        edu_score = 8\n    elif \"高中\" in degree\
+          \ or \"中职\" in degree:\n        edu_score = 10\n    elif \"专科\" in degree\
+          \ or \"本科\" in degree:\n        edu_score = 12\n    else:\n        edu_score\
+          \ = 0\n    score_sg += edu_score\n    breakdown_sg[\"education\"] = edu_score\n\
+          \    \n    # 3. 升学需求 (0-15)\n    study_map = {\"strong\":15, \"medium\"\
+          :10, \"weak\":5, \"none\":0}\n    study_score = study_map.get(data.get(\"\
+          study_intent\", \"none\"), 0)\n    score_sg += study_score\n    breakdown_sg[\"\
+          study_intent\"] = study_score\n    \n    # 4. 就业需求 (0-10)\n    job_map =\
+          \ {\"strong\":10, \"medium\":7, \"weak\":4, \"none\":0}\n    job_score =\
+          \ job_map.get(data.get(\"job_intent\", \"none\"), 0)\n    score_sg += job_score\n\
+          \    breakdown_sg[\"job_intent\"] = job_score\n    \n    # 5. 家庭经济 (0-15)\n\
+          \    income_map = {\"high\":15, \"medium\":12, \"low\":8, \"very_low\":4}\n\
+          \    income_score = income_map.get(data.get(\"family_income\", \"very_low\"\
+          ), 0)\n    score_sg += income_score\n    breakdown_sg[\"family_income\"\
+          ] = income_score\n    \n    # 6. 入学能力（英语） (0-10)\n    english_map = {\"\
+          fluent\":10, \"good\":7, \"basic\":4, \"poor\":0}\n    english_score = english_map.get(data.get(\"\
+          english_level\", \"poor\"), 0)\n    score_sg += english_score\n    breakdown_sg[\"\
+          english\"] = english_score\n    \n    # 7. 留学意愿 (0-12)\n    abroad_map =\
+          \ {\"strong\":12, \"medium\":8, \"weak\":4, \"none\":0}\n    abroad_score\
+          \ = abroad_map.get(data.get(\"study_abroad_intent\", \"none\"), 0)\n   \
+          \ score_sg += abroad_score\n    breakdown_sg[\"study_abroad\"] = abroad_score\n\
+          \    \n    # 8. 政策关注度 (0-8)\n    policy_map = {\"active\":8, \"passive\"\
+          :4, \"none\":0}\n    policy_score = policy_map.get(data.get(\"policy_concern\"\
+          , \"none\"), 0)\n    score_sg += policy_score\n    breakdown_sg[\"policy\"\
+          ] = policy_score\n    \n    # 新加坡总分 (满分100)\n    total_sg = score_sg\n \
+          \   \n    # ========== 德国项目评分 ==========\n    score_de = 0\n    breakdown_de\
+          \ = {}\n    \n    # 1. 年龄 (0-15)\n    if age is not None:\n        if 18\
+          \ <= age <= 25:\n            age_de = 15\n        elif 26 <= age <= 30:\n\
+          \            age_de = 12\n        elif 31 <= age <= 35:\n            age_de\
+          \ = 8\n        elif 36 <= age <= 40:\n            age_de = 3\n        else:\n\
+          \            age_de = 0\n    else:\n        age_de = 0\n    score_de +=\
+          \ age_de\n    breakdown_de[\"age\"] = age_de\n    \n    # 2. 学历 (0-10)\n\
+          \    if \"本科\" in degree or \"硕士\" in degree:\n        edu_de = 10\n   \
+          \ elif \"专科\" in degree or \"高职\" in degree:\n        edu_de = 8\n    elif\
+          \ \"高中\" in degree or \"中职\" in degree:\n        edu_de = 6\n    else:\n\
+          \        edu_de = 0\n    score_de += edu_de\n    breakdown_de[\"education\"\
+          ] = edu_de\n    \n    # 3. 就业导向 (0-20)\n    job_de_map = {\"strong\":20,\
+          \ \"medium\":14, \"weak\":8, \"none\":0}\n    job_de = job_de_map.get(data.get(\"\
+          job_intent\", \"none\"), 0)\n    score_de += job_de\n    breakdown_de[\"\
+          job_intent\"] = job_de\n    \n    # 4. 移民需求 (0-10)\n    imm_map = {\"strong\"\
+          :10, \"medium\":6, \"weak\":3, \"none\":0}\n    imm_score = imm_map.get(data.get(\"\
+          immigration_intent\", \"none\"), 0)\n    score_de += imm_score\n    breakdown_de[\"\
+          immigration\"] = imm_score\n    \n    # 5. 升学需求 (0-5)\n    study_de_map\
+          \ = {\"strong\":5, \"medium\":3, \"weak\":1, \"none\":0}\n    study_de =\
+          \ study_de_map.get(data.get(\"study_intent\", \"none\"), 0)\n    score_de\
+          \ += study_de\n    breakdown_de[\"study_intent\"] = study_de\n    \n   \
+          \ # 6. 动手能力 (0-8)\n    hands_map = {\"strong\":8, \"medium\":5, \"weak\"\
+          :2, \"none\":0}\n    hands_score = hands_map.get(data.get(\"hands_on_ability\"\
+          , \"none\"), 0)\n    score_de += hands_score\n    breakdown_de[\"hands_on\"\
+          ] = hands_score\n    \n    # 7. 逻辑思维 (0-5)\n    logic_map = {\"strong\"\
+          :5, \"medium\":3, \"weak\":1, \"none\":0}\n    logic_score = logic_map.get(data.get(\"\
+          logic_ability\", \"none\"), 0)\n    score_de += logic_score\n    breakdown_de[\"\
+          logic\"] = logic_score\n    \n    # 8. 德语能力 (0-12)\n    german_map = {\"\
+          b1+\":12, \"b1\":10, \"a2\":6, \"a1\":3, \"learning\":2, \"none\":0}\n \
+          \   german_score = german_map.get(data.get(\"german_level\", \"none\"),\
+          \ 0)\n    score_de += german_score\n    breakdown_de[\"german\"] = german_score\n\
+          \    \n    # 9. 家庭支持 (0-5)\n    support_map = {\"strong\":5, \"medium\"\
+          :3, \"weak\":1, \"none\":0}\n    support_score = support_map.get(data.get(\"\
+          family_support\", \"none\"), 0)\n    score_de += support_score\n    breakdown_de[\"\
+          family_support\"] = support_score\n    \n    # 10. 经济理性 (0-2)\n    rational_score\
+          \ = 2 if data.get(\"economic_rational\") == \"true\" else 0\n    score_de\
+          \ += rational_score\n    breakdown_de[\"economic_rational\"] = rational_score\n\
+          \    \n    # 11. 留学意愿 (0-4)\n    abroad_de_map = {\"strong\":4, \"medium\"\
+          :2, \"weak\":1, \"none\":0}\n    abroad_de = abroad_de_map.get(data.get(\"\
+          study_abroad_intent\", \"none\"), 0)\n    score_de += abroad_de\n    breakdown_de[\"\
+          study_abroad\"] = abroad_de\n    \n    # 12. 政策关注度 (0-3)\n    policy_de_map\
+          \ = {\"active\":3, \"passive\":1.5, \"none\":0}\n    policy_de = policy_de_map.get(data.get(\"\
+          policy_concern\", \"none\"), 0)\n    score_de += policy_de\n    breakdown_de[\"\
+          policy\"] = policy_de\n    \n    # 13. 学习态度 (0-3)\n    attitude_map = {\"\
+          strong\":3, \"medium\":1.5, \"weak\":0.5, \"none\":0}\n    attitude_score\
+          \ = attitude_map.get(data.get(\"learning_attitude\", \"none\"), 0)\n   \
+          \ score_de += attitude_score\n    breakdown_de[\"learning_attitude\"] =\
+          \ attitude_score\n    \n    total_de = score_de\n    \n    # ==========\
+          \ 等级评定（通用） ==========\n    def get_level(score):\n        if score >= 81:\
+          \ return \"S\"\n        elif score >= 61: return \"A\"\n        elif score\
+          \ >= 41: return \"B\"\n        elif score >= 21: return \"C\"\n        else:\
+          \ return \"D\"\n    \n    level_sg = get_level(total_sg)\n    level_de =\
+          \ get_level(total_de)\n    \n    # 返回结果，供下一个 LLM 节点使用\n    return {\n  \
+          \      \"sg_score\": total_sg,\n        \"sg_level\": level_sg,\n      \
+          \  \"sg_breakdown\": json.dumps(breakdown_sg),\n        \"de_score\": total_de,\n\
+          \        \"de_level\": level_de,\n        \"de_breakdown\": json.dumps(breakdown_de),\n\
+          \        \"user_name\": data.get(\"c_name\", \"未知\"),\n        \"user_phone\"\
+          : str(data.get(\"c_phone\", \"\")),\n        \"user_age\": age,\n      \
+          \  \"user_degree\": degree\n    }"
+        code_language: python3
+        outputs:
+          de_breakdown:
+            children: null
+            type: string
+          de_level:
+            children: null
+            type: string
+          de_score:
+            children: null
+            type: number
+          sg_breakdown:
+            children: null
+            type: string
+          sg_level:
+            children: null
+            type: string
+          sg_score:
+            children: null
+            type: number
+          user_age:
+            children: null
+            type: number
+          user_degree:
+            children: null
+            type: string
+          user_name:
+            children: null
+            type: string
+          user_phone:
+            children: null
+            type: string
+        selected: false
+        title: 研判评分
+        type: code
+        variables:
+        - value_selector:
+          - '1776946809394'
+          - text
+          value_type: string
+          variable: extracted_data
+      height: 51
+      id: '1777109443285'
+      position:
+        x: 3436.310040184915
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 3436.310040184915
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1777109443285'
+          - sg_score
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 1dff0975-8344-4bce-ac9f-340f9738e65a
+          role: system
+          text: "你是一个专业的留学顾问。请根据以下用户画像评分结果{{#context#}}，生成一份完整的《用户画像研判分析报告》。报告需使用TEXT格式，内容亲切专业，并给出具体跟进建议。\n\
+            \n**用户基本信息：**\n- 姓名：{{#1777109443285.user_name#}}\n- 年龄：{{#1777109443285.user_age#}}\
+            \ 岁\n- 学历：{{#1777109443285.user_degree#}}\n- 手机：{{#1777109443285.user_phone#}}\n\
+            \n**新加坡项目评分：** {{#1777109443285.sg_score#}} 分，等级 {{#1777109443285.sg_level#}}\n\
+            **德国项目评分：** {{#1777109443285.de_score#}} 分，等级 {{#1777109443285.de_level#}}\n\
+            \n**评分明细（新加坡）：** {{#1777109443285.sg_breakdown#}}\n**评分明细（德国）：** {{#1777109443285.de_breakdown#}}\n\
+            \n请按以下模板输出：\n用户画像研判分析报告\n一、基本信息\n（列出姓名、年龄、学历、手机号）\n二、项目匹配度评估\n新加坡国际本硕升学计划\n\
+            - 综合得分：{{#1777109443285.sg_score#}} / 100\n- 客户等级：{{#1777109443285.sg_level#}}\n\
+            - 各维度得分简述：（根据明细提取优势与短板）\n中德精英人才共建计划\n- 综合得分：{{#1777109443285.de_score#}}\
+            \ / 100\n- 客户等级：{{#1777109443285.de_level#}}\n- 各维度得分简述：\n三、综合评级与建议（300字以内）\n\
+            - **推荐项目**：（根据得分高低推荐一个或两者均可）\n- **客户等级含义**：（S/A/B/C/D 对应的中文解释）\n- **跟进建议**：\n\
+            \  - 动作优先级：立即跟进 / 重点培育 / 常规跟进 / 长线培育 / 补充信息\n  - 沟通话术建议：（围绕高分因子强化兴趣，针对低分因子提供解决方案）\n\
+            - **下一步行动**：（如发送项目资料、安排顾问咨询、邀请说明会等）\n四、优势与待提升点（200字以内）\n- **核心优势**：（列举得分最高的\
+            \ 2-3 个因子）\n- **待提升点**：（列举得分最低的 2-3 个因子，并给出如何弥补的建议）"
+        selected: false
+        title: 研判分析结果
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777109628138'
+      position:
+        x: 3718.5532130447755
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 3718.5532130447755
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        instruction: 根据LLM研判分析结果{{#1777109628138.text#}}提取相关的参数。c_analyze_info信息由markdown格式修改为text格式。
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        parameters:
+        - description: 项目匹配程度，取sg_level和de_level的最高值，序次是SABCD
+          name: c_rank
+          required: false
+          type: string
+        - description: 顾客适合项目，0-所有项目都符合，1-所有项目都不符合，2-新加坡国际本硕升学计划，3-中德精英人才共建计划
+          name: c_suit_project
+          required: false
+          type: number
+        - description: 提取分析结果中综合评级与建议信息(三、标题中的删掉)，不进行修改。数据格式是text，删掉所有空格。
+          name: c_analyze_info
+          required: false
+          type: string
+        query:
+        - '1777109628138'
+        - text
+        reasoning_mode: prompt
+        selected: false
+        title: 参数提取器 4
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 87
+      id: '1777113692726'
+      position:
+        x: 4353.068291110139
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 4353.068291110139
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        error_strategy: fail-branch
+        headers: ''
+        method: get
+        params: 'c_name:{{#1777109443285.user_name#}}
+
+          c_phone:{{#1777109443285.user_phone#}}'
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: HTTP 请求 8
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/customers'
+        variables: []
+      height: 147
+      id: '1777113981302'
+      position:
+        x: 4992.334020522553
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 4992.334020522553
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '查询顾客失败：
+
+          {{#1777113981302.body#}}'
+        selected: false
+        title: 直接回复 14
+        type: answer
+        variables: []
+      height: 118
+      id: '1777116925902'
+      position:
+        x: 5287.0682911101385
+        y: 340.6260001782901
+      positionAbsolute:
+        x: 5287.0682911101385
+        y: 340.6260001782901
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 147cf566-2134-4e8d-9e89-d2d14021c70d
+            value: ''
+            varType: number
+            variable_selector:
+            - '1777116986374'
+            - this_cid
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 条件分支 3
+        type: if-else
+      height: 123
+      id: '1777116973934'
+      position:
+        x: 5725.068291110138
+        y: 129.62600017829118
+      positionAbsolute:
+        x: 5725.068291110138
+        y: 129.62600017829118
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        instruction: 从body的data中提取顾客的c_id字段到this_cid，数字转为字符串，如果没有则为空字符串""。
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        parameters:
+        - description: 从body的data中提取顾客的c_id字段到this_cid，数字转为字符串，如果没有则为空字符串""。
+          name: this_cid
+          required: false
+          type: string
+        query:
+        - '1777113981302'
+        - body
+        reasoning_mode: prompt
+        selected: false
+        title: 参数提取器 5
+        type: parameter-extractor
+        vision:
+          enabled: false
+      height: 87
+      id: '1777116986374'
+      position:
+        x: 5289.262403235943
+        y: 129.62600017829118
+      positionAbsolute:
+        x: 5289.262403235943
+        y: 129.62600017829118
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-4070
+            key: ''
+            type: text
+            value: "{\n  \"c_age\": {{#1777109443285.user_age#}},\n  \"c_gender\"\
+              : {{#1776950054526.c_gender#}},\n  \"c_email\": “{{#1776950054526.c_email#}}”,\n\
+              \  \"c_degree\": {{#1777109443285.user_degree#}},\n  \"c_region\": {{#1776950054526.c_region#}},\n\
+              \  \"c_suit_project\": {{#1777113692726.c_suit_project#}},\n  \"c_rank\"\
+              : {{#1777113692726.c_rank#}},\n  \"c_analyze_info\": {{#1777113692726.c_analyze_info#}}\n\
+              }"
+          type: json
+        error_strategy: fail-branch
+        headers: ''
+        method: put
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: false
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: 顾客信息更新
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/customers/{{#1777116986374.this_cid#}}'
+        variables: []
+      height: 166
+      id: '1777117127912'
+      position:
+        x: 6044.068291110138
+        y: 53.626000178291406
+      positionAbsolute:
+        x: 6044.068291110138
+        y: 53.626000178291406
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data:
+          - id: key-value-7339
+            key: ''
+            type: text
+            value: "{\n  \"c_name\": {{#1777109443285.user_name#}},\n  \"c_age\":\
+              \ {{#1777109443285.user_age#}},\n  \"c_gender\": {{#1776950054526.c_gender#}},\n\
+              \  \"c_phone\":\" {{#1777109443285.user_phone#}}\",\n  \"c_email\":\"\
+              \ {{#1776950054526.c_email#}}\",\n  \"c_degree\": {{#1777109443285.user_degree#}},\n\
+              \  \"c_region\": {{#1776950054526.c_region#}},\n  \"c_suit_project\"\
+              : {{#1777113692726.c_suit_project#}},\n  \"c_rank\": {{#1777113692726.c_rank#}},\n\
+              \  \"link_uid\": {{#1776943088398.uid#}},\n  \"c_status\": 0,\n  \"\
+              c_analyze_info\": {{#1777113692726.c_analyze_info#}}\n}"
+          type: json
+        error_strategy: fail-branch
+        headers: ''
+        method: post
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: 顾客信息创建
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/customers'
+        variables: []
+      height: 147
+      id: '1777117131559'
+      position:
+        x: 6066.068291110137
+        y: 250.62600017829118
+      positionAbsolute:
+        x: 6066.068291110137
+        y: 250.62600017829118
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '更新顾客失败：
+
+          {{#1777117127912.body#}}'
+        selected: false
+        title: 直接回复 15
+        type: answer
+        variables: []
+      height: 118
+      id: '1777117692468'
+      position:
+        x: 6613.197864605344
+        y: 164.9403315084985
+      positionAbsolute:
+        x: 6613.197864605344
+        y: 164.9403315084985
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '创建顾客失败：
+
+          {{#1777117131559.body#}}'
+        selected: false
+        title: 直接回复 16
+        type: answer
+        variables: []
+      height: 118
+      id: '1777117907881'
+      position:
+        x: 6629.197864605344
+        y: 344.6260001782906
+      positionAbsolute:
+        x: 6629.197864605344
+        y: 344.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '更新顾客信息成功
+
+          ----
+
+          {{#1777109628138.text#}}'
+        selected: false
+        title: 直接回复 17
+        type: answer
+        variables: []
+      height: 118
+      id: '1777121237870'
+      position:
+        x: 6339.844987730361
+        y: 53.626000178291406
+      positionAbsolute:
+        x: 6339.844987730361
+        y: 53.626000178291406
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '创建顾客成功
+
+          ----
+
+          {{#1777109628138.text#}}'
+        selected: false
+        title: 直接回复 18
+        type: answer
+        variables: []
+      height: 118
+      id: '1777121253381'
+      position:
+        x: 6339.844987730361
+        y: 250.62600017829118
+      positionAbsolute:
+        x: 6339.844987730361
+        y: 250.62600017829118
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 89ff0552-f3f0-4184-b212-f2922a3db0de
+            value: ''
+            varType: string
+            variable_selector:
+            - '1777109443285'
+            - user_phone
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 条件分支 4
+        type: if-else
+      height: 123
+      id: '1777124505244'
+      position:
+        x: 4692.334020522553
+        y: 134.6260001782906
+      positionAbsolute:
+        x: 4692.334020522553
+        y: 134.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: 创建或更新顾客需要提供顾客手机号，谢谢。
+        selected: false
+        title: 直接回复 19
+        type: answer
+        variables: []
+      height: 115
+      id: '1777124533988'
+      position:
+        x: 4992.334020522553
+        y: 344.6260001782906
+      positionAbsolute:
+        x: 4992.334020522553
+        y: 344.6260001782906
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        dataset_ids:
+        - oGSpzm+ykKsyPhhMe+9F2VPamlmBJEL6OX6fElZvICjTG7cwETAGG71iU79kpgHO
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: reranking_model
+          reranking_model:
+            model: qwen3-rerank
+            provider: langgenius/tongyi/tongyi
+          top_k: 4
+        query_variable_selector:
+        - '1776943088398'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 知识检索
+        type: knowledge-retrieval
+      height: 89
+      id: '1777127537298'
+      position:
+        x: 3166.86759582175
+        y: 2277.7864553077898
+      positionAbsolute:
+        x: 3166.86759582175
+        y: 2277.7864553077898
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1777127537298'
+          - result
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 049868a1-70b8-44d5-b3ed-46d766cb10f4
+          role: system
+          text: 你是一个专业的公司的信息查询智能体，根据知识库{{#context#}}，可以给公司员工提供售前留学服务咨询和公司信息的咨询。请严格仅依据提供的知识库内容回答问题，不要编造信息。如果知识库中没有相关信息，请礼貌地告知用户。如果知识库中没有相关信息，请礼貌地告知用户。回答时语气应保持专业、严谨和正式。
+        selected: false
+        title: LLM 8
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1777127577353'
+      position:
+        x: 3467.86759582175
+        y: 2277.7864553077898
+      positionAbsolute:
+        x: 3467.86759582175
+        y: 2277.7864553077898
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#1777127577353.text#}}'
+        selected: false
+        title: 直接回复 16
+        type: answer
+        variables: []
+      height: 102
+      id: '1777127587153'
+      position:
+        x: 3768.86759582175
+        y: 2277.7864553077898
+      positionAbsolute:
+        x: 3768.86759582175
+        y: 2277.7864553077898
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 1790d260-65e7-46a7-857e-a78638960f1c
+            value: ''
+            varType: string
+            variable_selector:
+            - '1776943088398'
+            - yesterday
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 条件分支 4
+        type: if-else
+      height: 123
+      id: '1777128453008'
+      position:
+        x: 2762.9036884893135
+        y: 716.2541036917979
+      positionAbsolute:
+        x: 2762.9036884893135
+        y: 716.2541036917979
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "\ndef main():\n    from datetime import date,timedelta\n    this_yesterday\
+          \ = str(date.today() - timedelta(days=1))\n    return {\n        \"result\"\
+          : this_yesterday\n    }\n"
+        code_language: python3
+        outputs:
+          result:
+            children: null
+            type: string
+        selected: false
+        title: 昨天日期
+        type: code
+        variables: []
+      height: 51
+      id: '1777128478367'
+      position:
+        x: 3091.126175079551
+        y: 924.1443152518839
+      positionAbsolute:
+        x: 3091.126175079551
+        y: 924.1443152518839
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        authorization:
+          config:
+            api_key: '{{#1776943088398.token#}}'
+            type: bearer
+          type: api-key
+        body:
+          data: []
+          type: none
+        error_strategy: fail-branch
+        headers: ''
+        method: get
+        params: w_date:{{#1777128478367.result#}}
+        retry_config:
+          max_retries: 3
+          retry_enabled: false
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          max_connect_timeout: 0
+          max_read_timeout: 0
+          max_write_timeout: 0
+        title: 员工日报查询 (1)
+        type: http-request
+        url: '{{#env.localhost_port#}}/api/work-repos/all/list'
+        variables: []
+      height: 147
+      id: '17771285878540'
+      position:
+        x: 3448.310040184915
+        y: 924.1443152518839
+      positionAbsolute:
+        x: 3448.310040184915
+        y: 924.1443152518839
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: empty
+            id: f9079bf4-208f-4d35-a2ff-2706248fef2e
+            value: ''
+            varType: string
+            variable_selector:
+            - '1776943088398'
+            - start_date
+          - comparison_operator: empty
+            id: cb59e628-5dac-405d-acbd-d72d1b01bb9f
+            value: ''
+            varType: string
+            variable_selector:
+            - '1776943088398'
+            - end_date
+          id: 'true'
+          logical_operator: or
+        selected: false
+        title: 条件分支 5
+        type: if-else
+      height: 149
+      id: '1777128726055'
+      position:
+        x: 2762.9036884893135
+        y: 1311.6334628742177
+      positionAbsolute:
+        x: 2762.9036884893135
+        y: 1311.6334628742177
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "\ndef main():\n    from datetime import date, timedelta\n    this_start_date\
+          \ = str(date.today() - timedelta(days=7))\n    this_end_date = str(date.today())\n\
+          \    return {\n        \"this_start_date\": this_start_date,\n        \"\
+          this_end_date\":this_end_date\n    }\n"
+        code_language: python3
+        outputs:
+          this_end_date:
+            children: null
+            type: string
+          this_start_date:
+            children: null
+            type: string
+        selected: false
+        title: 上周日期
+        type: code
+        variables: []
+      height: 51
+      id: '17771287681410'
+      position:
+        x: 3091.126175079551
+        y: 1130.3915567372119
+      positionAbsolute:
+        x: 3091.126175079551
+        y: 1130.3915567372119
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1777281171866'
+          - text
+        model:
+          completion_params:
+            enable_search: true
+          mode: chat
+          name: qwen3.6-plus-2026-04-02
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 09079edb-4528-4f99-bef5-8c6191cf0873
+          role: system
+          text: "```xml\n<instruction>\n你是一位资深教育行业分析师，现在领导要求你撰写一份专业的《教育服务行业周报》{{#context#}},1000字内。请联网搜索查询一周（开始时间{{#17771287681410.this_start_date#}}~结束时间{{#17771287681410.this_end_date#}}）内的［教育服务行业］\
+            \ 政策动态、资本动向、重大事件。\n\n请遵循以下步骤完成任务：\n1. **信息筛选与整合**：筛选出在1周内发生的、对教育服务行业有显著影响的关键事件、政策变动或市场动态。\n\
+            2. **撰写周报概要**：用简练的语言概括本周行业的整体态势，突出核心趋势。\n3. **整理热点详情**：挑选1-3个最具代表性的热点事件，按照“时间+详情”的格式进行陈述，确保事实准确、描述清晰，附加网页链接url。\n\
+            4. **深度周报分析**：结合行业背景，对上述热点事件进行深度解读，分析其背后的原因、对相关企业或细分市场的影响，以及潜在的未来走向。\n\
+            5. **生成周报总结**：基于以上分析，给出简明扼要的结论性总结，并可适当提供简短的建议或展望。\n6. **格式检查**：确保输出内容严格遵循指定的Markdown结构，且**不包含任何XML标签**（如<root>,\
+            \ <section>等）。\n\n注意：\n- 保持专业、客观的语气。\n- 请基于现有信息进行合理推导或注明“暂无相关数据”，不要编造虚假事实。\n\
+            - 输出语言为中文。\n</instruction>\n\n<output_format>\n请严格按照以下Markdown结构输出：\n\n\
+            ## 周报概要\n    [在此处填写本周教育服务行业的整体概况]\n\n## 热点详情\n**热点事件一**\n- 热点事件时间：[具体时间]\n\
+            - 热点事件详情：[详细描述]\n- 链接：[url]\n\n**热点事件二**（如有）\n- 热点事件时间：[具体时间]\n- 热点事件详情：[详细描述]\n\
+            - 链接：[url]\n\n## 周报分析\n    [在此处进行深入的行业分析，包括事件影响、趋势解读等]\n\n## 周报总结\n  \
+            \  [在此处填写最终总结与建议]\n</output_format>\n\n<example>\n## 周报概要\n    本周教育服务行业受新政影响较大，在线职业教育板块出现明显波动，头部企业纷纷调整业务重心转向成人技能提升领域。同时，AI在教育场景的应用落地加速，多家机构发布智能助教产品。\n\
+            \n## 热点详情\n**热点事件一**\n- 热点事件时间：2023年10月23日\n- 热点事件详情：教育部发布《关于规范非学科类校外培训的指导意见》，明确要求各地加强对科技、文化艺术等非学科类培训的监管，设定了资金监管和预收费上限的新标准。\n\
+            \n**热点事件二**\n- 热点事件时间：2023年10月25日\n- 热点事件详情：某知名在线教育公司宣布推出“AI个性化学习伴侣”，利用大模型技术为学生提供实时答疑和学习路径规划，首日用户注册量突破10万。\n\
+            \n## 周报分析\n    新政的出台标志着非学科类培训进入强监管时代，短期内可能导致部分中小机构退出市场，但长期来看有利于行业规范化发展，头部合规企业将受益。此外，AI产品的密集发布显示技术驱动已成为行业共识，预计未来季度内，具备技术研发能力的教育机构将获得更高的市场估值。投资者应关注政策合规性强且技术储备深厚的标的。\n\
+            \n## 周报总结\n    本周行业处于政策调整与技术革新的交汇点。建议从业者重点关注合规成本控制及AI技术的实际应用场景落地，避免盲目扩张。\n\
+            </example>\n```"
+        selected: false
+        title: 行业周报分析 (1)
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '17771288744550'
+      position:
+        x: 3831.4484577847493
+        y: 1130.3915567372119
+      positionAbsolute:
+        x: 3831.4484577847493
+        y: 1130.3915567372119
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: contains
+            id: 8344eef9-2ef2-49a4-800d-88cef97cdf49
+            value: '403'
+            varType: string
+            variable_selector:
+            - '17770225467550'
+            - error_message
+          id: 'true'
+          logical_operator: and
+        selected: false
+        title: 条件分支 6
+        type: if-else
+      height: 123
+      id: '1777271934343'
+      position:
+        x: 3493.927123174943
+        y: 2057.1153226771225
+      positionAbsolute:
+        x: 3493.927123174943
+        y: 2057.1153226771225
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: 调用Text2SQL失败，其他错误。
+        selected: false
+        title: 直接回复 17
+        type: answer
+        variables: []
+      height: 99
+      id: '1777271997711'
+      position:
+        x: 4131.080515933874
+        y: 2137.3853441830042
+      positionAbsolute:
+        x: 4131.080515933874
+        y: 2137.3853441830042
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Email username
+            ja_JP: Email username
+            pt_BR: Email username
+            zh_Hans: 邮箱用户名
+          label:
+            en_US: Email username
+            ja_JP: Email username
+            pt_BR: Email username
+            zh_Hans: 邮箱用户名
+          llm_description: Email username
+          max: null
+          min: null
+          name: username_send
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: AUTHORIZE CODE
+            ja_JP: AUTHORIZE CODE
+            pt_BR: CODE DE AUTORIZAÇÃO
+            zh_Hans: 授权码
+          label:
+            en_US: AUTHORIZE CODE
+            ja_JP: AUTHORIZE CODE
+            pt_BR: CODE DE AUTORIZAÇÃO
+            zh_Hans: 授权码
+          llm_description: AUTHORIZE CODE
+          max: null
+          min: null
+          name: authorization_code
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Recipient mailbox, multiple mailboxes separated by commas
+            ja_JP: Recipient mailbox, multiple mailboxes separated by commas
+            pt_BR: Recipiente de correio electrónico, endereços de correio electrónico
+              múltiplos separados por vírgulas
+            zh_Hans: 收件人邮箱，多个邮箱逗号隔开
+          label:
+            en_US: Recipient mailbox, multiple mailboxes separated by commas
+            ja_JP: Recipient mailbox, multiple mailboxes separated by commas
+            pt_BR: Recipiente de correio electrónico, endereços de correio electrónico
+              múltiplos separados por vírgulas
+            zh_Hans: 收件人邮箱，多个邮箱逗号隔开
+          llm_description: Recipient mailbox, multiple mailboxes separated by commas
+          max: null
+          min: null
+          name: username_recv
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: subject
+            ja_JP: subject
+            pt_BR: tema
+            zh_Hans: 主题
+          label:
+            en_US: subject
+            ja_JP: subject
+            pt_BR: tema
+            zh_Hans: 主题
+          llm_description: subject
+          max: null
+          min: null
+          name: subject
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: content
+            ja_JP: content
+            pt_BR: conteúdo
+            zh_Hans: 内容
+          label:
+            en_US: content
+            ja_JP: content
+            pt_BR: conteúdo
+            zh_Hans: 内容
+          llm_description: 内容
+          max: null
+          min: null
+          name: content
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        params:
+          authorization_code: ''
+          content: ''
+          subject: ''
+          username_recv: ''
+          username_send: ''
+        plugin_id: wjdsg/163-smtp-send-mail
+        plugin_unique_identifier: wjdsg/163-smtp-send-mail:0.0.1@53922437a73d6512114f3e915dcad3b7c85b7df687ae2013d96e97e6e3b6fd6a
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=b2ddbc49-0ce9-43aa-9cb6-5b3c0f9d0883&filename=d34785dd2b36ddffe8dc7c28d648a5a18e590831169662dd0f37d0cc48d3d203.svg
+        provider_id: wjdsg/163-smtp-send-mail/163-smtp-send-mail
+        provider_name: wjdsg/163-smtp-send-mail/163-smtp-send-mail
+        provider_type: builtin
+        selected: false
+        title: 163SMTP邮件发送
+        tool_configurations: {}
+        tool_description: 163SMTP邮件发送
+        tool_label: 163SMTP邮件发送
+        tool_name: 163-smtp-send-mail
+        tool_node_version: '2'
+        tool_parameters:
+          authorization_code:
+            type: mixed
+            value: DRVX3zQzsX7JTvyt
+          content:
+            type: mixed
+            value: '{{#1777094206429.text#}}'
+          subject:
+            type: mixed
+            value: '{{#1776943088398.start_date#}}-{{#1776943088398.end_date#}}行业周报分析'
+          username_recv:
+            type: mixed
+            value: kiritomoe@163.com
+          username_send:
+            type: mixed
+            value: kiritomoe@163.com
+        type: tool
+      height: 51
+      id: '1777279725865'
+      position:
+        x: 3699.72889121398
+        y: 1538.2621255346332
+      positionAbsolute:
+        x: 3699.72889121398
+        y: 1538.2621255346332
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#1777094206429.text#}}'
+        selected: false
+        title: 直接回复 18
+        type: answer
+        variables: []
+      height: 102
+      id: '1777279842953'
+      position:
+        x: 4000.72889121398
+        y: 1538.2621255346332
+      positionAbsolute:
+        x: 4000.72889121398
+        y: 1538.2621255346332
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The base URL to start crawling from.
+            ja_JP: The base URL to start crawling from.
+            pt_BR: The base URL to start crawling from.
+            zh_Hans: 开始爬取的基础 URL。
+          label:
+            en_US: URL
+            ja_JP: URL
+            pt_BR: URL
+            zh_Hans: URL
+          llm_description: The base URL to start crawling from. The crawler will follow
+            links from this page.
+          max: null
+          min: null
+          name: url
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Maximum depth to crawl (how many links deep from the base URL).
+            ja_JP: Maximum depth to crawl (how many links deep from the base URL).
+            pt_BR: Maximum depth to crawl (how many links deep from the base URL).
+            zh_Hans: 最大爬取深度（从基础 URL 开始的链接深度）。
+          label:
+            en_US: Max Depth
+            ja_JP: Max Depth
+            pt_BR: Max Depth
+            zh_Hans: 最大深度
+          llm_description: Maximum depth to crawl - how many levels of links to follow
+            from the base URL.
+          max: 5
+          min: 1
+          name: max_depth
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Maximum breadth to crawl (number of links to follow per page).
+            ja_JP: Maximum breadth to crawl (number of links to follow per page).
+            pt_BR: Maximum breadth to crawl (number of links to follow per page).
+            zh_Hans: 最大爬取广度（每页跟踪的链接数）。
+          label:
+            en_US: Max Breadth
+            ja_JP: Max Breadth
+            pt_BR: Max Breadth
+            zh_Hans: 最大广度
+          llm_description: Maximum breadth to crawl - how many links to follow from
+            each page.
+          max: 100
+          min: 1
+          name: max_breadth
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Maximum total number of pages to crawl.
+            ja_JP: Maximum total number of pages to crawl.
+            pt_BR: Maximum total number of pages to crawl.
+            zh_Hans: 要爬取的最大页面总数。
+          label:
+            en_US: Page Limit
+            ja_JP: Page Limit
+            pt_BR: Page Limit
+            zh_Hans: 页面限制
+          llm_description: Maximum total number of pages to crawl before stopping.
+          max: 1000
+          min: 1
+          name: limit
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Natural language instructions to guide the crawler on what content
+              to focus on.
+            ja_JP: Natural language instructions to guide the crawler on what content
+              to focus on.
+            pt_BR: Natural language instructions to guide the crawler on what content
+              to focus on.
+            zh_Hans: 指导爬虫关注哪些内容的自然语言指令。
+          label:
+            en_US: Instructions
+            ja_JP: Instructions
+            pt_BR: Instructions
+            zh_Hans: 指令
+          llm_description: Natural language instructions for the crawler to focus
+            on specific content or topics.
+          max: null
+          min: null
+          name: instructions
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: URL paths to include in the crawl (comma-separated, e.g., "/docs,/blog").
+            ja_JP: URL paths to include in the crawl (comma-separated, e.g., "/docs,/blog").
+            pt_BR: URL paths to include in the crawl (comma-separated, e.g., "/docs,/blog").
+            zh_Hans: 要包含在爬取中的 URL 路径（逗号分隔，例如"/docs,/blog"）。
+          label:
+            en_US: Select Paths
+            ja_JP: Select Paths
+            pt_BR: Select Paths
+            zh_Hans: 选择路径
+          llm_description: Comma-separated URL paths to include in the crawl (e.g.,
+            "/docs,/api,/guides").
+          max: null
+          min: null
+          name: select_paths
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: URL paths to exclude from the crawl (comma-separated, e.g., "/login,/admin").
+            ja_JP: URL paths to exclude from the crawl (comma-separated, e.g., "/login,/admin").
+            pt_BR: URL paths to exclude from the crawl (comma-separated, e.g., "/login,/admin").
+            zh_Hans: 要从爬取中排除的 URL 路径（逗号分隔，例如"/login,/admin"）。
+          label:
+            en_US: Exclude Paths
+            ja_JP: Exclude Paths
+            pt_BR: Exclude Paths
+            zh_Hans: 排除路径
+          llm_description: Comma-separated URL paths to exclude from the crawl (e.g.,
+            "/login,/admin,/private").
+          max: null
+          min: null
+          name: exclude_paths
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Domains to include in the crawl (comma-separated). Only used when
+              allow_external is true.
+            ja_JP: Domains to include in the crawl (comma-separated). Only used when
+              allow_external is true.
+            pt_BR: Domains to include in the crawl (comma-separated). Only used when
+              allow_external is true.
+            zh_Hans: 要包含在爬取中的域名（逗号分隔）。仅在 allow_external 为 true 时使用。
+          label:
+            en_US: Select Domains
+            ja_JP: Select Domains
+            pt_BR: Select Domains
+            zh_Hans: 选择域名
+          llm_description: Comma-separated domains to include when crawling external
+            links.
+          max: null
+          min: null
+          name: select_domains
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Domains to exclude from the crawl (comma-separated).
+            ja_JP: Domains to exclude from the crawl (comma-separated).
+            pt_BR: Domains to exclude from the crawl (comma-separated).
+            zh_Hans: 要从爬取中排除的域名（逗号分隔）。
+          label:
+            en_US: Exclude Domains
+            ja_JP: Exclude Domains
+            pt_BR: Exclude Domains
+            zh_Hans: 排除域名
+          llm_description: Comma-separated domains to exclude from the crawl.
+          max: null
+          min: null
+          name: exclude_domains
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: true
+          form: form
+          human_description:
+            en_US: Allow the crawler to follow links to external domains.
+            ja_JP: Allow the crawler to follow links to external domains.
+            pt_BR: Allow the crawler to follow links to external domains.
+            zh_Hans: 允许爬虫跟踪到外部域名的链接。
+          label:
+            en_US: Allow External
+            ja_JP: Allow External
+            pt_BR: Allow External
+            zh_Hans: 允许外部链接
+          llm_description: When true, allows the crawler to follow links to external
+            domains.
+          max: null
+          min: null
+          name: allow_external
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: false
+          form: form
+          human_description:
+            en_US: Include images found on crawled pages in the response.
+            ja_JP: Include images found on crawled pages in the response.
+            pt_BR: Include images found on crawled pages in the response.
+            zh_Hans: 在响应中包含在爬取页面上找到的图像。
+          label:
+            en_US: Include Images
+            ja_JP: Include Images
+            pt_BR: Include Images
+            zh_Hans: 包含图像
+          llm_description: Include images from crawled pages in the response.
+          max: null
+          min: null
+          name: include_images
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: false
+          form: form
+          human_description:
+            en_US: Include favicon URL for each crawled page.
+            ja_JP: Include favicon URL for each crawled page.
+            pt_BR: Include favicon URL for each crawled page.
+            zh_Hans: 包含每个爬取页面的 favicon URL。
+          label:
+            en_US: Include Favicon
+            ja_JP: Include Favicon
+            pt_BR: Include Favicon
+            zh_Hans: 包含 Favicon
+          llm_description: When true, includes the favicon URL for each crawled page.
+          max: null
+          min: null
+          name: include_favicon
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: basic
+          form: form
+          human_description:
+            en_US: The depth of content extraction. 'advanced' retrieves more data
+              but may increase latency and costs more credits.
+            ja_JP: The depth of content extraction. 'advanced' retrieves more data
+              but may increase latency and costs more credits.
+            pt_BR: The depth of content extraction. 'advanced' retrieves more data
+              but may increase latency and costs more credits.
+            zh_Hans: 内容提取的深度。"advanced"检索更多数据，但可能增加延迟和消耗更多积分。
+          label:
+            en_US: Extract Depth
+            ja_JP: Extract Depth
+            pt_BR: Extract Depth
+            zh_Hans: 提取深度
+          llm_description: Extraction depth - 'basic' (default, faster) or 'advanced'
+            (more data, higher cost).
+          max: null
+          min: null
+          name: extract_depth
+          options:
+          - icon: ''
+            label:
+              en_US: Basic
+              ja_JP: Basic
+              pt_BR: Basic
+              zh_Hans: 基本
+            value: basic
+          - icon: ''
+            label:
+              en_US: Advanced
+              ja_JP: Advanced
+              pt_BR: Advanced
+              zh_Hans: 高级
+            value: advanced
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: markdown
+          form: form
+          human_description:
+            en_US: The format of extracted content.
+            ja_JP: The format of extracted content.
+            pt_BR: The format of extracted content.
+            zh_Hans: 提取内容的格式。
+          label:
+            en_US: Content Format
+            ja_JP: Content Format
+            pt_BR: Content Format
+            zh_Hans: 内容格式
+          llm_description: Format of extracted content - 'markdown' (default) or 'text'
+            (plain text).
+          max: null
+          min: null
+          name: format
+          options:
+          - icon: ''
+            label:
+              en_US: Markdown
+              ja_JP: Markdown
+              pt_BR: Markdown
+              zh_Hans: Markdown
+            value: markdown
+          - icon: ''
+            label:
+              en_US: Text
+              ja_JP: Text
+              pt_BR: Text
+              zh_Hans: 文本
+            value: text
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: 150
+          form: form
+          human_description:
+            en_US: Request timeout in seconds.
+            ja_JP: Request timeout in seconds.
+            pt_BR: Request timeout in seconds.
+            zh_Hans: 请求超时时间（秒）。
+          label:
+            en_US: Timeout
+            ja_JP: Timeout
+            pt_BR: Timeout
+            zh_Hans: 超时时间
+          llm_description: Request timeout in seconds. Default is 150 seconds.
+          max: 150
+          min: 10
+          name: timeout
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: 3
+          form: form
+          human_description:
+            en_US: Maximum number of relevant chunks returned per source. Only available
+              when instructions are provided.
+            ja_JP: Maximum number of relevant chunks returned per source. Only available
+              when instructions are provided.
+            pt_BR: Maximum number of relevant chunks returned per source. Only available
+              when instructions are provided.
+            zh_Hans: 每个来源返回的最大相关块数。仅在提供指令时可用。
+          label:
+            en_US: Chunks Per Source
+            ja_JP: Chunks Per Source
+            pt_BR: Chunks Per Source
+            zh_Hans: 每个来源的块数
+          llm_description: Maximum number of relevant chunks returned per source (1-5).
+            Only used when instructions parameter is provided.
+          max: 5
+          min: 1
+          name: chunks_per_source
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: false
+          form: form
+          human_description:
+            en_US: Include credit usage information in the response.
+            ja_JP: Include credit usage information in the response.
+            pt_BR: Include credit usage information in the response.
+            zh_Hans: 在响应中包含积分使用信息。
+          label:
+            en_US: Include Usage
+            ja_JP: Include Usage
+            pt_BR: Include Usage
+            zh_Hans: 包含使用信息
+          llm_description: When true, includes credit usage information in the response.
+          max: null
+          min: null
+          name: include_usage
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Optional project ID for tracking and analytics purposes. Will be
+              sent as X-Project-ID header.
+            ja_JP: Optional project ID for tracking and analytics purposes. Will be
+              sent as X-Project-ID header.
+            pt_BR: Optional project ID for tracking and analytics purposes. Will be
+              sent as X-Project-ID header.
+            zh_Hans: 用于跟踪和分析目的的可选项目 ID。将作为 X-Project-ID 标头发送。
+          label:
+            en_US: Project ID
+            ja_JP: Project ID
+            pt_BR: Project ID
+            zh_Hans: 项目 ID
+          llm_description: Optional project ID for usage tracking and analytics.
+          max: null
+          min: null
+          name: project_id
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          allow_external: ''
+          chunks_per_source: ''
+          exclude_domains: ''
+          exclude_paths: ''
+          extract_depth: ''
+          format: ''
+          include_favicon: ''
+          include_images: ''
+          include_usage: ''
+          instructions: ''
+          limit: ''
+          max_breadth: ''
+          max_depth: ''
+          project_id: ''
+          select_domains: ''
+          select_paths: ''
+          timeout: ''
+          url: ''
+        plugin_id: langgenius/tavily
+        plugin_unique_identifier: langgenius/tavily:0.1.5@d155ce82c081df2a32a7bf4bd9ded15028dee4cc5c54ad1bd39c9a2726e8cbe4
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=b2ddbc49-0ce9-43aa-9cb6-5b3c0f9d0883&filename=87e9610216108c07bc947745c1df5715aa276dbaa90e5d60866102c549fb5452.png
+        provider_id: langgenius/tavily/tavily
+        provider_name: langgenius/tavily/tavily
+        provider_type: builtin
+        selected: false
+        title: Tavily Crawl
+        tool_configurations:
+          allow_external:
+            type: constant
+            value: false
+          chunks_per_source:
+            type: constant
+            value: 3
+          extract_depth:
+            type: constant
+            value: basic
+          format:
+            type: constant
+            value: markdown
+          include_favicon:
+            type: constant
+            value: false
+          include_images:
+            type: constant
+            value: false
+          include_usage:
+            type: constant
+            value: false
+          limit:
+            type: constant
+            value: null
+          max_breadth:
+            type: constant
+            value: null
+          max_depth:
+            type: constant
+            value: 2
+          project_id:
+            type: mixed
+            value: null
+          timeout:
+            type: constant
+            value: 150
+        tool_description: 使用 Tavily Crawl 从基础 URL 开始爬取网站，发现并提取多个页面的内容。
+        tool_label: Tavily Crawl
+        tool_name: tavily_crawl
+        tool_node_version: '2'
+        tool_parameters:
+          exclude_domains:
+            type: mixed
+            value: null
+          exclude_paths:
+            type: mixed
+            value: null
+          instructions:
+            type: mixed
+            value: null
+          select_domains:
+            type: mixed
+            value: null
+          select_paths:
+            type: mixed
+            value: null
+          url:
+            type: mixed
+            value: https://portal.cscse.edu.cn/lxfwzx/xwdt85/xwdt
+        type: tool
+      height: 373
+      id: '1777281171866'
+      position:
+        x: 3487.6404520715832
+        y: 1130.3915567372119
+      positionAbsolute:
+        x: 3487.6404520715832
+        y: 1130.3915567372119
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        is_team_authorization: true
+        paramSchemas:
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: The base URL to start crawling from.
+            ja_JP: The base URL to start crawling from.
+            pt_BR: The base URL to start crawling from.
+            zh_Hans: 开始爬取的基础 URL。
+          label:
+            en_US: URL
+            ja_JP: URL
+            pt_BR: URL
+            zh_Hans: URL
+          llm_description: The base URL to start crawling from. The crawler will follow
+            links from this page.
+          max: null
+          min: null
+          name: url
+          options: []
+          placeholder: null
+          precision: null
+          required: true
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Maximum depth to crawl (how many links deep from the base URL).
+            ja_JP: Maximum depth to crawl (how many links deep from the base URL).
+            pt_BR: Maximum depth to crawl (how many links deep from the base URL).
+            zh_Hans: 最大爬取深度（从基础 URL 开始的链接深度）。
+          label:
+            en_US: Max Depth
+            ja_JP: Max Depth
+            pt_BR: Max Depth
+            zh_Hans: 最大深度
+          llm_description: Maximum depth to crawl - how many levels of links to follow
+            from the base URL.
+          max: 5
+          min: 1
+          name: max_depth
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Maximum breadth to crawl (number of links to follow per page).
+            ja_JP: Maximum breadth to crawl (number of links to follow per page).
+            pt_BR: Maximum breadth to crawl (number of links to follow per page).
+            zh_Hans: 最大爬取广度（每页跟踪的链接数）。
+          label:
+            en_US: Max Breadth
+            ja_JP: Max Breadth
+            pt_BR: Max Breadth
+            zh_Hans: 最大广度
+          llm_description: Maximum breadth to crawl - how many links to follow from
+            each page.
+          max: 100
+          min: 1
+          name: max_breadth
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Maximum total number of pages to crawl.
+            ja_JP: Maximum total number of pages to crawl.
+            pt_BR: Maximum total number of pages to crawl.
+            zh_Hans: 要爬取的最大页面总数。
+          label:
+            en_US: Page Limit
+            ja_JP: Page Limit
+            pt_BR: Page Limit
+            zh_Hans: 页面限制
+          llm_description: Maximum total number of pages to crawl before stopping.
+          max: 1000
+          min: 1
+          name: limit
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Natural language instructions to guide the crawler on what content
+              to focus on.
+            ja_JP: Natural language instructions to guide the crawler on what content
+              to focus on.
+            pt_BR: Natural language instructions to guide the crawler on what content
+              to focus on.
+            zh_Hans: 指导爬虫关注哪些内容的自然语言指令。
+          label:
+            en_US: Instructions
+            ja_JP: Instructions
+            pt_BR: Instructions
+            zh_Hans: 指令
+          llm_description: Natural language instructions for the crawler to focus
+            on specific content or topics.
+          max: null
+          min: null
+          name: instructions
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: URL paths to include in the crawl (comma-separated, e.g., "/docs,/blog").
+            ja_JP: URL paths to include in the crawl (comma-separated, e.g., "/docs,/blog").
+            pt_BR: URL paths to include in the crawl (comma-separated, e.g., "/docs,/blog").
+            zh_Hans: 要包含在爬取中的 URL 路径（逗号分隔，例如"/docs,/blog"）。
+          label:
+            en_US: Select Paths
+            ja_JP: Select Paths
+            pt_BR: Select Paths
+            zh_Hans: 选择路径
+          llm_description: Comma-separated URL paths to include in the crawl (e.g.,
+            "/docs,/api,/guides").
+          max: null
+          min: null
+          name: select_paths
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: URL paths to exclude from the crawl (comma-separated, e.g., "/login,/admin").
+            ja_JP: URL paths to exclude from the crawl (comma-separated, e.g., "/login,/admin").
+            pt_BR: URL paths to exclude from the crawl (comma-separated, e.g., "/login,/admin").
+            zh_Hans: 要从爬取中排除的 URL 路径（逗号分隔，例如"/login,/admin"）。
+          label:
+            en_US: Exclude Paths
+            ja_JP: Exclude Paths
+            pt_BR: Exclude Paths
+            zh_Hans: 排除路径
+          llm_description: Comma-separated URL paths to exclude from the crawl (e.g.,
+            "/login,/admin,/private").
+          max: null
+          min: null
+          name: exclude_paths
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Domains to include in the crawl (comma-separated). Only used when
+              allow_external is true.
+            ja_JP: Domains to include in the crawl (comma-separated). Only used when
+              allow_external is true.
+            pt_BR: Domains to include in the crawl (comma-separated). Only used when
+              allow_external is true.
+            zh_Hans: 要包含在爬取中的域名（逗号分隔）。仅在 allow_external 为 true 时使用。
+          label:
+            en_US: Select Domains
+            ja_JP: Select Domains
+            pt_BR: Select Domains
+            zh_Hans: 选择域名
+          llm_description: Comma-separated domains to include when crawling external
+            links.
+          max: null
+          min: null
+          name: select_domains
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: null
+          form: llm
+          human_description:
+            en_US: Domains to exclude from the crawl (comma-separated).
+            ja_JP: Domains to exclude from the crawl (comma-separated).
+            pt_BR: Domains to exclude from the crawl (comma-separated).
+            zh_Hans: 要从爬取中排除的域名（逗号分隔）。
+          label:
+            en_US: Exclude Domains
+            ja_JP: Exclude Domains
+            pt_BR: Exclude Domains
+            zh_Hans: 排除域名
+          llm_description: Comma-separated domains to exclude from the crawl.
+          max: null
+          min: null
+          name: exclude_domains
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        - auto_generate: null
+          default: true
+          form: form
+          human_description:
+            en_US: Allow the crawler to follow links to external domains.
+            ja_JP: Allow the crawler to follow links to external domains.
+            pt_BR: Allow the crawler to follow links to external domains.
+            zh_Hans: 允许爬虫跟踪到外部域名的链接。
+          label:
+            en_US: Allow External
+            ja_JP: Allow External
+            pt_BR: Allow External
+            zh_Hans: 允许外部链接
+          llm_description: When true, allows the crawler to follow links to external
+            domains.
+          max: null
+          min: null
+          name: allow_external
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: false
+          form: form
+          human_description:
+            en_US: Include images found on crawled pages in the response.
+            ja_JP: Include images found on crawled pages in the response.
+            pt_BR: Include images found on crawled pages in the response.
+            zh_Hans: 在响应中包含在爬取页面上找到的图像。
+          label:
+            en_US: Include Images
+            ja_JP: Include Images
+            pt_BR: Include Images
+            zh_Hans: 包含图像
+          llm_description: Include images from crawled pages in the response.
+          max: null
+          min: null
+          name: include_images
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: false
+          form: form
+          human_description:
+            en_US: Include favicon URL for each crawled page.
+            ja_JP: Include favicon URL for each crawled page.
+            pt_BR: Include favicon URL for each crawled page.
+            zh_Hans: 包含每个爬取页面的 favicon URL。
+          label:
+            en_US: Include Favicon
+            ja_JP: Include Favicon
+            pt_BR: Include Favicon
+            zh_Hans: 包含 Favicon
+          llm_description: When true, includes the favicon URL for each crawled page.
+          max: null
+          min: null
+          name: include_favicon
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: basic
+          form: form
+          human_description:
+            en_US: The depth of content extraction. 'advanced' retrieves more data
+              but may increase latency and costs more credits.
+            ja_JP: The depth of content extraction. 'advanced' retrieves more data
+              but may increase latency and costs more credits.
+            pt_BR: The depth of content extraction. 'advanced' retrieves more data
+              but may increase latency and costs more credits.
+            zh_Hans: 内容提取的深度。"advanced"检索更多数据，但可能增加延迟和消耗更多积分。
+          label:
+            en_US: Extract Depth
+            ja_JP: Extract Depth
+            pt_BR: Extract Depth
+            zh_Hans: 提取深度
+          llm_description: Extraction depth - 'basic' (default, faster) or 'advanced'
+            (more data, higher cost).
+          max: null
+          min: null
+          name: extract_depth
+          options:
+          - icon: ''
+            label:
+              en_US: Basic
+              ja_JP: Basic
+              pt_BR: Basic
+              zh_Hans: 基本
+            value: basic
+          - icon: ''
+            label:
+              en_US: Advanced
+              ja_JP: Advanced
+              pt_BR: Advanced
+              zh_Hans: 高级
+            value: advanced
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: markdown
+          form: form
+          human_description:
+            en_US: The format of extracted content.
+            ja_JP: The format of extracted content.
+            pt_BR: The format of extracted content.
+            zh_Hans: 提取内容的格式。
+          label:
+            en_US: Content Format
+            ja_JP: Content Format
+            pt_BR: Content Format
+            zh_Hans: 内容格式
+          llm_description: Format of extracted content - 'markdown' (default) or 'text'
+            (plain text).
+          max: null
+          min: null
+          name: format
+          options:
+          - icon: ''
+            label:
+              en_US: Markdown
+              ja_JP: Markdown
+              pt_BR: Markdown
+              zh_Hans: Markdown
+            value: markdown
+          - icon: ''
+            label:
+              en_US: Text
+              ja_JP: Text
+              pt_BR: Text
+              zh_Hans: 文本
+            value: text
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: select
+        - auto_generate: null
+          default: 150
+          form: form
+          human_description:
+            en_US: Request timeout in seconds.
+            ja_JP: Request timeout in seconds.
+            pt_BR: Request timeout in seconds.
+            zh_Hans: 请求超时时间（秒）。
+          label:
+            en_US: Timeout
+            ja_JP: Timeout
+            pt_BR: Timeout
+            zh_Hans: 超时时间
+          llm_description: Request timeout in seconds. Default is 150 seconds.
+          max: 150
+          min: 10
+          name: timeout
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: 3
+          form: form
+          human_description:
+            en_US: Maximum number of relevant chunks returned per source. Only available
+              when instructions are provided.
+            ja_JP: Maximum number of relevant chunks returned per source. Only available
+              when instructions are provided.
+            pt_BR: Maximum number of relevant chunks returned per source. Only available
+              when instructions are provided.
+            zh_Hans: 每个来源返回的最大相关块数。仅在提供指令时可用。
+          label:
+            en_US: Chunks Per Source
+            ja_JP: Chunks Per Source
+            pt_BR: Chunks Per Source
+            zh_Hans: 每个来源的块数
+          llm_description: Maximum number of relevant chunks returned per source (1-5).
+            Only used when instructions parameter is provided.
+          max: 5
+          min: 1
+          name: chunks_per_source
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: number
+        - auto_generate: null
+          default: false
+          form: form
+          human_description:
+            en_US: Include credit usage information in the response.
+            ja_JP: Include credit usage information in the response.
+            pt_BR: Include credit usage information in the response.
+            zh_Hans: 在响应中包含积分使用信息。
+          label:
+            en_US: Include Usage
+            ja_JP: Include Usage
+            pt_BR: Include Usage
+            zh_Hans: 包含使用信息
+          llm_description: When true, includes credit usage information in the response.
+          max: null
+          min: null
+          name: include_usage
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: boolean
+        - auto_generate: null
+          default: null
+          form: form
+          human_description:
+            en_US: Optional project ID for tracking and analytics purposes. Will be
+              sent as X-Project-ID header.
+            ja_JP: Optional project ID for tracking and analytics purposes. Will be
+              sent as X-Project-ID header.
+            pt_BR: Optional project ID for tracking and analytics purposes. Will be
+              sent as X-Project-ID header.
+            zh_Hans: 用于跟踪和分析目的的可选项目 ID。将作为 X-Project-ID 标头发送。
+          label:
+            en_US: Project ID
+            ja_JP: Project ID
+            pt_BR: Project ID
+            zh_Hans: 项目 ID
+          llm_description: Optional project ID for usage tracking and analytics.
+          max: null
+          min: null
+          name: project_id
+          options: []
+          placeholder: null
+          precision: null
+          required: false
+          scope: null
+          template: null
+          type: string
+        params:
+          allow_external: ''
+          chunks_per_source: ''
+          exclude_domains: ''
+          exclude_paths: ''
+          extract_depth: ''
+          format: ''
+          include_favicon: ''
+          include_images: ''
+          include_usage: ''
+          instructions: ''
+          limit: ''
+          max_breadth: ''
+          max_depth: ''
+          project_id: ''
+          select_domains: ''
+          select_paths: ''
+          timeout: ''
+          url: ''
+        plugin_id: langgenius/tavily
+        plugin_unique_identifier: langgenius/tavily:0.1.5@d155ce82c081df2a32a7bf4bd9ded15028dee4cc5c54ad1bd39c9a2726e8cbe4
+        provider_icon: /console/api/workspaces/current/plugin/icon?tenant_id=b2ddbc49-0ce9-43aa-9cb6-5b3c0f9d0883&filename=87e9610216108c07bc947745c1df5715aa276dbaa90e5d60866102c549fb5452.png
+        provider_id: langgenius/tavily/tavily
+        provider_name: langgenius/tavily/tavily
+        provider_type: builtin
+        selected: false
+        title: Tavily Crawl (1)
+        tool_configurations:
+          allow_external:
+            type: constant
+            value: false
+          chunks_per_source:
+            type: constant
+            value: 3
+          extract_depth:
+            type: constant
+            value: basic
+          format:
+            type: constant
+            value: markdown
+          include_favicon:
+            type: constant
+            value: false
+          include_images:
+            type: constant
+            value: false
+          include_usage:
+            type: constant
+            value: false
+          limit:
+            type: constant
+            value: null
+          max_breadth:
+            type: constant
+            value: null
+          max_depth:
+            type: constant
+            value: 2
+          project_id:
+            type: mixed
+            value: null
+          timeout:
+            type: constant
+            value: 150
+        tool_description: 使用 Tavily Crawl 从基础 URL 开始爬取网站，发现并提取多个页面的内容。
+        tool_label: Tavily Crawl
+        tool_name: tavily_crawl
+        tool_node_version: '2'
+        tool_parameters:
+          exclude_domains:
+            type: mixed
+            value: null
+          exclude_paths:
+            type: mixed
+            value: null
+          instructions:
+            type: mixed
+            value: null
+          select_domains:
+            type: mixed
+            value: null
+          select_paths:
+            type: mixed
+            value: null
+          url:
+            type: mixed
+            value: https://portal.cscse.edu.cn/lxfwzx/xwdt85/xwdt
+        type: tool
+      height: 373
+      id: '17772812867980'
+      position:
+        x: 3091.126175079551
+        y: 1474.722951805409
+      positionAbsolute:
+        x: 3091.126175079551
+        y: 1474.722951805409
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    viewport:
+      x: -437.7295471784648
+      y: 74.46935401335645
+      zoom: 0.32987697769322394
+  rag_pipeline_variables: []
