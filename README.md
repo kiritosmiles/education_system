@@ -1,6 +1,6 @@
 # Education System
 
-基于 FastAPI 的教育管理系统，采用 MVC 架构，符合 RESTful 规范和 Pydantic 规范，使用 SQLAlchemy 与 MySQL 数据库交互。集成 Dify AI 实现工作日报总结和行业周报的智能生成。
+基于 FastAPI 的教育管理系统，采用 MVC 架构，符合 RESTful 规范和 Pydantic 规范，使用 SQLAlchemy 与 MySQL 数据库交互。集成 Dify AI 实现工作日报总结和行业周报的智能生成。前端采用地雷系（Jirai-kei）暗黑主题设计，集成 Live2D 看板娘。
 
 ## 项目结构
 
@@ -8,13 +8,13 @@
 education_system/
 ├── app/
 │   ├── __init__.py
-│   ├── main.py                # 应用入口、路由注册、定时任务
+│   ├── main.py                # 应用入口、路由注册、定时任务、统一异常处理
 │   ├── config.py              # 配置管理（读取.env）
 │   ├── database.py            # 数据库连接
 │   ├── models/                # SQLAlchemy ORM 模型（按表拆分）
 │   │   ├── __init__.py
 │   │   ├── user.py            # 用户模型
-│   │   ├── customer.py        # 顾客模型
+│   │   ├── customer.py        # 顾客模型（含评级/适配项目/分析信息）
 │   │   ├── work_repo.py       # 工作日报模型
 │   │   ├── industry_repo.py   # 行业周报模型
 │   │   └── work_repo_sum.py   # 工作日报总结模型
@@ -36,7 +36,7 @@ education_system/
 │   │   ├── industry_repo_controller.py    # 行业周报CRUD（含AI生成+定时任务）
 │   │   ├── email_controller.py            # 邮件推送
 │   │   ├── text2sql_controller.py         # Text2SQL智能查询
-│   │   └── ai_chat_controller.py          # AI智能助手（Dify Chat API）
+│   │   └── ai_chat_controller.py          # AI智能助手（Dify Chat API，支持文件上传）
 │   ├── middleware/            # 中间件
 │   │   ├── __init__.py
 │   │   ├── logging_mw.py     # 日志初始化（控制台彩色 + 文件轮转）
@@ -44,12 +44,12 @@ education_system/
 │   ├── utils/
 │   │   ├── __init__.py
 │   │   ├── auth.py           # JWT/MD5认证工具
-│   │   ├── dify_client.py    # Dify API客户端（Chatbot阻塞模式）
+│   │   ├── dify_client.py    # Dify API客户端（Chat阻塞模式 + 文件上传 + 工作流输出提取）
 │   │   ├── email_sender.py   # SMTP邮件发送
 │   │   └── text2sql.py       # 阿里云DashScope Text2SQL
 │   ├── templates/             # Jinja2前端模板
-│   │   ├── base.html          # 基础布局
-│   │   ├── home.html          # 首页（含Dify聊天机器人）
+│   │   ├── base.html          # 基础布局（地雷系暗黑主题、全局样式）
+│   │   ├── home.html          # 首页（企业展示 + Live2D看板娘 + Dify嵌入式聊天）
 │   │   ├── login.html         # 登录页
 │   │   ├── dashboard.html     # 仪表盘
 │   │   ├── users.html         # 用户管理
@@ -59,10 +59,17 @@ education_system/
 │   │   ├── industry_repos.html # 行业周报
 │   │   ├── email.html         # 邮件推送
 │   │   ├── text2sql.html      # 智能查询
-│   │   └── ai_chat.html       # AI智能助手（Dify Chat API，Markdown渲染，表格/代码块优化）
+│   │   └── ai_chat.html       # AI智能助手（Markdown渲染，表格/代码块优化，文件上传，耗时统计）
 │   └── static/                # 静态资源
 │       ├── css/
-│       └── js/
+│       ├── js/
+│       └── live2d/            # Live2D 看板娘资源
+│           └── katou/         # 加藤惠模型
+│               ├── css/       # 看板娘样式
+│               ├── images/    # 功能图标
+│               ├── js/        # Live2D SDK + 交互逻辑
+│               ├── model/     # 模型数据（moc/纹理/动作/表情/物理/姿势）
+│               └── message.json  # 悬停/点击消息配置
 ├── log/                       # 日志目录
 │   ├── app.log               # 应用日志（自动轮转，保留7天）
 │   └── app_error.log         # 错误日志（自动轮转，保留7天）
@@ -116,6 +123,7 @@ DASHSCOPE_API_KEY=your_dashscope_api_key
 DIFY_BASE_URL=http://your_dify_server
 DIFY_WORK_REPO_SUM_API_KEY=your_work_repo_sum_api_key
 DIFY_INDUSTRY_REPO_API_KEY=your_industry_repo_api_key
+DIFY_CHAT_API_KEY=your_chat_api_key
 
 # 日志级别（可选，默认INFO）
 LOG_LEVEL=INFO
@@ -144,6 +152,42 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 浏览器打开 `http://localhost:8000`
 
 默认管理员账号：`admin` / `admin123`
+
+## UI 主题
+
+前端采用**地雷系（Jirai-kei）暗黑主题**，以深蓝紫渐变为基底，搭配粉紫强调色：
+
+| 变量 | 色值 | 用途 |
+|------|------|------|
+| `--jirai-black` | `#1a1a2e` | 主背景 |
+| `--jirai-dark` | `#16213e` | 侧边栏 |
+| `--jirai-purple` | `#533483` | 次要强调 |
+| `--jirai-pink` | `#e91e63` | 主强调色（按钮/高亮/聚焦） |
+| `--jirai-soft-pink` | `#fce4ec` | 标题/高亮文本 |
+| `--jirai-lavender` | `#b39ddb` | 辅助文本 |
+| `--jirai-text` | `#e1bee7` | 主文本（淡紫粉） |
+
+- **背景**：深蓝紫渐变 `linear-gradient(160deg, #0f0c29, #1a1a2e, #24243e)`
+- **卡片**：毛玻璃效果（`backdrop-filter: blur(10px)`）+ 半透明深色 + 紫色边框
+- **按钮**：粉紫渐变 `#e91e63 → #533483`，hover 带粉色阴影
+- **表格**：深色背景 + 紫色表头 + 斑马纹 + 粉色悬停高亮
+- **表单**：半透明深色背景，聚焦时粉色边框 + 粉色光晕
+- **滚动条**：自定义深色 + 粉色滑块
+- **首页 Hero**：浮动光晕动画 + 粒子背景
+
+## Live2D 看板娘
+
+首页集成 Live2D 看板娘（加藤惠，来自《路人女主的养成方法》），功能包括：
+
+- **时间问候**：根据当前时间段显示不同问候语（深夜/清晨/上午/中午/午后/傍晚/晚上）
+- **点击互动**：点击模型显示随机角色语音文本
+- **悬停提示**：页面元素悬停时显示对应提示文本（通过 `message.json` 配置）
+- **拖拽移动**：支持鼠标拖拽调整位置，位置通过 `sessionStorage` 持久化
+- **显示/隐藏**：隐藏按钮退出后显示"召唤惠惠"按钮，状态通过 `localStorage` 记忆
+- **Dify 聊天联动**：点击看板娘自动触发 Dify 嵌入式聊天窗口
+- **淡入淡出**：显示/隐藏带渐变过渡动画
+- **移动端适配**：860px 以下自动隐藏
+- **模型细节**：6种表情（ANGRY/DOWN/FUN/NOMAL/SAD/SURPRISE）+ 16个动作 + 物理引擎 + 2048分辨率纹理
 
 ## API 接口
 
@@ -195,6 +239,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **users**: 用户表（uid, username, pwd, name, gender, email, phone, role, create_time, is_del）
 - **customers**: 顾客表（c_id, c_name, c_age, c_gender, c_phone, c_email, c_degree, c_region, c_suit_project, create_time, update_time, link_uid, c_status, c_rank, c_analyze_info, is_del）
   - `c_rank`: 顾客评级（S/A/B/C/D，S=核心顾客, A=重要顾客, B=普通顾客, C=一般顾客, D=边缘顾客）
+  - `c_suit_project`: 适配项目（0=所有项目都符合, 1=都不符合, 2=新加坡国际本硕升学计划, 3=中德精英人才共建计划）
 - **work_repo**: 工作日报表（w_id, w_date, w_title, u_id, content, create_time, update_time, is_del）
 - **work_repo_sum**: 工作日报总结表（ws_id, ws_date, ws_title, content, create_time, is_del）
 - **industry_repo**: 行业周报表（i_id, i_title, content, create_time, is_del）
@@ -203,7 +248,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ### Dify 集成
 
-系统集成 Dify AI 平台，提供以下智能生成能力：
+系统集成 Dify AI 平台，提供以下智能能力：
 
 - **工作日报总结**：调用 Dify Chatbot API，根据指定日期的所有员工日报自动生成总结报告
   - 手动触发：POST `/api/work-repo-sums/generate?ws_date=YYYY-MM-DD`
@@ -211,7 +256,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **行业周报**：调用 Dify Chatbot API，根据指定日期范围自动生成行业周报
   - 手动触发：POST `/api/industry-repos/generate?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD`
   - 定时任务：每周一 8:30 自动生成上周行业周报
-- **AI 聊天助手**：基于 Dify Chat API 的智能对话，支持多轮对话、文件上传、Markdown 渲染
+- **首页嵌入式聊天**：通过 Dify 官方前端嵌入组件（`embed.min.js`）在首页右下角展示聊天窗口，点击 Live2D 看板娘自动触发
+- **AI 聊天助手**（`/ai-chat` 页面）：基于 Dify Chat API 的自定义对话界面
   - 接口：POST `/api/ai-chat/message`
   - 支持上传图片/文档，AI 自动识别内容
   - 多轮对话：通过 `conversation_id` 保持上下文
@@ -220,6 +266,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     - 代码块深色主题 + 一键复制按钮，HTML 转义防 XSS
     - Markdown 标题/列表/引用/分割线/段落排版优化
     - AI 回复气泡宽度 90%，充分利用空间
+    - 请求耗时实时统计
 
 ### Text2SQL 智能查询
 
@@ -240,6 +287,14 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 | 工作日报总结 | 每天 8:00 | 自动生成昨日工作日报总结 |
 | 行业周报 | 每周一 8:30 | 自动生成上周行业周报 |
 
+## 统一异常处理
+
+系统在 `main.py` 中注册了全局异常处理器，确保所有错误返回统一 JSON 格式：
+
+- **HTTPException**：返回标准 JSON 错误响应
+- **RequestValidationError**（422）：参数校验失败，返回字段级错误详情
+- **全局 Exception**（500）：捕获所有未处理异常，记录错误日志
+
 ## 日志系统
 
 - **控制台输出**：带 ANSI 颜色的格式化日志
@@ -257,5 +312,6 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **定时任务**: APScheduler
 - **HTTP客户端**: httpx（Dify API调用）
 - **日志**: Python logging + TimedRotatingFileHandler
-- **前端**: Bootstrap 5 + Jinja2模板 + Marked.js v4（Markdown渲染）
+- **前端**: Bootstrap 5 + Bootstrap Icons + Jinja2模板 + Marked.js v4（Markdown渲染）+ Live2D SDK
+- **UI主题**: 地雷系暗黑风格（深蓝紫渐变 + 粉紫强调 + 毛玻璃效果）
 - **数据库**: MySQL 8.0
