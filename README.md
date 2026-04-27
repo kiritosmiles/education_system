@@ -1,6 +1,6 @@
 # Education System
 
-基于 FastAPI 的教育管理系统，采用 MVC 架构，符合 RESTful 规范和 Pydantic 规范，使用 SQLAlchemy 与 MySQL 数据库交互。集成 Dify AI 实现工作日报总结和行业周报的智能生成。前端采用地雷系（Jirai-kei）暗黑主题设计，集成 Live2D 看板娘。
+基于 FastAPI 的教育管理系统，采用 MVC 架构，符合 RESTful 规范和 Pydantic 规范，使用 SQLAlchemy 与 MySQL 数据库交互。集成 Dify AI 实现工作日报总结和行业周报的智能生成。前端采用暗黑系风格主题设计，集成 Live2D 看板娘。
 
 ## 项目结构
 
@@ -48,7 +48,7 @@ education_system/
 │   │   ├── email_sender.py   # SMTP邮件发送
 │   │   └── text2sql.py       # 阿里云DashScope Text2SQL
 │   ├── templates/             # Jinja2前端模板
-│   │   ├── base.html          # 基础布局（地雷系暗黑主题、全局样式）
+│   │   ├── base.html          # 基础布局（暗黑系风格主题、全局样式）
 │   │   ├── home.html          # 首页（企业展示 + Live2D看板娘 + Dify嵌入式聊天）
 │   │   ├── login.html         # 登录页
 │   │   ├── dashboard.html     # 仪表盘
@@ -155,7 +155,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ## UI 主题
 
-前端采用**地雷系（Jirai-kei）暗黑主题**，以深蓝紫渐变为基底，搭配粉紫强调色：
+前端采用**暗黑系风格主题**，以深蓝紫渐变为基底，搭配粉紫强调色：
 
 | 变量 | 色值 | 用途 |
 |------|------|------|
@@ -348,5 +348,5 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **HTTP客户端**: httpx（Dify API调用，全局连接池复用 + 流式SSE）
 - **日志**: Python logging + TimedRotatingFileHandler
 - **前端**: Bootstrap 5 + Bootstrap Icons + Jinja2模板 + Marked.js v4（Markdown渲染）+ Live2D SDK
-- **UI主题**: 地雷系暗黑风格（深蓝紫渐变 + 粉紫强调 + 毛玻璃效果）
+- **UI主题**: 暗黑系风格（深蓝紫渐变 + 粉紫强调 + 毛玻璃效果）
 - **数据库**: MySQL 8.0
