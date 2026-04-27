@@ -15,7 +15,7 @@ pydantic_settings==2.13.1
 # 认证
 python-jose[cryptography]==3.3.0
 
-# HTTP客户端（Dify API调用）
+# HTTP客户端（Dify API调用：阻塞模式 + 流式SSE + 全局连接池复用）
 httpx==0.28.1
 
 # AI/大模型

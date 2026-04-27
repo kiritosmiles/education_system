@@ -8,7 +8,7 @@
 education_system/
 ├── app/
 │   ├── __init__.py
-│   ├── main.py                # 应用入口、路由注册、定时任务、统一异常处理
+│   ├── main.py                # 应用入口、路由注册、生命周期管理（lifespan）、统一异常处理
 │   ├── config.py              # 配置管理（读取.env）
 │   ├── database.py            # 数据库连接
 │   ├── models/                # SQLAlchemy ORM 模型（按表拆分）
@@ -36,7 +36,7 @@ education_system/
 │   │   ├── industry_repo_controller.py    # 行业周报CRUD（含AI生成+定时任务）
 │   │   ├── email_controller.py            # 邮件推送
 │   │   ├── text2sql_controller.py         # Text2SQL智能查询
-│   │   └── ai_chat_controller.py          # AI智能助手（Dify Chat API，支持文件上传）
+│   │   └── ai_chat_controller.py          # AI智能助手（Dify Chat API，支持文件上传，阻塞/流式双模式）
 │   ├── middleware/            # 中间件
 │   │   ├── __init__.py
 │   │   ├── logging_mw.py     # 日志初始化（控制台彩色 + 文件轮转）
@@ -44,7 +44,7 @@ education_system/
 │   ├── utils/
 │   │   ├── __init__.py
 │   │   ├── auth.py           # JWT/MD5认证工具
-│   │   ├── dify_client.py    # Dify API客户端（Chat阻塞模式 + 文件上传 + 工作流输出提取）
+│   │   ├── dify_client.py    # Dify API客户端（Chat阻塞/流式模式 + 文件上传 + 全局连接池复用 + 工作流输出提取）
 │   │   ├── email_sender.py   # SMTP邮件发送
 │   │   └── text2sql.py       # 阿里云DashScope Text2SQL
 │   ├── templates/             # Jinja2前端模板
@@ -59,7 +59,7 @@ education_system/
 │   │   ├── industry_repos.html # 行业周报
 │   │   ├── email.html         # 邮件推送
 │   │   ├── text2sql.html      # 智能查询
-│   │   └── ai_chat.html       # AI智能助手（Markdown渲染，表格/代码块优化，文件上传，耗时统计）
+│   │   └── ai_chat.html       # AI智能助手（流式SSE渲染，Markdown实时渲染，打字光标动画，文件上传，耗时统计）
 │   └── static/                # 静态资源
 │       ├── css/
 │       ├── js/
@@ -183,7 +183,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **点击互动**：点击模型显示随机角色语音文本
 - **悬停提示**：页面元素悬停时显示对应提示文本（通过 `message.json` 配置）
 - **拖拽移动**：支持鼠标拖拽调整位置，位置通过 `sessionStorage` 持久化
-- **显示/隐藏**：隐藏按钮退出后显示"召唤惠惠"按钮，状态通过 `localStorage` 记忆
+- **显示/隐藏**：隐藏按钮退出后显示44px圆形图标按钮（右下角），状态通过 `localStorage` 记忆
 - **Dify 聊天联动**：点击看板娘自动触发 Dify 嵌入式聊天窗口
 - **淡入淡出**：显示/隐藏带渐变过渡动画
 - **移动端适配**：860px 以下自动隐藏
@@ -223,7 +223,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 | 行业周报 | DELETE | `/api/industry-repos/{i_id}` | 删除周报 |
 | 邮件 | POST | `/api/email/send` | 发送邮件 |
 | 智能查询 | POST | `/api/text2sql/query` | 自然语言转SQL查询 |
-| AI助手 | POST | `/api/ai-chat/message` | AI对话（支持文件上传） |
+| AI助手 | POST | `/api/ai-chat/message` | AI对话 - 阻塞模式（支持文件上传） |
+| AI助手 | POST | `/api/ai-chat/stream` | AI对话 - 流式SSE模式（实时逐token渲染） |
 
 ## 权限说明
 
@@ -258,10 +259,13 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
   - 定时任务：每周一 8:30 自动生成上周行业周报
 - **首页嵌入式聊天**：通过 Dify 官方前端嵌入组件（`embed.min.js`）在首页右下角展示聊天窗口，点击 Live2D 看板娘自动触发
 - **AI 聊天助手**（`/ai-chat` 页面）：基于 Dify Chat API 的自定义对话界面
-  - 接口：POST `/api/ai-chat/message`
+  - 流式模式（推荐）：POST `/api/ai-chat/stream`，SSE 协议逐 token 实时渲染，打字光标动画
+  - 阻塞模式（兼容）：POST `/api/ai-chat/message`，适用于定时任务等不需要流式的场景
   - 支持上传图片/文档，AI 自动识别内容
   - 多轮对话：通过 `conversation_id` 保持上下文
   - 前端渲染优化：
+    - 流式渲染：`fetch + ReadableStream` 逐 chunk 解析 SSE 事件，AI 每个 token 立即显示
+    - 打字光标：流式输出时显示闪烁光标（▍），回答结束后自动消失
     - 表格横向滚动（`.table-wrapper`），蓝色表头 + 斑马纹 + 悬停高亮
     - 代码块深色主题 + 一键复制按钮，HTML 转义防 XSS
     - Markdown 标题/列表/引用/分割线/段落排版优化
@@ -341,7 +345,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 - **AI**: Dify（工作日报总结、行业周报生成、AI聊天助手）+ 阿里云DashScope（Text2SQL）
 - **邮件**: aiosmtplib + 163邮箱SMTP
 - **定时任务**: APScheduler
-- **HTTP客户端**: httpx（Dify API调用）
+- **HTTP客户端**: httpx（Dify API调用，全局连接池复用 + 流式SSE）
 - **日志**: Python logging + TimedRotatingFileHandler
 - **前端**: Bootstrap 5 + Bootstrap Icons + Jinja2模板 + Marked.js v4（Markdown渲染）+ Live2D SDK
 - **UI主题**: 地雷系暗黑风格（深蓝紫渐变 + 粉紫强调 + 毛玻璃效果）

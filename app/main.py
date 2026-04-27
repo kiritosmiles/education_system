@@ -1,6 +1,7 @@
 import os
 import asyncio
 from pathlib import Path
+from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse, JSONResponse
@@ -27,7 +28,28 @@ BASE_DIR = Path(__file__).resolve().parent
 
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Education System", version="1.0.0")
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """应用生命周期管理：启动/关闭时执行"""
+    # ── startup ──
+    from apscheduler.schedulers.asyncio import AsyncIOScheduler
+    from app.controllers.work_repo_sum_controller import scheduled_generate_work_repo_sum
+    from app.controllers.industry_repo_controller import scheduled_generate_industry_repo
+    scheduler = AsyncIOScheduler()
+    scheduler.add_job(scheduled_generate_work_repo_sum, 'cron', hour=8, minute=0)
+    scheduler.add_job(scheduled_generate_industry_repo, 'cron', day_of_week='mon', hour=8, minute=30)
+    scheduler.start()
+    app.state.scheduler = scheduler
+    yield
+    # ── shutdown ──
+    from app.utils.dify_client import close_http_client
+    await close_http_client()
+    if app.state.scheduler.running:
+        app.state.scheduler.shutdown()
+
+
+app = FastAPI(title="Education System", version="1.0.0", lifespan=lifespan)
 
 
 # ============ 统一异常处理 ============
@@ -129,21 +151,6 @@ async def ai_chat_page(request: Request):
 @app.get("/work-repo-sums", response_class=HTMLResponse)
 async def work_repo_sums_page(request: Request):
     return templates.TemplateResponse(request, "work_repo_sums.html")
-
-
-# ============ 定时任务 ============
-@app.on_event("startup")
-async def startup_event():
-    from apscheduler.schedulers.asyncio import AsyncIOScheduler
-    from app.controllers.work_repo_sum_controller import scheduled_generate_work_repo_sum
-    from app.controllers.industry_repo_controller import scheduled_generate_industry_repo
-    scheduler = AsyncIOScheduler()
-    # 每天8:00生成昨日工作日报总结
-    scheduler.add_job(scheduled_generate_work_repo_sum, 'cron', hour=8, minute=0)
-    # 每周一8:30生成上周行业周报
-    scheduler.add_job(scheduled_generate_industry_repo, 'cron', day_of_week='mon', hour=8, minute=30)
-    scheduler.start()
-    app.state.scheduler = scheduler
 
 
 if __name__ == "__main__":
