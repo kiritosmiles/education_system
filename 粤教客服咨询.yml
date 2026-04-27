@@ -1,0 +1,297 @@
+app:
+  description: 客服咨询服务
+  icon: 🛎️
+  icon_background: '#FFEAD5'
+  mode: advanced-chat
+  name: 粤教客服咨询
+  use_icon_as_answer_icon: true
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/tongyi:0.1.36@73e3e28eca163b96da65ef9eab8633f9e7257213ff0d2f2bed93b28b552d2cda
+    version: null
+kind: app
+version: 0.5.0
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        image_file_size_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: '哈喽呀！✨ 欢迎来到粤教公司～ (≧∇≦)ﾉ
+
+      我们主要专注于售前留学服务咨询呢！🌏✈️ 无论是想了解留学的相关事宜，还是有任何关于公司的小疑问，都可以随时找我们哟～'
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: true
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        sourceType: llm
+        targetType: answer
+      id: llm-answer
+      selected: false
+      source: llm
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: knowledge-retrieval
+        targetType: llm
+      id: 1776949014338-source-llm-target
+      source: '1776949014338'
+      sourceHandle: source
+      target: llm
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        sourceType: start
+        targetType: question-classifier
+      id: 1776948953465-source-1777027058342-target
+      source: '1776948953465'
+      sourceHandle: source
+      target: '1777027058342'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: knowledge-retrieval
+      id: 1777027058342-1-1776949014338-target
+      source: '1777027058342'
+      sourceHandle: '1'
+      target: '1776949014338'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInLoop: false
+        sourceType: question-classifier
+        targetType: answer
+      id: 1777027058342-2-1777027144542-target
+      source: '1777027058342'
+      sourceHandle: '2'
+      target: '1777027144542'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables: []
+      height: 72
+      id: '1776948953465'
+      position:
+        x: -95.7605619625736
+        y: -15
+      positionAbsolute:
+        x: -95.7605619625736
+        y: -15
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: true
+          variable_selector:
+          - '1776949014338'
+          - result
+        memory:
+          query_prompt_template: '{{#sys.query#}}
+
+
+            {{#sys.files#}}'
+          role_prefix:
+            assistant: ''
+            user: ''
+          window:
+            enabled: false
+            size: 10
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        prompt_template:
+        - id: 9208123d-a4b8-4e9b-be1e-01c6cc1d6a52
+          role: system
+          text: '你是一个专业的公司的客服智能体，根据知识库{{#context#}}，可以给客户的用户提供售前留学服务咨询和公司信息的咨询，如果问的是公司信息或公司业务，就介绍粤教公司的信息。
+
+            请严格仅依据提供的知识库内容回答问题，不要编造信息。如果知识库中没有相关信息，请礼貌地告知用户。
+
+            售前留学服务咨询回答时语气应保持专业、严谨和正式。公司信息咨询回答时回复风格偏甜美可爱。'
+        selected: false
+        title: LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: llm
+      position:
+        x: 983
+        y: 7
+      positionAbsolute:
+        x: 983
+        y: 7
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: '{{#llm.text#}}'
+        selected: false
+        title: 直接回复
+        type: answer
+        variables: []
+      height: 102
+      id: answer
+      position:
+        x: 1333.9491492948127
+        y: 6
+      positionAbsolute:
+        x: 1333.9491492948127
+        y: 6
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        dataset_ids:
+        - oGSpzm+ykKsyPhhMe+9F2VPamlmBJEL6OX6fElZvICjTG7cwETAGG71iU79kpgHO
+        multiple_retrieval_config:
+          reranking_enable: true
+          reranking_mode: reranking_model
+          reranking_model:
+            model: qwen3-rerank
+            provider: langgenius/tongyi/tongyi
+          top_k: 4
+        query_variable_selector:
+        - '1776948953465'
+        - sys.query
+        retrieval_mode: multiple
+        selected: false
+        title: 客服咨询
+        type: knowledge-retrieval
+      height: 89
+      id: '1776949014338'
+      position:
+        x: 642
+        y: 6
+      positionAbsolute:
+        x: 642
+        y: 6
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        classes:
+        - id: '1'
+          name: 教育提升，公司留学业务咨询或公司信息咨询，公司业务，新加坡，德国，服务
+        - id: '2'
+          name: 其他知识咨询
+        instructions: ''
+        model:
+          completion_params:
+            temperature: 0.7
+          mode: chat
+          name: qwen3.6-plus
+          provider: langgenius/tongyi/tongyi
+        query_variable_selector:
+        - '1776948953465'
+        - sys.query
+        selected: false
+        title: 问题分类器
+        type: question-classifier
+        vision:
+          enabled: false
+      height: 201
+      id: '1777027058342'
+      position:
+        x: 342.942505650552
+        y: 6
+      positionAbsolute:
+        x: 342.942505650552
+        y: 6
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: 哎呀呀，这个问题有点超纲啦～(✧ω✧) 人家的小脑袋瓜暂时还没有学到这部分内容呢！不过你可以换个问法，或者我帮你转接给更专业的人工客服小姐姐/小哥哥？他们一定可以帮你解决哒～
+          放心，我会一直在这里陪着你，有需要随时喊我哦～(づ｡◕‿‿◕｡)づ
+        selected: false
+        title: 直接回复 2
+        type: answer
+        variables: []
+      height: 195
+      id: '1777027144542'
+      position:
+        x: 642
+        y: 258.41074587287267
+      positionAbsolute:
+        x: 642
+        y: 258.41074587287267
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    viewport:
+      x: -540.1144045063706
+      y: 226.09999999999997
+      zoom: 0.7000000000000013
+  rag_pipeline_variables: []
