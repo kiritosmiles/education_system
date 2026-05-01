@@ -1,0 +1,475 @@
+{% extends "base.html" %}
+{% block title %}三国知识问答{% endblock %}
+{% block content %}
+<style>
+    .container-fluid, .container-fluid > .row {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .col-md-10.main-content {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-right: 0 !important;
+    }
+    #chatCard {
+        flex: 1 1 0%;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: rgba(15,12,41,.6);
+    }
+    #chatCard > .card-body {
+        flex: 1 1 0%;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    #chatContainer {
+        flex: 1 1 0%;
+        min-height: 0;
+        overflow-y: auto;
+    }
+    #chatContainer::-webkit-scrollbar { width: 6px; }
+    #chatContainer::-webkit-scrollbar-track { background: rgba(15,12,41,.3); border-radius: 3px; }
+    #chatContainer::-webkit-scrollbar-thumb { background: rgba(233,30,99,.3); border-radius: 3px; }
+    #chatContainer::-webkit-scrollbar-thumb:hover { background: rgba(233,30,99,.5); }
+
+    #chatContainer .ai-bubble-content .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 8px 0;
+        border-radius: 6px;
+        border: 1px solid rgba(179,157,219,.2);
+    }
+    #chatContainer .ai-bubble-content table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 0;
+    }
+    #chatContainer .ai-bubble-content table th {
+        background: linear-gradient(135deg, #e91e63, #533483);
+        color: #fff;
+        font-weight: 600;
+        padding: 8px 12px;
+        font-size: 13px;
+        border: 1px solid rgba(233,30,99,.3);
+        white-space: nowrap;
+    }
+    #chatContainer .ai-bubble-content table td {
+        padding: 6px 12px;
+        font-size: 13px;
+        border: 1px solid rgba(179,157,219,.15);
+        white-space: pre-wrap;
+        word-break: break-word;
+        color: #ce93d8;
+    }
+    #chatContainer .ai-bubble-content table tr:nth-child(even) td {
+        background: rgba(83,52,131,.1);
+    }
+    #chatContainer .ai-bubble-content table tr:hover td {
+        background: rgba(233,30,99,.1);
+    }
+    #chatContainer .ai-bubble-content pre {
+        position: relative;
+        background: #0f0c29;
+        color: #f48fb1;
+        border-radius: 8px;
+        padding: 16px;
+        overflow-x: auto;
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 8px 0;
+        border: 1px solid rgba(233,30,99,.2);
+    }
+    #chatContainer .ai-bubble-content pre code {
+        background: transparent;
+        color: inherit;
+        padding: 0;
+        font-size: inherit;
+    }
+    #chatContainer .ai-bubble-content code {
+        background: rgba(233,30,99,.1);
+        color: #f48fb1;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 13px;
+    }
+    .copy-btn {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(233,30,99,.15);
+        color: #f48fb1;
+        border: 1px solid rgba(233,30,99,.3);
+        border-radius: 4px;
+        padding: 2px 10px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+    .copy-btn:hover { background: rgba(233,30,99,.3); }
+    .copy-btn.copied { background: #e91e63; color: #fff; border-color: #e91e63; }
+
+    #chatContainer .ai-bubble-content h1,
+    #chatContainer .ai-bubble-content h2,
+    #chatContainer .ai-bubble-content h3 {
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: #fce4ec;
+    }
+    #chatContainer .ai-bubble-content h1 { font-size: 18px; }
+    #chatContainer .ai-bubble-content h2 { font-size: 16px; }
+    #chatContainer .ai-bubble-content h3 { font-size: 15px; }
+    #chatContainer .ai-bubble-content ul,
+    #chatContainer .ai-bubble-content ol {
+        padding-left: 20px;
+        margin-bottom: 8px;
+    }
+    #chatContainer .ai-bubble-content li { margin-bottom: 2px; }
+    #chatContainer .ai-bubble-content blockquote {
+        border-left: 3px solid #e91e63;
+        padding-left: 12px;
+        margin: 8px 0;
+        color: #b39ddb;
+    }
+    #chatContainer .ai-bubble-content hr {
+        border: none;
+        border-top: 1px solid rgba(179,157,219,.2);
+        margin: 10px 0;
+    }
+    #chatContainer .ai-bubble-content p {
+        margin-bottom: 6px;
+    }
+    #chatContainer .ai-bubble-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* 出处标签样式 */
+    #chatContainer .ai-bubble-content .cite-tag {
+        display: inline-block;
+        background: rgba(233,30,99,.2);
+        color: #f48fb1;
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 0 2px;
+        transition: all 0.2s;
+    }
+    #chatContainer .ai-bubble-content .cite-tag:hover {
+        background: rgba(233,30,99,.4);
+        color: #fce4ec;
+    }
+
+    /* 出处详情卡片 */
+    .source-card {
+        margin-top: 12px;
+        border-top: 1px solid rgba(179,157,219,.2);
+        padding-top: 10px;
+    }
+    .source-card-title {
+        font-size: 12px;
+        color: #b39ddb;
+        margin-bottom: 8px;
+        font-weight: 600;
+    }
+    .source-item {
+        background: rgba(15,12,41,.5);
+        border: 1px solid rgba(179,157,219,.15);
+        border-radius: 6px;
+        padding: 8px 12px;
+        margin-bottom: 6px;
+        font-size: 13px;
+    }
+    .source-item .source-label {
+        color: #e91e63;
+        font-weight: 600;
+        font-size: 11px;
+        margin-bottom: 4px;
+    }
+    .source-item .source-content {
+        color: #ce93d8;
+        line-height: 1.5;
+    }
+    .source-item .source-meta {
+        color: #9c8daf;
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    .streaming-cursor::after {
+        content: '▍';
+        color: #e91e63;
+        animation: blink 0.8s infinite;
+        margin-left: 2px;
+    }
+</style>
+<div class="page-header" style="padding-right:20px;">
+    <h3><i class="bi bi-book-half"></i> 三国知识问答</h3>
+</div>
+<div class="card" id="chatCard">
+    <div class="card-body p-0 d-flex flex-column">
+        <!-- 对话窗口 -->
+        <div id="chatContainer" style="padding: 20px; background: linear-gradient(160deg, rgba(15,12,41,.3), rgba(36,36,62,.5));">
+            <div class="text-center py-5" style="color:#b39ddb;">
+                <i class="bi bi-book" style="font-size:3rem;color:#e91e63;"></i>
+                <p class="mt-2 mb-0" style="color:#fce4ec;">三国演义知识问答</p>
+                <small>输入关于三国演义的问题，AI 将从知识库中检索并回答</small>
+            </div>
+        </div>
+        <!-- 输入区域 -->
+        <div class="border-top p-3" style="background: rgba(15,12,41,.8); flex-shrink:0; border-color:rgba(233,30,99,.2)!important;">
+            <div class="d-flex align-items-end gap-2">
+                <textarea id="chatInput" class="form-control" rows="1" placeholder="输入三国演义相关问题..."
+                    style="resize:none;max-height:120px;"
+                    onkeydown="handleKeyDown(event)" oninput="autoResize(this)"></textarea>
+                <button id="sendBtn" class="btn btn-primary mb-0" style="flex-shrink:0;" onclick="sendMessage()">
+                    <i class="bi bi-send-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+<script>
+const chatContainer = document.getElementById('chatContainer');
+const chatInput = document.getElementById('chatInput');
+let isLoading = false;
+let messageCounter = 0;
+
+function getMarkedRenderer() {
+    const renderer = new marked.Renderer();
+    renderer.table = function(header, body) {
+        return `<div class="table-wrapper"><table>${header}${body}</table></div>`;
+    };
+    renderer.code = function(code, language) {
+        const lang = language || '';
+        const escaped = code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        return `<pre><code class="language-${lang}">${escaped}</code><button class="copy-btn" onclick="copyCode(this)">复制</button></pre>`;
+    };
+    return renderer;
+}
+
+function copyCode(btn) {
+    const code = btn.previousElementSibling.textContent;
+    navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = '已复制';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 2000);
+    });
+}
+
+function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+function handleKeyDown(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+    }
+}
+
+function formatDuration(ms) {
+    const sec = Math.floor(ms / 1000);
+    const min = Math.floor(sec / 60);
+    const s = sec % 60;
+    if (min > 0) return `${min}分${s}秒`;
+    return `${s}秒`;
+}
+
+function appendMessage(role, content, isMarkdown = false, elapsed = null, sources = null) {
+    const welcome = chatContainer.querySelector('.text-center.py-5');
+    if (welcome) welcome.remove();
+
+    const msgId = ++messageCounter;
+    const isUser = role === 'user';
+    const div = document.createElement('div');
+    div.className = `d-flex mb-3 ${isUser ? 'justify-content-end' : 'justify-content-start'}`;
+    div.dataset.msgId = msgId;
+
+    const avatar = isUser
+        ? '<div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width:36px;height:36px;flex-shrink:0;font-size:14px;background:linear-gradient(135deg,#e91e63,#533483);color:#fff;"><i class="bi bi-person-fill"></i></div>'
+        : '<div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width:36px;height:36px;flex-shrink:0;font-size:14px;background:linear-gradient(135deg,#533483,#7b1fa2);color:#fce4ec;"><i class="bi bi-book"></i></div>';
+
+    const bubbleStyle = isUser
+        ? 'background:linear-gradient(135deg,#e91e63,#533483);color:#fce4ec;border-radius:16px 16px 4px 16px;'
+        : 'background:rgba(30,30,54,.9);color:#ce93d8;border-radius:16px 16px 16px 4px;border:1px solid rgba(233,30,99,.2);';
+
+    let htmlContent;
+    if (isMarkdown) {
+        htmlContent = marked.parse(content, { renderer: getMarkedRenderer(), breaks: true, gfm: true });
+        // 将【出处 N】转换为高亮标签，绑定当前消息ID
+        htmlContent = htmlContent.replace(/【出处\s*(\d+)】/g,
+            `<a class="cite-tag" onclick="scrollToSource(${msgId}, $1)" title="点击查看出处">$1</a>`);
+    } else {
+        htmlContent = content.replace(/\n/g, '<br>');
+    }
+
+    // 构建出处详情卡片
+    let sourcesHtml = '';
+    if (sources && sources.length) {
+        sourcesHtml = '<div class="source-card">';
+        sourcesHtml += '<div class="source-card-title"><i class="bi bi-bookmark-star"></i> 引用出处</div>';
+
+        sources.forEach(s => {
+            if (s.type === 'qa') {
+                sourcesHtml += `
+                    <div class="source-item" id="source-${msgId}-${s.index}">
+                        <div class="source-label"><i class="bi bi-question-circle"></i> 出处 ${s.index} · 问答对</div>
+                        <div class="source-content">
+                            <div><strong>问题：</strong>${escapeHtml(s.question)}</div>
+                            <div><strong>答案：</strong>${escapeHtml(s.answer)}</div>
+                            ${s.reason ? `<div><strong>解析：</strong>${escapeHtml(s.reason)}</div>` : ''}
+                        </div>
+                        <div class="source-meta">来源：${escapeHtml(s.source_file)} | 第${s.qa_index}条 | 相关度：${s.score}</div>
+                    </div>`;
+            } else {
+                sourcesHtml += `
+                    <div class="source-item" id="source-${msgId}-${s.index}">
+                        <div class="source-label"><i class="bi bi-file-text"></i> 出处 ${s.index} · 原文</div>
+                        <div class="source-content">${escapeHtml(s.content)}</div>
+                        <div class="source-meta">来源：${escapeHtml(s.source_file)} | 第${s.chunk_index}块 | 字符${s.char_start}-${s.char_end} | 相关度：${s.score}</div>
+                    </div>`;
+            }
+        });
+
+        sourcesHtml += '</div>';
+    }
+
+    const timerHtml = (!isUser && elapsed !== null)
+        ? `<div style="font-size:11px;color:#b39ddb;margin-top:4px;"><i class="bi bi-clock"></i> 耗时 ${formatDuration(elapsed)}</div>`
+        : '';
+
+    div.innerHTML = `
+        ${!isUser ? avatar : ''}
+        <div style="max-width:90%;${bubbleStyle}word-break:break-word;line-height:1.6;font-size:14px;">
+            <div class="px-3 py-2 ${!isUser ? 'ai-bubble-content' : ''}">${htmlContent}</div>
+            ${sourcesHtml ? `<div class="px-3 pb-1">${sourcesHtml}</div>` : ''}
+            ${timerHtml ? `<div class="px-3 pb-2">${timerHtml}</div>` : ''}
+        </div>
+        ${isUser ? avatar.replace('me-2', 'ms-2') : ''}
+    `;
+    chatContainer.appendChild(div);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    return div;
+}
+
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+function scrollToSource(msgId, index) {
+    const target = document.getElementById(`source-${msgId}-${index}`);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.style.borderColor = '#e91e63';
+        target.style.boxShadow = '0 0 8px rgba(233,30,99,.4)';
+        setTimeout(() => {
+            target.style.borderColor = '';
+            target.style.boxShadow = '';
+        }, 2000);
+    }
+}
+
+function createLoadingBubble() {
+    const welcome = chatContainer.querySelector('.text-center.py-5');
+    if (welcome) welcome.remove();
+
+    const div = document.createElement('div');
+    div.className = 'd-flex mb-3 justify-content-start';
+    div.id = 'loadingBubble';
+
+    const avatar = '<div class="rounded-circle d-flex align-items-center justify-content-center me-2" style="width:36px;height:36px;flex-shrink:0;font-size:14px;background:linear-gradient(135deg,#533483,#7b1fa2);color:#fce4ec;"><i class="bi bi-book"></i></div>';
+
+    div.innerHTML = `
+        ${avatar}
+        <div style="max-width:90%;background:rgba(30,30,54,.9);color:#ce93d8;border-radius:16px 16px 16px 4px;border:1px solid rgba(233,30,99,.2);word-break:break-word;line-height:1.6;font-size:14px;">
+            <div class="px-3 py-2 ai-bubble-content streaming-cursor" id="loadingContent">正在检索知识库并生成回答</div>
+        </div>
+    `;
+    chatContainer.appendChild(div);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    return div;
+}
+
+function removeLoadingBubble() {
+    const el = document.getElementById('loadingBubble');
+    if (el) el.remove();
+}
+
+async function sendMessage() {
+    const question = chatInput.value.trim();
+    if (!question || isLoading) {
+        if (!question) showToast('请输入问题', 'warning');
+        return;
+    }
+
+    const sendBtn = document.getElementById('sendBtn');
+    sendBtn.disabled = true;
+    chatInput.disabled = true;
+    isLoading = true;
+
+    // 显示用户消息
+    appendMessage('user', question);
+    chatInput.value = '';
+    chatInput.style.height = 'auto';
+
+    // 显示加载状态
+    createLoadingBubble();
+    const startTime = Date.now();
+
+    try {
+        const res = await fetch('/api/sanguo-qa/ask', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + getToken(),
+            },
+            body: JSON.stringify({ question: question }),
+        });
+
+        removeLoadingBubble();
+
+        if (!res.ok) {
+            const errData = await res.json().catch(() => ({}));
+            appendMessage('ai', `请求失败：${errData.detail || errData.msg || res.status}`, false);
+            return;
+        }
+
+        const data = await res.json();
+        const answer = data.data?.answer || '未获取到回答';
+        const sources = data.data?.sources || [];
+        const elapsed = Date.now() - startTime;
+        appendMessage('ai', answer, true, elapsed, sources);
+
+    } catch (e) {
+        removeLoadingBubble();
+        appendMessage('ai', '网络错误，请检查连接后重试。', false);
+    }
+
+    isLoading = false;
+    sendBtn.disabled = false;
+    chatInput.disabled = false;
+    chatInput.focus();
+}
+</script>
+{% endblock %}

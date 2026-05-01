@@ -20,6 +20,7 @@ from app.controllers.email_controller import router as email_router
 from app.controllers.text2sql_controller import router as text2sql_router
 from app.controllers.work_repo_sum_controller import router as work_repo_sum_router
 from app.controllers.ai_chat_controller import router as ai_chat_router
+from app.controllers.sanguo_qa_controller import router as sanguo_qa_router
 
 # 初始化日志
 setup_logging()
@@ -95,6 +96,7 @@ app.include_router(email_router)
 app.include_router(text2sql_router)
 app.include_router(work_repo_sum_router)
 app.include_router(ai_chat_router)
+app.include_router(sanguo_qa_router)
 
 
 # ============ Frontend Pages ============
@@ -146,6 +148,11 @@ async def text2sql_page(request: Request):
 @app.get("/ai-chat", response_class=HTMLResponse)
 async def ai_chat_page(request: Request):
     return templates.TemplateResponse(request, "ai_chat.html")
+
+
+@app.get("/sanguo-qa", response_class=HTMLResponse)
+async def sanguo_qa_page(request: Request):
+    return templates.TemplateResponse(request, "sanguo_qa.html")
 
 
 @app.get("/work-repo-sums", response_class=HTMLResponse)

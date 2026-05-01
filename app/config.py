@@ -29,6 +29,9 @@ class Settings(BaseSettings):
     # DashScope
     DASHSCOPE_API_KEY: str = ""
 
+    # Milvus
+    MILVUS_URI: str = "http://localhost:19530"
+
     # Dify
     DIFY_BASE_URL: str = "http://192.168.184.128"
     DIFY_WORK_REPO_SUM_API_KEY: str = ""

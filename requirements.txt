@@ -20,6 +20,7 @@ httpx==0.28.1
 
 # AI/大模型
 dashscope>=1.20.0
+openai>=1.30.0
 
 # 邮件
 aiosmtplib>=3.0.0
@@ -33,3 +34,17 @@ python-dotenv>=1.0.0
 
 # 定时任务（工作日报总结/行业周报定时生成）
 apscheduler>=3.10.0
+
+# 文件读取
+python-docx>=0.8.11
+pdfplumber>=0.10.0
+pywin32>=305;sys_platform=="win32"
+
+# 向量数据库
+pymilvus>=2.4.0
+
+# 中文分词
+jieba>=0.42.1
+
+# LangChain 文本切块
+langchain-text-splitters>=0.3.0

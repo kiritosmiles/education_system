@@ -1,1019 +1,217 @@
-2026-04-27 09:30:53 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 09:30:53 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 09:30:53 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 09:30:55 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 09:30:55 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 09:30:55 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 09:30:55 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 09:30:55 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 09:30:55 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 09:30:55 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 09:30:55 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 09:33:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 09:33:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 09:33:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 09:33:19 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 09:33:22 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 09:33:22 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzMzOTk5OX0.qDq
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2638.97ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 33.00ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 40.00ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 40.00ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 09:33:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 18.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 20.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 20.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 22.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 09:33:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 09:33:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 09:33:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 09:33:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 09:33:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 09:33:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 09:33:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 09:33:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 09:33:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 5.88ms
-2026-04-27 09:33:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 09:33:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 09:33:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 09:33:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 09:33:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 09:33:50 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1449.17ms
-2026-04-27 09:34:01 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 09:34:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 20272.36ms
-2026-04-27 09:48:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 5.01ms
-2026-04-27 09:48:37 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1312.63ms
-2026-04-27 09:48:49 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 09:48:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 20842.26ms
-2026-04-27 09:49:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 09:49:39 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 922.49ms
-2026-04-27 09:49:53 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 09:49:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 22212.77ms
-2026-04-27 10:00:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:00:11 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 10:00:11 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 10:00:11 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 10:00:12 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 10:00:12 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 10:00:12 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 10:00:12 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 10:00:12 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 10:00:12 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 10:00:12 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 10:00:12 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 10:00:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 10:00:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:00:55 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
-2026-04-27 10:00:55 - app.utils.dify_client - ERROR - dify_client.py:62 - Dify API错误: status=400, body={"code":"invalid_param","message":"Run failed: req_id: 396450845b PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:00:55 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify API错误(400): {"code":"invalid_param","message":"Run failed: req_id: 396450845b PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:00:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 22495.09ms
-2026-04-27 10:01:27 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1115.11ms
-2026-04-27 10:01:41 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:01:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 21228.47ms
-2026-04-27 10:02:08 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
-2026-04-27 10:02:08 - app.utils.dify_client - ERROR - dify_client.py:62 - Dify API错误: status=400, body={"code":"invalid_param","message":"Run failed: req_id: ac7f83ed23 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:02:08 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify API错误(400): {"code":"invalid_param","message":"Run failed: req_id: ac7f83ed23 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:02:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 10170.96ms
-2026-04-27 10:02:23 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
-2026-04-27 10:02:23 - app.utils.dify_client - ERROR - dify_client.py:62 - Dify API错误: status=400, body={"code":"invalid_param","message":"Run failed: req_id: 8bd97cee73 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:02:23 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify API错误(400): {"code":"invalid_param","message":"Run failed: req_id: 8bd97cee73 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:02:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 8262.57ms
-2026-04-27 10:02:39 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1564.02ms
-2026-04-27 10:02:55 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
-2026-04-27 10:02:55 - app.utils.dify_client - ERROR - dify_client.py:62 - Dify API错误: status=400, body={"code":"invalid_param","message":"Run failed: req_id: 1efbb75ea6 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:02:55 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify API错误(400): {"code":"invalid_param","message":"Run failed: req_id: 1efbb75ea6 PluginInvokeError: {\"args\":{},\"error_type\":\"ConnectionError\",\"message\":\"HTTPSConnectionPool(host='dashscope.aliyuncs.com', port=443): Max retries exceeded with url: \/api\/v1\/services\/aigc\/multimodal-generation\/generation (Caused by NameResolutionError(\\\"HTTPSConnection(host='dashscope.aliyuncs.com', port=443): Failed to resolve 'dashscope.aliyuncs.com' ([Errno -3] Temporary failure in name resolution)\\\"))\"}","status":400}
-
-2026-04-27 10:02:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 28594.58ms
-2026-04-27 10:06:19 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1732.73ms
-2026-04-27 10:06:31 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:06:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 37733.59ms
-2026-04-27 10:12:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:12:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 27.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 30.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 31.01ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 12.99ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:12:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:12:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 10:12:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:12:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:12:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:12:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers/1 - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:12:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:12:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:12:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:12:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:13:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 3.01ms
-2026-04-27 10:13:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 10.02ms
-2026-04-27 10:14:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:14:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:14:52 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 10:14:55 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:14:55 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0MjQ5Mn0.1CO
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3104.75ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 18.00ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:14:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:15:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:17:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.01ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.57ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 12.00ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:17:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:17:40 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 10:17:40 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 10:17:40 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 10:17:41 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 10:17:41 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 10:17:41 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 10:17:41 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 10:17:41 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 10:17:41 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 10:17:41 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 10:17:41 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 30.57ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 31.58ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 12.00ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 15.99ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:17:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:17:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:17:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:17:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:17:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 10:17:54 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 10:17:56 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 10:17:58 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:17:58 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0MjY3NH0.oST
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3607.03ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 12.00ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:17:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:17:59 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:17:59 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0MjY3Nn0.Iyp
-2026-04-27 10:17:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2529.28ms
-2026-04-27 10:18:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 2.99ms
-2026-04-27 10:18:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:18:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:18:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:18:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:18:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:18:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:18:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:18:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 10:18:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:18:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:18:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:18:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:18:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:18:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:18:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:18:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:18:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 14.01ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:21:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:21:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:22:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 11.66ms
-2026-04-27 10:22:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 12.63ms
-2026-04-27 10:22:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:22:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:23:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:23:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.99ms
-2026-04-27 10:23:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:23:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:23:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 9.60ms
-2026-04-27 10:23:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:23:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:23:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:23:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:23:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:23:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:23:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:23:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:23:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:23:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 18.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 12.01ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:23:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 12.00ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 13.56ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 12.56ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:23:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:24:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:24:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.60ms
-2026-04-27 10:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:25:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 16.12ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 22.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 22.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 22.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:25:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.01ms
-2026-04-27 10:25:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:25:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:25:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:25:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:25:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:25:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:25:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:25:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:25:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:25:30 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1558.53ms
-2026-04-27 10:25:44 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:25:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 24105.02ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:25:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:25:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:25:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:25:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:25:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:26:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1323.57ms
-2026-04-27 10:26:29 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:26:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 27488.44ms
-2026-04-27 10:26:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.99ms
-2026-04-27 10:26:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 10:26:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 10:26:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 10:26:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:26:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:27:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:27:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:39:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:42:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:42:21 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 10:42:23 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 10:42:23 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0NDE0MX0.TT7
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2277.92ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.01ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 5.99ms
-2026-04-27 10:42:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:53:02 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 10:53:02 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 10:53:02 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 10:53:04 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 10:53:04 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 10:53:04 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 10:53:04 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 10:53:04 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 10:53:04 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 10:53:04 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 10:53:04 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 10:53:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.99ms
-2026-04-27 10:53:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/css/live2d.css - 状态码: 200 - 耗时: 31.57ms
-2026-04-27 10:53:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/js/live2d.js - 状态码: 200 - 耗时: 31.59ms
-2026-04-27 10:53:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/moc/katou.2048/texture_00.png - 状态码: 200 - 耗时: 2.20ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/katou_01.model.json - 状态码: 200 - 耗时: 0.99ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/moc/katou.moc - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/exp/F_ANGRY.exp.json - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/exp/F_DOWN.exp.json - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/exp/F_FUN.exp.json - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/exp/F_NOMAL.exp.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/exp/F_SAD.exp.json - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/exp/F_SURPRISE.exp.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/katou_01.physics.json - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/mtn/IDLING_01.mtn - 状态码: 200 - 耗时: 3.99ms
-2026-04-27 10:53:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/加藤惠live2d/model/katou_01/katou_01.pose.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 10:53:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 10:54:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:02:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:02:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 1.99ms
-2026-04-27 11:02:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:02:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:02:35 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 11:02:35 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 11:02:35 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 11:02:36 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 11:02:36 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 11:02:36 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 11:02:37 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 11:02:37 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 11:02:37 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 11:02:37 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 11:02:37 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 11:02:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 11:02:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:02:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:02:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 11:03:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 11:06:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:06:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/js/live2d.js - 状态码: 200 - 耗时: 32.00ms
-2026-04-27 11:06:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 34.00ms
-2026-04-27 11:06:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.99ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/katou_01.model.json - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/moc/katou.moc - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/moc/katou.2048/texture_00.png - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_DOWN.exp.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_ANGRY.exp.json - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_FUN.exp.json - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_NOMAL.exp.json - 状态码: 200 - 耗时: 34.28ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_SAD.exp.json - 状态码: 200 - 耗时: 33.28ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_SURPRISE.exp.json - 状态码: 200 - 耗时: 83.40ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/katou_01.physics.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/katou_01.pose.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:06:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/mtn/IDLING_01.mtn - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:06:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:06:20 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 11:06:20 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 11:06:20 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 11:06:21 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 11:06:21 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 11:06:21 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 11:06:21 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 11:06:21 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 11:06:21 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 11:06:21 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 11:06:21 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 11:06:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:06:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 18.00ms
-2026-04-27 11:06:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:08:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 8.99ms
-2026-04-27 11:08:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:09:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:13:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 11:13:01 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 11:13:03 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 11:13:03 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0NTk4MX0.xb9
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2594.42ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 29.00ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 33.00ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 35.00ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:13:19 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:13:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:13:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:13:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:13:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos/6 - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:13:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:13:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.99ms
-2026-04-27 11:13:33 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/29 - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 11:13:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.60ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:13:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:13:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:13:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:13:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:13:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 11:14:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 11:14:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 11:14:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:14:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:14:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 11:17:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:17:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:17:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 11:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:17:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:17:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:17:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 8.56ms
-2026-04-27 11:17:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:17:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.58ms
-2026-04-27 11:17:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:17:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:17:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:17:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:17:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:19:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:19:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:19:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:19:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:19:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers/1 - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:19:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:19:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:19:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:19:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:20:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:20:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:20:23 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 11:20:25 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 11:20:25 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0NjQyM30.WYM
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2224.57ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.99ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 11.99ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:20:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:20:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:21:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:21:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 401 - 耗时: 2.00ms
-2026-04-27 11:21:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:21:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.12ms
-2026-04-27 11:21:37 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 11:21:38 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 11:21:41 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 11:21:41 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0NjQ5OH0.19O
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2946.80ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 10.99ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 11.99ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 10.01ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 11:21:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:21:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:21:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 18.01ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 19.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 25.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 30.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.99ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:21:43 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 13.64ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 18.64ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.64ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 20.63ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.98ms
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 11:21:44 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 11:21:44 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0NjQ5N30.wRa
-2026-04-27 11:21:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 7827.67ms
-2026-04-27 11:21:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:21:45 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:21:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.03ms
-2026-04-27 11:21:46 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:21:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:21:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:21:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 0.99ms
-2026-04-27 11:21:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:22:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 11:22:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 11:22:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 11:24:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repo-sums - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:24:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repo-sums - 状态码: 200 - 耗时: 7.01ms
-2026-04-27 11:24:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:24:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 11:24:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 11:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 3.01ms
-2026-04-27 11:25:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:25:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:25:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:25:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:25:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 12.00ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 13.77ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 15.78ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 11:25:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 11:25:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:31:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 11:45:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 11:45:37 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 11:45:39 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 11:45:39 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM0NzkzN30.8bS
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2030.73ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 11:45:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 11:45:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /users - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 11:45:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 6.51ms
-2026-04-27 12:09:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 12:59:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.99ms
-2026-04-27 12:59:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 47.00ms
-2026-04-27 12:59:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/js/live2d.js - 状态码: 200 - 耗时: 46.99ms
-2026-04-27 12:59:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 12:59:22 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 12:59:22 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 12:59:22 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 12:59:24 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 12:59:24 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 12:59:24 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 12:59:24 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 12:59:24 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 12:59:24 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 12:59:24 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 12:59:24 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 12:59:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 12:59:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 29.57ms
-2026-04-27 12:59:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/js/live2d.js - 状态码: 200 - 耗时: 30.57ms
-2026-04-27 12:59:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.83ms
-2026-04-27 12:59:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 13:02:27 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 13:02:27 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 13:02:27 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 13:02:29 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 13:02:29 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 13:02:29 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 13:02:29 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 13:02:29 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 13:02:29 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 13:02:29 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 13:02:29 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 13:02:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 14:17:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 14:17:10 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 14:17:17 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:17:17 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM1NzAzMH0.nrp
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 6662.68ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 44.00ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 46.00ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 51.00ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 21.59ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.22ms
-2026-04-27 14:17:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.16ms
-2026-04-27 14:17:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 14:17:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 14:17:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 14:17:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.01ms
-2026-04-27 14:17:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos/29 - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 14:17:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /industry-repos - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 14:17:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 14:17:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /email - 状态码: 200 - 耗时: 2.97ms
-2026-04-27 14:17:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 14:18:20 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:18:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 19743.65ms
-2026-04-27 14:19:08 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:19:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 32993.36ms
-2026-04-27 14:24:15 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:24:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:24:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.01ms
-2026-04-27 14:24:45 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 14:24:48 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:24:48 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM1NzQ4NX0.pm8
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2132.97ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 19.00ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 14.04ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 14:24:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 14:24:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 14:24:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 14:26:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 14:26:37 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:26:38 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 14:26:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:26:43 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=2, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 14:26:44 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:26:44 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM1NzU5OH0.ex8
-2026-04-27 14:26:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 5906.79ms
-2026-04-27 14:26:50 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:26:50 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：2
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjIsInJvbGUiOjEsImV4cCI6MTc3NzM1NzYwM30.swt
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 6676.37ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 15.00ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 18.99ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 22.00ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 10.00ms
-2026-04-27 14:26:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 14:26:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /work-repos - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 14:26:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 14:26:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 14:26:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 14:26:58 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 14:27:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1043.94ms
-2026-04-27 14:27:25 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:27:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 21761.12ms
-2026-04-27 14:29:17 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:29:17 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:29:17 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:29:17 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:29:17 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:29:17 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 14:29:17 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 14:29:17 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 14:29:38 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:29:38 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:29:38 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:29:40 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:29:40 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:29:40 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:29:40 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:29:40 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:29:40 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 14:29:40 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 14:29:40 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 14:29:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 14:29:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 14:30:02 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:30:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 14005.22ms
-2026-04-27 14:32:12 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:32:12 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:32:12 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:32:13 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:32:13 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:32:13 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:32:14 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:32:14 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:32:14 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 14:32:14 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 14:32:14 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 14:32:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 11.00ms
-2026-04-27 14:32:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 14:32:40 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:32:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 17082.23ms
-2026-04-27 14:33:56 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:33:56 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:33:56 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:33:58 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:33:58 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:33:58 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:33:58 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:33:58 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:33:58 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 14:33:58 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 14:33:58 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 14:34:23 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1129.09ms
-2026-04-27 14:34:24 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1009.50ms
-2026-04-27 14:34:25 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 999.58ms
-2026-04-27 14:34:27 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1218.76ms
-2026-04-27 14:34:27 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:34:27 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 15969.68ms
-2026-04-27 14:35:48 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1072.21ms
-2026-04-27 14:35:49 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1254.17ms
-2026-04-27 14:35:51 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1114.44ms
-2026-04-27 14:35:52 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 921.18ms
-2026-04-27 14:40:53 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1463.00ms
-2026-04-27 14:40:54 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 966.62ms
-2026-04-27 14:40:55 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1258.43ms
-2026-04-27 14:40:57 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1192.13ms
-2026-04-27 14:40:57 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:40:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 13547.77ms
-2026-04-27 14:42:10 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1422.84ms
-2026-04-27 14:42:11 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1110.86ms
-2026-04-27 14:42:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1039.11ms
-2026-04-27 14:42:13 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1008.24ms
-2026-04-27 14:42:13 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:42:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 13497.34ms
-2026-04-27 14:42:32 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:42:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 8474.38ms
-2026-04-27 14:43:14 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:43:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 15841.66ms
-2026-04-27 14:45:03 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1455.01ms
-2026-04-27 14:45:04 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1191.83ms
-2026-04-27 14:45:06 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1422.82ms
-2026-04-27 14:45:07 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1419.12ms
-2026-04-27 14:45:07 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:45:07 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 14640.52ms
-2026-04-27 14:45:17 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 14:45:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 14:45:24 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=10, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 14:45:28 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:45:28 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：10
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwLCJyb2xlIjoyLCJleHAiOjE3NzczNTg3MjR9.T
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 3457.57ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 7.58ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 8.00ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 24.00ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 15.56ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 20.00ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 11.01ms
-2026-04-27 14:45:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 14:45:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 14:45:53 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1157.96ms
-2026-04-27 14:45:54 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1144.21ms
-2026-04-27 14:45:56 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1449.75ms
-2026-04-27 14:45:57 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1718.15ms
-2026-04-27 14:45:57 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 14:45:57 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 18973.39ms
-2026-04-27 14:51:59 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:51:59 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:51:59 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:52:01 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:52:01 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:52:01 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:52:01 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:52:01 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:52:01 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 14:52:01 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 14:52:01 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 14:52:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 14:52:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 14:53:12 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1305.32ms
-2026-04-27 14:53:14 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1689.67ms
-2026-04-27 14:53:15 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1173.07ms
-2026-04-27 14:53:17 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 403 - 耗时: 1548.47ms
-2026-04-27 14:56:59 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 14:56:59 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 14:56:59 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 14:57:00 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:57:00 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 14:57:00 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 14:57:00 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 14:57:00 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 15:11:59 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 15:11:59 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 15:11:59 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 15:12:00 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 15:12:00 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 15:12:00 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 15:12:00 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 15:12:00 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 15:12:32 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 15:12:32 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 15:12:32 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 15:12:32 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 15:12:32 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 15:12:33 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 15:12:33 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 15:12:33 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 15:13:19 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 15:13:19 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 15:13:19 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 15:13:21 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 15:13:21 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 15:13:21 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 15:13:21 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 15:13:21 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 15:13:21 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 15:13:21 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 15:13:21 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 15:13:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 12.00ms
-2026-04-27 15:13:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 15:13:51 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1668.59ms
-2026-04-27 15:13:56 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 15:13:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 18685.13ms
-2026-04-27 15:14:16 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 400 BAD REQUEST"
-2026-04-27 15:14:16 - app.utils.dify_client - ERROR - dify_client.py:62 - Dify API错误: status=400, body={"code":"invalid_param","message":"Run failed: Traceback (most recent call last):\n  File \"\/var\/sandbox\/sandbox-python\/tmp\/031c1dc3_9304_4800_b5b3_0e17ec6bccf1.py\", line 48, in <module>\n  File \"<string>\", line 17, in <module>\n  File \"<string>\", line 4, in main\nNameError: name 'timedelta' is not defined\nerror: exit status 255\n","status":400}
-
-2026-04-27 15:14:16 - app.controllers.ai_chat_controller - ERROR - ai_chat_controller.py:69 - AI聊天错误: Dify API错误(400): {"code":"invalid_param","message":"Run failed: Traceback (most recent call last):\n  File \"\/var\/sandbox\/sandbox-python\/tmp\/031c1dc3_9304_4800_b5b3_0e17ec6bccf1.py\", line 48, in <module>\n  File \"<string>\", line 17, in <module>\n  File \"<string>\", line 4, in main\nNameError: name 'timedelta' is not defined\nerror: exit status 255\n","status":400}
-
-2026-04-27 15:14:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 500 - 耗时: 9080.45ms
-2026-04-27 15:14:48 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1844.43ms
-2026-04-27 15:15:41 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 15:15:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 62024.72ms
-2026-04-27 16:14:11 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 16:14:13 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 16:14:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 16:14:18 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 16:14:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:14:27 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 16:14:30 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:14:30 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM2NDA2N30.95q
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2793.51ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 54.00ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 54.00ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 26.00ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 25.00ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 16:14:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 7.23ms
-2026-04-27 16:14:36 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 16:14:53 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1063.30ms
-2026-04-27 16:14:55 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1089.20ms
-2026-04-27 16:15:06 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:15:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 22872.80ms
-2026-04-27 16:15:12 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:15:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 27332.64ms
-2026-04-27 16:23:22 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 16:23:22 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 16:23:22 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 16:23:22 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 16:23:22 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 16:23:22 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 16:23:22 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 16:23:22 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 16:28:22 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 16:28:22 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 16:28:22 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 16:28:22 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 16:28:22 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 16:28:22 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 16:28:22 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 16:28:22 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 16:31:20 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
-2026-04-27 16:31:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 16:31:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 16:31:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/js/live2d.js - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/katou_01.model.json - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/moc/katou.moc - 状态码: 200 - 耗时: 1.97ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/moc/katou.2048/texture_00.png - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_ANGRY.exp.json - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_FUN.exp.json - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_DOWN.exp.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_SAD.exp.json - 状态码: 200 - 耗时: 4.01ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_SURPRISE.exp.json - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/exp/F_NOMAL.exp.json - 状态码: 200 - 耗时: 7.99ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/katou_01.physics.json - 状态码: 200 - 耗时: 7.01ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/katou_01.pose.json - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/model/katou_01/mtn/IDLING_01.mtn - 状态码: 200 - 耗时: 7.19ms
-2026-04-27 16:31:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 16:31:44 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 2.03ms
-2026-04-27 16:31:59 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 28.00ms
-2026-04-27 16:32:01 - access - INFO - access_mw.py:26 - 192.168.110.84 - PUT /api/customers/6 - 状态码: 200 - 耗时: 17.00ms
-2026-04-27 16:32:01 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:32:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 41390.57ms
-2026-04-27 16:34:04 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/files/upload "HTTP/1.1 201 CREATED"
-2026-04-27 16:34:34 - access - INFO - access_mw.py:26 - 192.168.110.84 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 16:34:39 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/customers - 状态码: 200 - 耗时: 14.00ms
-2026-04-27 16:34:39 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:34:39 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/message - 状态码: 200 - 耗时: 34986.49ms
-2026-04-27 16:35:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 16:35:26 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /text2sql - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 16:35:28 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 16:35:31 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 16:35:32 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=1, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 16:35:35 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:35:35 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：1
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsInJvbGUiOjAsImV4cCI6MTc3NzM2NTMzMn0.ZA1
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2555.78ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 3.00ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 200 - 耗时: 24.09ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 41.08ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 42.08ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 21.00ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 16:35:35 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 16:35:39 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=10, token=eyJhbGciOiJIUzI1NiIs...
-2026-04-27 16:35:42 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:35:42 - app.controllers.auth_controller - INFO - auth_controller.py:33 - Dify调用成功: answer=uid：10
-token：eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEwLCJyb2xlIjoyLCJleHAiOjE3NzczNjUzMzl9.H
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 2660.36ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 12.00ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 15.00ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 16.00ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 16:35:42 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 16:35:50 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:35:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 16:36:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 16:36:00 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:36:01 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 8.00ms
-2026-04-27 16:36:01 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:36:09 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1006.30ms
-2026-04-27 16:36:14 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1132.03ms
-2026-04-27 16:36:48 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:36:48 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:36:54 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 5.00ms
-2026-04-27 16:36:54 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:36:58 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1742.00ms
-2026-04-27 16:37:03 - access - INFO - access_mw.py:26 - 192.168.110.84 - POST /api/text2sql/query - 状态码: 200 - 耗时: 1586.18ms
-2026-04-27 16:38:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:38:41 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:39:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:39:20 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:39:34 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 16:39:47 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 16:39:47 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 16:43:21 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
-2026-04-27 16:43:24 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 16:43:24 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 16:43:24 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 16:43:25 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 16:43:25 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 16:43:25 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 16:43:25 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 16:43:25 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 16:47:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 16:47:02 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 42.00ms
-2026-04-27 16:47:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 16:47:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 9.00ms
-2026-04-27 16:47:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 16:47:08 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 16:47:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 0.00ms
-2026-04-27 16:47:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 17:16:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /customers - 状态码: 200 - 耗时: 1.00ms
-2026-04-27 17:16:52 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 17:16:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /ai-chat - 状态码: 200 - 耗时: 4.00ms
-2026-04-27 17:17:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/ai-chat/stream - 状态码: 200 - 耗时: 48.00ms
-2026-04-27 17:17:01 - httpx - INFO - _client.py:1740 - HTTP Request: POST http://192.168.184.128/v1/chat-messages "HTTP/1.1 200 OK"
-2026-04-27 17:47:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 17:58:10 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 17:58:21 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 19:54:20 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 19:56:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 19:59:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 20:08:11 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
-2026-04-27 20:08:13 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 20:08:13 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 20:08:13 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 20:08:15 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
-2026-04-27 20:08:15 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
-2026-04-27 20:08:15 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
-2026-04-27 20:08:16 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 20:08:16 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2026-04-27 20:08:16 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
-2026-04-27 20:08:16 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
-2026-04-27 20:08:16 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
-2026-04-27 20:08:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 13.00ms
-2026-04-27 20:08:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/images/quite.png - 状态码: 200 - 耗时: 27.00ms
-2026-04-27 20:08:40 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 20:09:30 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /.well-known/appspecific/com.chrome.devtools.json - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 20:10:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 7.00ms
-2026-04-27 20:10:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 20:10:49 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/js/live2d.js - 状态码: 200 - 耗时: 2.00ms
-2026-04-27 20:10:51 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 1.00ms
-2026-04-27 20:18:55 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 6.00ms
-2026-04-27 20:18:56 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
-2026-04-27 20:19:00 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/images/quite.png - 状态码: 200 - 耗时: 1.00ms
+2026-04-30 21:02:17 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:02:17 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:02:17 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:02:22 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:02:22 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:02:22 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:02:22 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:02:22 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:02:22 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:02:22 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:02:22 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:02:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET / - 状态码: 200 - 耗时: 13.33ms
+2026-04-30 21:02:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/css/live2d.css - 状态码: 200 - 耗时: 53.37ms
+2026-04-30 21:02:29 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /static/live2d/katou/js/live2d.js - 状态码: 200 - 耗时: 52.71ms
+2026-04-30 21:02:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /login - 状态码: 200 - 耗时: 3.00ms
+2026-04-30 21:02:32 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /favicon.ico - 状态码: 404 - 耗时: 0.00ms
+2026-04-30 21:02:37 - app.controllers.auth_controller - INFO - auth_controller.py:25 - 登录成功，准备调用Dify: uid=10, token=eyJhbGciOiJIUzI1NiIs...
+2026-04-30 21:02:59 - app.controllers.auth_controller - ERROR - auth_controller.py:35 - 登录时调用Dify失败: All connection attempts failed
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/auth/login - 状态码: 200 - 耗时: 21145.25ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /dashboard - 状态码: 200 - 耗时: 11.00ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/users - 状态码: 403 - 耗时: 9.64ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 27.00ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 17.00ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/industry-repos - 状态码: 200 - 耗时: 15.00ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/customers - 状态码: 200 - 耗时: 7.15ms
+2026-04-30 21:02:59 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /api/work-repos - 状态码: 200 - 耗时: 5.99ms
+2026-04-30 21:03:06 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 4.00ms
+2026-04-30 21:03:11 - app.core.hybrid_search - INFO - hybrid_search.py:280 - 混合检索开始，问题: 张飞怎么死的
+2026-04-30 21:03:12 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:03:12 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:03:12 - app.core.hybrid_search - INFO - hybrid_search.py:106 - QA 混合检索返回 5 条结果
+2026-04-30 21:03:12 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:03:12 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:03:12 - app.core.hybrid_search - INFO - hybrid_search.py:164 - Text 混合检索返回 5 条结果
+2026-04-30 21:03:16 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:03:16 - app.core.hybrid_search - INFO - hybrid_search.py:251 - LLM 生成回答，token 用量: 3117
+2026-04-30 21:03:16 - app.core.hybrid_search - INFO - hybrid_search.py:295 - 混合检索 + LLM 回答完成
+2026-04-30 21:03:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 5160.33ms
+2026-04-30 21:07:10 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
+2026-04-30 21:07:14 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:07:14 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:07:14 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:07:14 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:07:14 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:07:14 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:07:14 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:07:14 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:07:15 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
+2026-04-30 21:07:21 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:07:21 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:07:21 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:07:24 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:07:24 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:07:24 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:07:24 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:07:24 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:07:24 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:07:24 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:07:24 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:07:25 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 10.00ms
+2026-04-30 21:07:31 - app.core.hybrid_search - INFO - hybrid_search.py:283 - 混合检索开始，问题: 关羽是怎么死的
+2026-04-30 21:07:32 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:07:32 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:07:32 - app.core.hybrid_search - INFO - hybrid_search.py:106 - QA 混合检索返回 5 条结果
+2026-04-30 21:07:32 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:07:32 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:07:32 - app.core.hybrid_search - INFO - hybrid_search.py:164 - Text 混合检索返回 5 条结果
+2026-04-30 21:07:38 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:07:38 - app.core.hybrid_search - INFO - hybrid_search.py:254 - LLM 生成回答，token 用量: 2981
+2026-04-30 21:07:38 - app.core.hybrid_search - INFO - hybrid_search.py:327 - 混合检索 + LLM 回答完成
+2026-04-30 21:07:38 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 7233.25ms
+2026-04-30 21:12:02 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
+2026-04-30 21:12:06 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:12:06 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:12:06 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:12:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:12:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:12:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:12:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:12:06 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:12:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 10.00ms
+2026-04-30 21:12:14 - app.core.hybrid_search - INFO - hybrid_search.py:284 - 混合检索开始，问题: 刘备怎么死的
+2026-04-30 21:12:15 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:12:15 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:12:15 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:12:16 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:12:16 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:12:16 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:12:22 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:12:22 - app.core.hybrid_search - INFO - hybrid_search.py:255 - LLM 生成回答，token 用量: 3158
+2026-04-30 21:12:22 - app.core.hybrid_search - INFO - hybrid_search.py:334 - 混合检索 + LLM 回答完成
+2026-04-30 21:12:22 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 8064.73ms
+2026-04-30 21:13:07 - app.core.hybrid_search - INFO - hybrid_search.py:284 - 混合检索开始，问题: 关羽怎么死的
+2026-04-30 21:13:08 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:13:08 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:13:08 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:13:08 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:13:08 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:13:08 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:13:14 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:13:14 - app.core.hybrid_search - INFO - hybrid_search.py:255 - LLM 生成回答，token 用量: 2984
+2026-04-30 21:13:14 - app.core.hybrid_search - INFO - hybrid_search.py:334 - 混合检索 + LLM 回答完成
+2026-04-30 21:13:14 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 6880.87ms
+2026-04-30 21:17:02 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:17:02 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:17:02 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:17:06 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:17:06 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:17:06 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:17:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:17:06 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:17:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:17:06 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:17:06 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:17:09 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 10.00ms
+2026-04-30 21:17:17 - app.core.hybrid_search - INFO - hybrid_search.py:284 - 混合检索开始，问题: 张飞怎么死的
+2026-04-30 21:17:18 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:17:18 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:17:18 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:17:18 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:17:18 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:17:18 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:17:23 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:17:23 - app.core.hybrid_search - INFO - hybrid_search.py:255 - LLM 生成回答，token 用量: 3271
+2026-04-30 21:17:23 - app.core.hybrid_search - INFO - hybrid_search.py:334 - 混合检索 + LLM 回答完成
+2026-04-30 21:17:23 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 6820.46ms
+2026-04-30 21:17:53 - app.core.hybrid_search - INFO - hybrid_search.py:284 - 混合检索开始，问题: 关羽怎么死的
+2026-04-30 21:17:53 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:17:53 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:17:53 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:17:54 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:17:54 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:17:54 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:18:03 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:18:03 - app.core.hybrid_search - INFO - hybrid_search.py:255 - LLM 生成回答，token 用量: 3041
+2026-04-30 21:18:03 - app.core.hybrid_search - INFO - hybrid_search.py:334 - 混合检索 + LLM 回答完成
+2026-04-30 21:18:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 10490.32ms
+2026-04-30 21:19:54 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
+2026-04-30 21:20:03 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:20:03 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:20:03 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:20:03 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:20:03 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:20:03 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:20:03 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:20:03 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:20:03 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 11.00ms
+2026-04-30 21:20:10 - app.core.hybrid_search - INFO - hybrid_search.py:284 - 混合检索开始，问题: 孙权怎么死的
+2026-04-30 21:20:11 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:20:11 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:20:11 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:20:11 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:20:11 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:20:11 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:20:16 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:20:16 - app.core.hybrid_search - INFO - hybrid_search.py:255 - LLM 生成回答，token 用量: 2921
+2026-04-30 21:20:16 - app.core.hybrid_search - INFO - hybrid_search.py:354 - 混合检索 + LLM 回答完成
+2026-04-30 21:20:16 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 6594.25ms
+2026-04-30 21:20:56 - app.core.hybrid_search - INFO - hybrid_search.py:284 - 混合检索开始，问题: 三英战吕布都和谁有关
+2026-04-30 21:20:56 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:20:56 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:20:56 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:20:56 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:20:56 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:20:56 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:21:05 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:21:05 - app.core.hybrid_search - INFO - hybrid_search.py:255 - LLM 生成回答，token 用量: 2730
+2026-04-30 21:21:05 - app.core.hybrid_search - INFO - hybrid_search.py:354 - 混合检索 + LLM 回答完成
+2026-04-30 21:21:05 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 9024.21ms
+2026-04-30 21:24:12 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 9.00ms
+2026-04-30 21:24:20 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:24:20 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:24:20 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:24:23 - root - INFO - logging_mw.py:144 - 日志记录器已启动，日志级别为：INFO
+2026-04-30 21:24:23 - root - INFO - logging_mw.py:145 - 常规日志文件路径为：D:\education_system\log\app.log
+2026-04-30 21:24:23 - root - INFO - logging_mw.py:146 - 错误日志文件路径为：D:\education_system\log\app_error.log
+2026-04-30 21:24:24 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:24:24 - apscheduler.scheduler - INFO - base.py:507 - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-30 21:24:24 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_work_repo_sum" to job store "default"
+2026-04-30 21:24:24 - apscheduler.scheduler - INFO - base.py:1090 - Added job "scheduled_generate_industry_repo" to job store "default"
+2026-04-30 21:24:24 - apscheduler.scheduler - INFO - base.py:214 - Scheduler started
+2026-04-30 21:24:24 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 14.28ms
+2026-04-30 21:24:32 - app.core.hybrid_search - INFO - hybrid_search.py:283 - 混合检索开始，问题: 三英战吕布都和税有关
+2026-04-30 21:24:33 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:24:33 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:24:33 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:24:34 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:24:34 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:24:34 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:24:41 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:24:41 - app.core.hybrid_search - INFO - hybrid_search.py:254 - LLM 生成回答，token 用量: 3318
+2026-04-30 21:24:41 - app.core.hybrid_search - INFO - hybrid_search.py:356 - 混合检索 + LLM 回答完成
+2026-04-30 21:24:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 8406.31ms
+2026-04-30 21:24:41 - access - INFO - access_mw.py:26 - 127.0.0.1 - GET /sanguo-qa - 状态码: 200 - 耗时: 1.00ms
+2026-04-30 21:24:53 - app.core.hybrid_search - INFO - hybrid_search.py:283 - 混合检索开始，问题: 三英战吕布都和谁有关
+2026-04-30 21:24:54 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:24:54 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:24:54 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:24:54 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:24:54 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:24:54 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:25:04 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:25:04 - app.core.hybrid_search - INFO - hybrid_search.py:254 - LLM 生成回答，token 用量: 2763
+2026-04-30 21:25:04 - app.core.hybrid_search - INFO - hybrid_search.py:356 - 混合检索 + LLM 回答完成
+2026-04-30 21:25:04 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 10583.70ms
+2026-04-30 21:25:47 - app.core.hybrid_search - INFO - hybrid_search.py:283 - 混合检索开始，问题: 桃园结义和谁有关
+2026-04-30 21:25:49 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:25:49 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:25:49 - app.core.hybrid_search - INFO - hybrid_search.py:107 - QA 混合检索返回 5 条结果
+2026-04-30 21:25:49 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-30 21:25:49 - app.utils.init_milvus_db - INFO - init_milvus_db.py:72 - Embedding 进度: 1/1
+2026-04-30 21:25:49 - app.core.hybrid_search - INFO - hybrid_search.py:165 - Text 混合检索返回 5 条结果
+2026-04-30 21:25:53 - httpx - INFO - _client.py:1025 - HTTP Request: POST https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-30 21:25:53 - app.core.hybrid_search - INFO - hybrid_search.py:254 - LLM 生成回答，token 用量: 2255
+2026-04-30 21:25:53 - app.core.hybrid_search - INFO - hybrid_search.py:356 - 混合检索 + LLM 回答完成
+2026-04-30 21:25:53 - access - INFO - access_mw.py:26 - 127.0.0.1 - POST /api/sanguo-qa/ask - 状态码: 200 - 耗时: 5401.20ms
+2026-04-30 21:28:23 - apscheduler.scheduler - INFO - base.py:245 - Scheduler has been shut down
